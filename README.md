@@ -1,7 +1,5 @@
 # INF263 Algoritmia
-![](https://img.shields.io/github/issues/ManuelLoaizaVasquez/inf263-algoritmia-pucp)
-![](https://img.shields.io/github/forks/ManuelLoaizaVasquez/inf263-algoritmia-pucp)
-![](https://img.shields.io/github/stars/ManuelLoaizaVasquez/inf263-algoritmia-pucp)
+[![Verificación de soluciones actuales](https://github.com/Duvet05/inf263-algoritmia-pucp/actions/workflows/verificar-actuales.yml/badge.svg)](https://github.com/Duvet05/inf263-algoritmia-pucp/actions/workflows/verificar-actuales.yml)
 
 <img src="https://imgs.xkcd.com/comics/travelling_salesman_problem.png" width="100%">
 
@@ -10,6 +8,26 @@ Este cubre algoritmos comunes, paradigmas algorítmicos,
 y estructuras de datos utilizadas para resolver estos problemas.
 El curso enfatiza la relación entre algoritmos y programación,
 e introduce técnicas básicas de análisis y medida de la eficiencia.
+
+## Soluciones actuales
+
+Las soluciones incorporadas desde el material local se encuentran en [soluciones-actuales](soluciones-actuales/CATALOGO.md). El catálogo indica evaluación, pregunta, código, enunciado y estado de verificación. El contenido histórico de `laboratorios/`, `examenes/` y `problemas/` se conserva para consulta.
+
+| Ciclo y evaluación | Soluciones |
+| --- | --- |
+| 2024-1, laboratorio 1 | [Kung Fu Panda, P1](soluciones-actuales/2024_1_lab01_po/LEEME.md) |
+| 2025-1, laboratorio 2 | [Cuadrigas, P1](soluciones-actuales/04_listas_pilas_colas/LEEME.md) |
+| 2025-2, examen 1 | [ROBOTJARDIN, P4](soluciones-actuales/04_listas_pilas_colas/robotjardin_2025_2/LEEME.md) |
+| 2026-1, laboratorio 1 | [Robot arqueólogo, P1; citas odontológicas, P2](soluciones-actuales/2026_1_lab01/LEEME.md) |
+| 2026-1, laboratorio 2 | [Barajado, P1; canario ancestral, P2](soluciones-actuales/04_listas_pilas_colas/LEEME.md) |
+
+Para verificar estas soluciones desde la raíz del repositorio:
+
+```sh
+python3 scripts/verificar_actuales.py
+```
+
+Se necesitan Python 3, un compilador C++17 y Node.js. La [guía de mantenimiento](CONTRIBUTING.md) explica cómo incorporar el siguiente ciclo y mantener el catálogo y las pruebas al día.
 
 ## Tabla de contenido
 | Módulo | Tema | Contenido |
@@ -42,6 +60,8 @@ Asimismo, adjunto [mi otro repositorio](https://github.com/ManuelLoaizaVasquez/a
 `tarea-academica` - contiene el informe final del curso, el cual lo basé en Segment Tree,
 mi estructura de datos favorita en programación competitiva.
 
+`soluciones-actuales` - reúne soluciones recientes verificadas, sus datos y enunciados disponibles.
+
 ## Lista de cursos universitarios sobre algoritmos
 
 | Curso                                     	    | Universidad                	|
@@ -50,4 +70,3 @@ mi estructura de datos favorita en programación competitiva.
 | [Introduction to Algorithms](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/index.htm) | Massachusetts Institute of Technology |
 | [Design and Analysis of Algorithms](http://web.stanford.edu/class/archive/cs/cs161/cs161.1168/) | Stanford University |
 | [Data Structures](https://sp21.datastructur.es/) | University of California, Berkeley |
-

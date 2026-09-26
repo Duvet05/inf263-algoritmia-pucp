@@ -1,0 +1,17 @@
+name: Verificar soluciones actuales
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Instalar compilador, Python y Node
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y g++ python3 nodejs
+      - name: Ejecutar pruebas
+        run: python3 scripts/verificar_actuales.py

@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+# Archivos locales y resultados de pruebas
+.DS_Store
+__pycache__/
+*.pyc
+build/

@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ROBOTJARDIN · El rectángulo de mayor área</title>
+  <style>
+    :root { color-scheme: light; --ink: #19372e; --muted: #5c7067; --green: #236447; --line: #dce4dc; --paper: #fff; --amber: #a35409; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f3f5ef; color: var(--ink); font: 16px/1.55 system-ui, -apple-system, sans-serif; }
+    main { max-width: 1080px; margin: auto; padding: 36px 24px 64px; }
+    a { color: var(--green); text-underline-offset: 4px; }
+    button, select, textarea { font: inherit; }
+    button, .download { display: inline-flex; justify-content: center; align-items: center; padding: 10px 16px; border: 1px solid #b6c8b8; border-radius: 9px; background: white; color: var(--ink); font-weight: 650; cursor: pointer; text-decoration: none; }
+    button:hover, .download:hover { background: #edf3e9; }
+    .primary { background: var(--green); color: white; border-color: var(--green); }
+    .primary:hover { background: #194d36; }
+    button:disabled { opacity: .42; cursor: default; }
+    :focus-visible { outline: 3px solid #c2782f; outline-offset: 4px; }
+    [hidden] { display: none !important; }
+    .topline, .toolbar, .heading-row, .controls, .legend { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    .topline { justify-content: space-between; margin-bottom: 25px; }
+    .back { font-size: 14px; }
+    .eyebrow { color: var(--green); font-size: 12px; font-weight: 750; text-transform: uppercase; letter-spacing: 2px; }
+    h1 { margin: 10px 0 12px; font-size: clamp(30px, 4.6vw, 48px); line-height: 1.12; letter-spacing: -1.5px; }
+    h2 { margin: 0; font-size: 18px; letter-spacing: -.3px; }
+    p { margin: 8px 0; }
+    .intro { max-width: 670px; color: var(--muted); }
+    .toolbar { margin: 26px 0 14px; justify-content: space-between; }
+    .toolbar label { font-weight: 650; font-size: 14px; }
+    select { max-width: 100%; margin-left: 8px; padding: 9px 30px 9px 12px; border-radius: 8px; border: 1px solid #b6c8b8; background: white; color: var(--ink); }
+    .badge { font-size: 12px; color: var(--green); padding: 5px 10px; border: 1px solid #c7d7c2; border-radius: 20px; }
+    .board { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(260px, 1fr); border: 1px solid var(--line); background: var(--paper); border-radius: 18px; overflow: hidden; }
+    .garden { padding: 26px; min-width: 0; }
+    .heading-row { justify-content: space-between; }
+    .dimensions { color: var(--muted); font-size: 13px; }
+    .matrix-scroll { overflow-x: auto; margin: 22px 0; padding: 6px; }
+    .matrix { --cell: 56px; display: grid; gap: 6px; width: max-content; margin: auto; position: relative; }
+    .cell { width: var(--cell); height: var(--cell); display: flex; justify-content: center; align-items: center; border-radius: 6px; font: 650 20px ui-monospace, SFMono-Regular, monospace; background: #edf2e5; color: #436446; }
+    .cell.zero { background: #f1f2ef; color: #8a9189; }
+    .cell.best { background: #d8e9b7; color: #244818; }
+    .axis { display: flex; justify-content: center; align-items: center; font: 12px ui-monospace, SFMono-Regular, monospace; color: var(--muted); }
+    .axis.current { background: #fff0d7; color: #82450b; font-weight: 800; border-radius: 5px; }
+    .outline { z-index: 1; pointer-events: none; border: 3px solid #376b26; border-radius: 9px; margin: -3px; }
+    .outline.candidate { z-index: 2; border: 2px dashed var(--amber); margin: -5px; }
+    .legend { gap: 16px; font-size: 12px; color: var(--muted); justify-content: center; }
+    .legend span { display: inline-flex; gap: 6px; align-items: center; }
+    .swatch { width: 12px; height: 12px; border-radius: 3px; display: inline-block; background: #edf2e5; border: 1px solid #aabd9c; }
+    .swatch.best { background: #d8e9b7; border: 2px solid #376b26; }
+    .swatch.zero { background: #f1f2ef; border-color: #d9dcd5; }
+    .answer { padding: 28px; border-left: 1px solid var(--line); background: #f9fbf6; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+    .answer-label { color: var(--muted); font-size: 13px; font-weight: 600; }
+    .area { display: flex; gap: 10px; align-items: baseline; line-height: 1; margin: 13px 0 18px; }
+    .area strong { font-size: 78px; font-weight: 650; letter-spacing: -5px; }
+    .area span { font-size: 16px; color: var(--muted); }
+    .formula { font-size: 20px; font-weight: 650; }
+    .coordinates { font-size: 13px; color: var(--muted); margin-bottom: 22px; }
+    .answer .controls { gap: 8px; }
+    .panel { background: white; border: 1px solid var(--line); border-radius: 14px; padding: 22px 26px; margin-top: 16px; min-width: 0; }
+    .step-count { color: var(--muted); font-size: 13px; }
+    .explanation { min-height: 54px; padding: 12px 16px; background: #f0f5e9; border-radius: 8px; margin: 14px 0 20px; }
+    .memory { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 28px; margin: 16px 0 20px; }
+    .memory h3 { font-size: 14px; margin: 0 0 3px; }
+    .help { color: var(--muted); font-size: 13px; }
+    .hist-scroll { overflow-x: auto; padding-top: 10px; }
+    .histogram { display: grid; gap: 8px; min-width: max-content; }
+    .bar-slot { min-width: 32px; height: 133px; position: relative; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; border-bottom: 1px solid var(--line); }
+    .bar { background: #aaca8d; width: 75%; min-height: 3px; border-radius: 4px 4px 0 0; }
+    .bar-slot.current .bar { background: #e5b876; }
+    .height { font: 650 15px ui-monospace, SFMono-Regular, monospace; margin-bottom: 4px; }
+    .bar-label { font: 11px ui-monospace, SFMono-Regular, monospace; color: var(--muted); margin: 5px 0; }
+    .stack { display: flex; gap: 7px; flex-wrap: wrap; align-items: center; min-height: 70px; padding: 12px 0; }
+    .stack-item { padding: 7px 9px; background: #eef2e9; border: 1px solid #d4dfca; border-radius: 7px; font: 13px ui-monospace, SFMono-Regular, monospace; }
+    .stack-item:last-child { border: 2px solid var(--green); }
+    .stack-empty { color: var(--muted); font-size: 13px; font-style: italic; }
+    .candidate-info { font-size: 13px; color: #75400c; min-height: 40px; }
+    details { margin-top: 16px; background: white; border: 1px solid var(--line); border-radius: 12px; padding: 16px 22px; }
+    summary { cursor: pointer; font-weight: 650; }
+    details[open] summary { margin-bottom: 16px; }
+    textarea { display: block; width: 100%; max-width: 550px; padding: 13px; resize: vertical; border-radius: 8px; border: 1px solid #b6c8b8; margin: 8px 0 12px; font: 16px/1.8 ui-monospace, SFMono-Regular, monospace; color: var(--ink); background: #fcfdf9; }
+    .error { color: #a02620; font-size: 14px; }
+    .how { margin-top: 24px; color: var(--muted); font-size: 14px; }
+    .how strong { color: var(--ink); }
+    .code-note { color: var(--muted); font-size: 14px; }
+    pre { overflow: auto; max-height: 520px; padding: 18px; border-radius: 8px; background: #162f28; color: #e0eed9; font: 13px/1.65 ui-monospace, SFMono-Regular, monospace; tab-size: 4; }
+    footer { margin-top: 28px; font-size: 12px; color: var(--muted); }
+    @media (max-width: 700px) {
+      main { padding: 20px 14px 40px; }
+      .topline { align-items: flex-start; }
+      .download { font-size: 13px; padding: 8px 12px; }
+      .board { grid-template-columns: 1fr; }
+      .garden, .answer, .panel { padding: 20px; }
+      .answer { border-left: 0; border-top: 1px solid var(--line); }
+      .area strong { font-size: 62px; }
+      .area { margin: 10px 0; }
+      .coordinates { margin-bottom: 15px; }
+      .memory { grid-template-columns: 1fr; gap: 14px; }
+      .matrix { --cell: 44px; gap: 5px; }
+      .controls button { padding: 9px 12px; font-size: 14px; }
+      .toolbar { align-items: flex-start; }
+      .toolbar label { width: 100%; }
+      select { display: block; width: 100%; margin: 6px 0 0; }
+      .legend { gap: 12px; }
+      details { padding: 16px; }
+    }
+    @media (max-width: 380px) { .matrix { --cell: 34px; } .cell { font-size: 17px; } }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="topline">
+      <a class="back" href="../LEEME.md">← Soluciones de listas</a>
+      <a class="download" id="download-code" href="../soluciones/2025_2_ex01_p04_robotjardin.cpp" download="2025_2_ex01_p04_robotjardin.cpp">Descargar C++</a>
+    </div>
+    <div class="eyebrow">ROBOTJARDIN 1.0 · Pregunta 4</div>
+    <h1>El rectángulo de mayor área.</h1>
+    <p class="intro">El robot busca el rectángulo o cuadrado más grande formado únicamente por <strong>1s</strong>. El borde verde señala los sectores que puede cortar.</p>
+  </header>
+
+  <div class="toolbar">
+    <label for="example">Jardín
+      <select id="example">
+        <option value="0">Ejemplo 1 · matriz 4 × 4</option>
+        <option value="1">Ejemplo 2 · matriz 4 × 5</option>
+        <option value="custom" id="custom-option" disabled>Matriz personalizada</option>
+      </select>
+    </label>
+    <span class="badge">Iterativo · una pila + un arreglo</span>
+  </div>
+
+  <section class="board" aria-label="Jardín y solución">
+    <div class="garden">
+      <div class="heading-row"><h2>Matriz del jardín</h2><span class="dimensions" id="dimensions"></span></div>
+      <div class="matrix-scroll" tabindex="0" aria-label="Matriz; desplaza horizontalmente si es necesario">
+        <div class="matrix" id="matrix" role="img" aria-label="Matriz del jardín"></div>
+      </div>
+      <div class="legend"><span><i class="swatch best"></i>Rectángulo máximo</span><span><i class="swatch"></i>1: cortar</span><span><i class="swatch zero"></i>0: vacío</span></div>
+    </div>
+    <div class="answer">
+      <div id="answer-live" aria-live="polite" aria-atomic="true">
+        <div class="answer-label" id="answer-label">Área máxima</div>
+        <div class="area"><strong id="area">0</strong><span>sectores</span></div>
+        <p class="formula" id="formula"></p>
+        <p class="coordinates" id="coordinates"></p>
+      </div>
+      <div class="controls">
+        <button class="primary" id="start">Ver paso a paso</button>
+        <button id="finish" hidden>Ver resultado</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="walkthrough" aria-label="Recorrido iterativo" hidden>
+    <div class="heading-row"><h2 id="step-title">Cómo lo calcula</h2><span class="step-count" id="step-count"></span></div>
+    <p class="explanation" id="explanation" role="status" aria-live="polite"></p>
+    <div class="memory">
+      <div>
+        <h3>Arreglo de alturas</h3>
+        <p class="help">Cuántos 1s seguidos llegan hasta la fila actual.</p>
+        <div class="hist-scroll"><div class="histogram" id="histogram"></div></div>
+      </div>
+      <div>
+        <h3>Pila de columnas</h3>
+        <p class="help">Base a la izquierda; cima a la derecha. C1 es la primera columna.</p>
+        <div class="stack" id="stack" aria-label="Contenido de la pila"></div>
+        <p class="candidate-info" id="candidate-info"></p>
+      </div>
+    </div>
+    <div class="controls">
+      <button id="previous">← Atrás</button>
+      <button class="primary" id="next">Siguiente paso →</button>
+      <button id="next-row">Siguiente fila</button>
+    </div>
+  </section>
+
+  <details id="editor">
+    <summary>Probar otra matriz</summary>
+    <form id="matrix-form">
+      <label for="matrix-input">Escribe una fila por línea, con los valores separados por espacios.</label>
+      <p class="help" id="input-help">Solo 0 y 1, con igual cantidad de columnas en cada fila. Máximo 20 × 20.</p>
+      <textarea id="matrix-input" rows="5" spellcheck="false" aria-describedby="input-help input-error"></textarea>
+      <p class="error" id="input-error" role="alert" hidden></p>
+      <button class="primary" type="submit">Calcular esta matriz</button>
+    </form>
+  </details>
+
+  <p class="how"><strong>La idea:</strong> cada fila se convierte en un histograma. La pila permite calcular los rectángulos de ese histograma y conservar el mayor. La matriz se mantiene intacta durante todo el recorrido.</p>
+  <details id="code-details">
+    <summary>Ver el código C++ completo</summary>
+    <p class="code-note">Una pila enlazada, un arreglo de alturas y ciclos. Tiempo O(n × m) y memoria auxiliar O(m). El programa ejecuta ambos ejemplos.</p>
+    <pre><code id="source-code"></code></pre>
+  </details>
+  <footer>Examen 1 · 2025-2 · Coordenadas desde 1 · Funciona sin conexión.</footer>
+  <noscript>Activa JavaScript para ver la matriz interactiva. El archivo 2025_2_ex01_p04_robotjardin.cpp está disponible en la carpeta de soluciones.</noscript>
+</main>
+
+<script>
+'use strict';
+
+const EJEMPLOS = [
+  [[1,1,1,0], [1,1,1,0], [1,0,1,1], [1,1,0,0]],
+  [[1,1,1,0,0], [1,1,1,1,1], [1,1,1,1,1], [1,1,0,0,0]]
+];
+const CPP_BASE64 = 'Ly8gUHJlZ3VudGEgNDogUk9CT1RKQVJESU4gMS4wLgovLyBTb2x1Y2lvbiBpdGVyYXRpdmE6IHVuIGFycmVnbG8gZGUgYWx0dXJhcyB5IHVuYSBwaWxhIGRlIGluZGljZXMuCi8vIFRpZW1wbyBPKG4gKiBtKSwgbWVtb3JpYSBhdXhpbGlhciBPKG0pLiBMYSBtYXRyaXogc2UgcmVjaWJlIGNvbW8gY29uc3QuCiNpbmNsdWRlIDxpb3N0cmVhbT4KdXNpbmcgbmFtZXNwYWNlIHN0ZDsKCi8vIENhcGFjaWRhZCBkZSBjb2x1bW5hcyBkZSBsYXMgbWF0cmljZXMgZGUgZW50cmFkYTsgbSBpbmRpY2EgY3VhbnRhcyBzZSB1c2FuLgpjb25zdCBpbnQgTUFYX0NPTFVNTkFTID0gMTAwOwoKc3RydWN0IE5vZG8gewogICAgaW50IGNvbHVtbmE7CiAgICBOb2RvICpzaWd1aWVudGU7Cn07CgpzdHJ1Y3QgUGlsYSB7CiAgICBOb2RvICp0b3BlID0gbnVsbHB0cjsKfTsKCnN0cnVjdCBSZWN0YW5ndWxvIHsKICAgIGxvbmcgbG9uZyBhcmVhID0gMDsKICAgIGludCBmaWxhSW5pY2lvID0gLTE7CiAgICBpbnQgZmlsYUZpbiA9IC0xOwogICAgaW50IGNvbHVtbmFJbmljaW8gPSAtMTsKICAgIGludCBjb2x1bW5hRmluID0gLTE7Cn07CgovLyBDb25zdWx0YSBkaXJlY3RhIGRlbCB0b3BlOiBPKDEpLgpib29sIGVzUGlsYVZhY2lhKGNvbnN0IFBpbGEgJnBpbGEpIHsKICAgIHJldHVybiBwaWxhLnRvcGUgPT0gbnVsbHB0cjsKfQoKLy8gQ29uc3VsdGEgZGlyZWN0YTogbGxhbWFyIHNvbGFtZW50ZSBjdWFuZG8gbGEgcGlsYSBubyBlc3RlIHZhY2lhLgppbnQgY2ltYShjb25zdCBQaWxhICZwaWxhKSB7CiAgICByZXR1cm4gcGlsYS50b3BlLT5jb2x1bW5hOwp9CgovLyBJbnNlcmNpb24gYWwgaW5pY2lvIGRlIGxhIHBpbGEgZW5sYXphZGE6IE8oMSksIHNpbiByZWN1cnNpb24uCnZvaWQgYXBpbGFyKFBpbGEgJnBpbGEsIGludCBjb2x1bW5hKSB7CiAgICBwaWxhLnRvcGUgPSBuZXcgTm9kb3tjb2x1bW5hLCBwaWxhLnRvcGV9Owp9CgovLyBFeHRyYWNjaW9uIGRlbCB0b3BlOiBPKDEpLiBMYSBwaWxhIGRlYmUgY29udGVuZXIgdW4gZWxlbWVudG8uCmludCBkZXNhcGlsYXIoUGlsYSAmcGlsYSkgewogICAgTm9kbyAqc2FsZSA9IHBpbGEudG9wZTsKICAgIGludCBjb2x1bW5hID0gc2FsZS0+Y29sdW1uYTsKICAgIHBpbGEudG9wZSA9IHNhbGUtPnNpZ3VpZW50ZTsKICAgIGRlbGV0ZSBzYWxlOwogICAgcmV0dXJuIGNvbHVtbmE7Cn0KCi8vIFNlIHJlY29ycmVuIGxhcyBmaWxhcyB5IHNlIHJlc3VlbHZlIGNhZGEgaGlzdG9ncmFtYSBjb24gdW5hIHBpbGEuCi8vIENhZGEgaW5kaWNlIHNlIGFwaWxhIHkgZGVzYXBpbGEgdW5hIHNvbGEgdmV6IHBvciBmaWxhOiBPKG4gKiBtKS4KUmVjdGFuZ3VsbyBjYWxjdWxhckFyZWFNYXhpbWEoY29uc3QgaW50IGphcmRpbltdW01BWF9DT0xVTU5BU10sIGludCBuLCBpbnQgbSkgewogICAgUmVjdGFuZ3VsbyBtZWpvcjsKICAgIGlmIChuIDw9IDAgfHwgbSA8PSAwIHx8IG0gPiBNQVhfQ09MVU1OQVMpIHJldHVybiBtZWpvcjsKCiAgICBpbnQgKmFsdHVyYXMgPSBuZXcgaW50W21de307IC8vIFVuaWNvIGFycmVnbG8gYXV4aWxpYXIsIGluaWNpYWxtZW50ZSBlbiBjZXJvLgogICAgUGlsYSBwaWxhOyAgICAgICAgICAgICAgICAgLy8gVW5pY2EgcGlsYSBhdXhpbGlhcjsgZ3VhcmRhIENPTFVNTkFTLgoKICAgIGZvciAoaW50IGZpbGEgPSAwOyBmaWxhIDwgbjsgZmlsYSsrKSB7CiAgICAgICAgLy8gQWx0dXJhID0gY2FudGlkYWQgZGUgdW5vcyBjb25zZWN1dGl2b3MgcXVlIHRlcm1pbmFuIGVuIGVzdGEgZmlsYS4KICAgICAgICBmb3IgKGludCBjb2wgPSAwOyBjb2wgPCBtOyBjb2wrKykgewogICAgICAgICAgICBpZiAoamFyZGluW2ZpbGFdW2NvbF0gPT0gMSkgYWx0dXJhc1tjb2xdKys7CiAgICAgICAgICAgIGVsc2UgYWx0dXJhc1tjb2xdID0gMDsKICAgICAgICB9CgogICAgICAgIC8vIGNvbCA9PSBtIHJlcHJlc2VudGEgZWwgZmluYWw6IHZhY2lhIGxhIHBpbGEgc2luIGFjY2VkZXIgYSBhbHR1cmFzW21dLgogICAgICAgIGZvciAoaW50IGNvbCA9IDA7IGNvbCA8PSBtOyBjb2wrKykgewogICAgICAgICAgICBpbnQgYWN0dWFsID0gY29sIDwgbSA/IGFsdHVyYXNbY29sXSA6IDA7CgogICAgICAgICAgICB3aGlsZSAoIWVzUGlsYVZhY2lhKHBpbGEpICYmCiAgICAgICAgICAgICAgICAgICAoY29sID09IG0gfHwgYWx0dXJhc1tjaW1hKHBpbGEpXSA+IGFjdHVhbCkpIHsKICAgICAgICAgICAgICAgIGludCBpbmRpY2UgPSBkZXNhcGlsYXIocGlsYSk7CiAgICAgICAgICAgICAgICBpbnQgYWx0byA9IGFsdHVyYXNbaW5kaWNlXTsKICAgICAgICAgICAgICAgIGludCBpenF1aWVyZGEgPSBlc1BpbGFWYWNpYShwaWxhKSA/IDAgOiBjaW1hKHBpbGEpICsgMTsKICAgICAgICAgICAgICAgIGludCBhbmNobyA9IGNvbCAtIGl6cXVpZXJkYTsKICAgICAgICAgICAgICAgIGxvbmcgbG9uZyBhcmVhID0gMUxMICogYWx0byAqIGFuY2hvOwoKICAgICAgICAgICAgICAgIGlmIChhcmVhID4gbWVqb3IuYXJlYSkgewogICAgICAgICAgICAgICAgICAgIG1lam9yLmFyZWEgPSBhcmVhOwogICAgICAgICAgICAgICAgICAgIG1lam9yLmZpbGFJbmljaW8gPSBmaWxhIC0gYWx0byArIDE7CiAgICAgICAgICAgICAgICAgICAgbWVqb3IuZmlsYUZpbiA9IGZpbGE7CiAgICAgICAgICAgICAgICAgICAgbWVqb3IuY29sdW1uYUluaWNpbyA9IGl6cXVpZXJkYTsKICAgICAgICAgICAgICAgICAgICBtZWpvci5jb2x1bW5hRmluID0gY29sIC0gMTsKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQoKICAgICAgICAgICAgLy8gTGFzIGFsdHVyYXMgZGUgbG9zIGluZGljZXMgZW4gbGEgcGlsYSBxdWVkYW4gZW4gb3JkZW4gbm8gZGVjcmVjaWVudGUuCiAgICAgICAgICAgIGlmIChjb2wgPCBtKSBhcGlsYXIocGlsYSwgY29sKTsKICAgICAgICB9CiAgICAgICAgLy8gTGEgcGlsYSB0ZXJtaW5hIHZhY2lhOiB0b2RvcyBzdXMgbm9kb3MgeWEgZnVlcm9uIGxpYmVyYWRvcy4KICAgIH0KCiAgICBkZWxldGVbXSBhbHR1cmFzOwogICAgcmV0dXJuIG1lam9yOwp9CgovLyBNdWVzdHJhIGVsIHJlc3VsdGFkby4gTGFzIGNvb3JkZW5hZGFzIHNlIGltcHJpbWVuIGNvbnRhbmRvIGRlc2RlIDEuCnZvaWQgbW9zdHJhclJlc3VsdGFkbyhjb25zdCBSZWN0YW5ndWxvICZyZWN0YW5ndWxvKSB7CiAgICBjb3V0IDw8ICJBcmVhIG1heGltYTogIiA8PCByZWN0YW5ndWxvLmFyZWEgPDwgJ1xuJzsKICAgIGlmIChyZWN0YW5ndWxvLmFyZWEgPiAwKSB7CiAgICAgICAgY291dCA8PCAiRmlsYXM6ICIgPDwgcmVjdGFuZ3Vsby5maWxhSW5pY2lvICsgMQogICAgICAgICAgICAgPDwgIiBhICIgPDwgcmVjdGFuZ3Vsby5maWxhRmluICsgMSA8PCAnXG4nOwogICAgICAgIGNvdXQgPDwgIkNvbHVtbmFzOiAiIDw8IHJlY3Rhbmd1bG8uY29sdW1uYUluaWNpbyArIDEKICAgICAgICAgICAgIDw8ICIgYSAiIDw8IHJlY3Rhbmd1bG8uY29sdW1uYUZpbiArIDEgPDwgJ1xuJzsKICAgIH0KfQoKLy8gRWplY3V0YSBsb3MgZG9zIGVqZW1wbG9zLiBFc3RhcyBtYXRyaWNlcyBzb24gZW50cmFkYXMsIG5vIG1lbW9yaWEgYXV4aWxpYXIuCmludCBtYWluKCkgewogICAgY29uc3QgaW50IGphcmRpbjFbNF1bTUFYX0NPTFVNTkFTXSA9IHsKICAgICAgICB7MSwgMSwgMSwgMH0sCiAgICAgICAgezEsIDEsIDEsIDB9LAogICAgICAgIHsxLCAwLCAxLCAxfSwKICAgICAgICB7MSwgMSwgMCwgMH0KICAgIH07CgogICAgY29uc3QgaW50IGphcmRpbjJbNF1bTUFYX0NPTFVNTkFTXSA9IHsKICAgICAgICB7MSwgMSwgMSwgMCwgMH0sCiAgICAgICAgezEsIDEsIDEsIDEsIDF9LAogICAgICAgIHsxLCAxLCAxLCAxLCAxfSwKICAgICAgICB7MSwgMSwgMCwgMCwgMH0KICAgIH07CgogICAgY291dCA8PCAiRWplbXBsbyAxICg0IHggNClcbiI7CiAgICBtb3N0cmFyUmVzdWx0YWRvKGNhbGN1bGFyQXJlYU1heGltYShqYXJkaW4xLCA0LCA0KSk7CiAgICBjb3V0IDw8ICJcbkVqZW1wbG8gMiAoNCB4IDUpXG4iOwogICAgbW9zdHJhclJlc3VsdGFkbyhjYWxjdWxhckFyZWFNYXhpbWEoamFyZGluMiwgNCwgNSkpOwogICAgcmV0dXJuIDA7Cn0K';
+
+function parsearMatriz(texto) {
+  const lineas = texto.trim().split(/\r?\n/).map(linea => linea.trim());
+  if (!texto.trim()) throw new Error('Escribe al menos una fila de ceros y unos.');
+  if (lineas.length > 20) throw new Error('La vista admite hasta 20 filas.');
+  const matriz = lineas.map((linea, i) => {
+    const valores = linea.split(/\s+/);
+    if (valores.some(valor => valor !== '0' && valor !== '1')) {
+      throw new Error(`Fila ${i + 1}: usa solo 0 y 1 separados por espacios.`);
+    }
+    if (valores.length > 20) throw new Error('La vista admite hasta 20 columnas.');
+    return valores.map(Number);
+  });
+  if (matriz.some(fila => fila.length !== matriz[0].length)) {
+    throw new Error('Todas las filas deben tener la misma cantidad de columnas.');
+  }
+  return matriz;
+}
+
+// Mismo recorrido iterativo que calcularAreaMaxima en ../soluciones/2025_2_ex01_p04_robotjardin.cpp.
+// Las copias de los estados solo permiten retroceder en la interfaz.
+function construirRecorrido(matriz) {
+  const n = matriz.length;
+  const m = n ? matriz[0].length : 0;
+  const alturas = Array(m).fill(0);
+  const pila = [];
+  let mejor = { area: 0, filaInicio: -1, filaFin: -1, columnaInicio: -1, columnaFin: -1 };
+  const pasos = [];
+  function guardar(tipo, fila, col, mensaje, candidato = null) {
+    pasos.push({ tipo, fila, col, mensaje, candidato, alturas: alturas.slice(), pila: pila.slice(), mejor: { ...mejor } });
+  }
+  guardar('inicio', -1, -1, 'Empezamos con todas las alturas en 0 y la pila vacía. La matriz solo se lee.');
+
+  for (let fila = 0; fila < n; fila++) {
+    for (let col = 0; col < m; col++) {
+      alturas[col] = matriz[fila][col] === 1 ? alturas[col] + 1 : 0;
+    }
+    guardar('fila', fila, -1, `Fila ${fila + 1}: un 1 suma a su altura; un 0 la reinicia. Alturas: [${alturas.join(', ')}].`);
+
+    for (let col = 0; col <= m; col++) {
+      const actual = col < m ? alturas[col] : 0;
+      while (pila.length && (col === m || alturas[pila[pila.length - 1]] > actual)) {
+        const indice = pila.pop();
+        const alto = alturas[indice];
+        const izquierda = pila.length ? pila[pila.length - 1] + 1 : 0;
+        const ancho = col - izquierda;
+        const area = alto * ancho;
+        const candidato = alto > 0 ? {
+          area, filaInicio: fila - alto + 1, filaFin: fila,
+          columnaInicio: izquierda, columnaFin: col - 1
+        } : null;
+        const mejora = area > mejor.area;
+        if (mejora) mejor = { ...candidato };
+        const motivo = col === m ? 'Llegamos al final de la fila.' : `C${col + 1} tiene una altura menor (${actual}).`;
+        guardar('desapilar', fila, col,
+          `${motivo} Sale C${indice + 1}: altura ${alto} × ancho ${ancho} = ${area}.${mejora ? ' Es el nuevo máximo.' : ''}`, candidato);
+      }
+      if (col < m) {
+        pila.push(col);
+        guardar('apilar', fila, col, `Entra C${col + 1} en la pila (altura ${actual}). Las alturas quedan en orden no decreciente.`);
+      }
+    }
+    guardar('fin-fila', fila, m, `Fila ${fila + 1} terminada. La pila queda vacía; el máximo acumulado es ${mejor.area}.`);
+  }
+  guardar('fin', n - 1, m, `Recorrido completo. El área máxima es ${mejor.area} sectores.`);
+  return pasos;
+}
+
+function iniciarVista() {
+  const $ = id => document.getElementById(id);
+  let matriz = EJEMPLOS[0];
+  let personalizada = null;
+  let pasos = construirRecorrido(matriz);
+  let paso = pasos.length - 1;
+  let modoPasos = false;
+
+  function dentro(fila, col, rectangulo) {
+    return rectangulo && rectangulo.area > 0 && fila >= rectangulo.filaInicio &&
+      fila <= rectangulo.filaFin && col >= rectangulo.columnaInicio && col <= rectangulo.columnaFin;
+  }
+
+  function agregarMarco(rectangulo, clase) {
+    if (!rectangulo || !rectangulo.area) return;
+    const marco = document.createElement('div');
+    marco.className = `outline ${clase}`;
+    marco.style.gridRow = `${rectangulo.filaInicio + 2} / ${rectangulo.filaFin + 3}`;
+    marco.style.gridColumn = `${rectangulo.columnaInicio + 2} / ${rectangulo.columnaFin + 3}`;
+    marco.setAttribute('aria-hidden', 'true');
+    $('matrix').append(marco);
+  }
+
+  function dibujarMatriz(estado) {
+    const contenedor = $('matrix');
+    contenedor.replaceChildren();
+    contenedor.style.gridTemplateColumns = `26px repeat(${matriz[0].length}, var(--cell))`;
+    contenedor.style.gridTemplateRows = `22px repeat(${matriz.length}, var(--cell))`;
+    contenedor.setAttribute('aria-label', `Matriz de ${matriz.length} por ${matriz[0].length}. Filas: ${matriz.map(fila => fila.join(' ')).join('; ')}. Mayor área encontrada: ${estado.mejor.area}.`);
+
+    for (let col = 0; col < matriz[0].length; col++) {
+      const eje = document.createElement('span');
+      eje.className = `axis${modoPasos && estado.col === col ? ' current' : ''}`;
+      eje.textContent = `C${col + 1}`;
+      eje.style.gridColumn = col + 2;
+      eje.style.gridRow = 1;
+      contenedor.append(eje);
+    }
+    for (let fila = 0; fila < matriz.length; fila++) {
+      const eje = document.createElement('span');
+      eje.className = `axis${modoPasos && estado.fila === fila ? ' current' : ''}`;
+      eje.textContent = `F${fila + 1}`;
+      eje.style.gridColumn = 1;
+      eje.style.gridRow = fila + 2;
+      contenedor.append(eje);
+      for (let col = 0; col < matriz[0].length; col++) {
+        const celda = document.createElement('span');
+        celda.className = `cell${matriz[fila][col] ? '' : ' zero'}${dentro(fila, col, estado.mejor) ? ' best' : ''}`;
+        celda.textContent = matriz[fila][col];
+        celda.title = `Fila ${fila + 1}, columna ${col + 1}: ${matriz[fila][col]}`;
+        celda.style.gridColumn = col + 2;
+        celda.style.gridRow = fila + 2;
+        contenedor.append(celda);
+      }
+    }
+    agregarMarco(estado.mejor, '');
+    if (modoPasos) agregarMarco(estado.candidato, 'candidate');
+  }
+
+  function dibujarMemoria(estado) {
+    $('histogram').replaceChildren();
+    $('histogram').style.gridTemplateColumns = `repeat(${estado.alturas.length}, minmax(32px, 1fr))`;
+    estado.alturas.forEach((altura, col) => {
+      const espacio = document.createElement('div');
+      espacio.className = `bar-slot${col === estado.col ? ' current' : ''}`;
+      const valor = document.createElement('span');
+      valor.className = 'height'; valor.textContent = altura;
+      const barra = document.createElement('div');
+      barra.className = 'bar'; barra.style.height = `${altura / matriz.length * 92}px`;
+      const etiqueta = document.createElement('span');
+      etiqueta.className = 'bar-label'; etiqueta.textContent = `C${col + 1}`;
+      espacio.append(valor, barra, etiqueta);
+      $('histogram').append(espacio);
+    });
+    $('stack').replaceChildren();
+    if (!estado.pila.length) {
+      const vacia = document.createElement('span');
+      vacia.className = 'stack-empty'; vacia.textContent = 'Pila vacía';
+      $('stack').append(vacia);
+    }
+    estado.pila.forEach(col => {
+      const elemento = document.createElement('span');
+      elemento.className = 'stack-item';
+      elemento.textContent = `C${col + 1} · h${estado.alturas[col]}`;
+      $('stack').append(elemento);
+    });
+    $('candidate-info').textContent = estado.candidato ?
+      `Borde naranja: rectángulo que se acaba de evaluar, de ${estado.candidato.area} sectores. El verde conserva el máximo.` :
+      'La pila guarda índices de columnas. La altura se consulta en el arreglo.';
+  }
+
+  function render() {
+    const estado = pasos[paso];
+    const mejor = estado.mejor;
+    $('dimensions').textContent = `${matriz.length} filas × ${matriz[0].length} columnas`;
+    $('area').textContent = mejor.area;
+    $('answer-label').textContent = modoPasos && estado.tipo !== 'fin' ? 'Mayor área hasta este paso' : 'Área máxima';
+    $('formula').textContent = mejor.area ?
+      `${mejor.filaFin - mejor.filaInicio + 1} filas × ${mejor.columnaFin - mejor.columnaInicio + 1} columnas` :
+      (modoPasos && estado.tipo !== 'fin' ? 'Todavía no hay un rectángulo.' : 'No hay sectores para cortar.');
+    $('coordinates').textContent = mejor.area ?
+      `Filas ${mejor.filaInicio + 1}–${mejor.filaFin + 1} · Columnas ${mejor.columnaInicio + 1}–${mejor.columnaFin + 1}` : '';
+    $('start').textContent = modoPasos ? 'Reiniciar pasos' : 'Ver paso a paso';
+    $('finish').hidden = !modoPasos;
+    $('walkthrough').hidden = !modoPasos;
+    $('step-title').textContent = estado.fila < 0 ? 'Antes de empezar' : `Procesando la fila ${estado.fila + 1}`;
+    if (estado.tipo === 'fin') $('step-title').textContent = 'Recorrido completo';
+    $('step-count').textContent = `Paso ${paso} de ${pasos.length - 1}`;
+    $('explanation').textContent = estado.mensaje;
+    $('previous').disabled = paso === 0;
+    $('next').disabled = paso === pasos.length - 1;
+    $('next-row').disabled = paso === pasos.length - 1;
+    dibujarMatriz(estado);
+    if (modoPasos) dibujarMemoria(estado);
+  }
+
+  function cargarMatriz(nueva) {
+    matriz = nueva;
+    pasos = construirRecorrido(matriz);
+    paso = pasos.length - 1;
+    modoPasos = false;
+    $('matrix-input').value = matriz.map(fila => fila.join(' ')).join('\n');
+    $('input-error').hidden = true;
+    $('matrix-input').removeAttribute('aria-invalid');
+    render();
+  }
+
+  $('example').addEventListener('change', () => {
+    cargarMatriz($('example').value === 'custom' ? personalizada : EJEMPLOS[Number($('example').value)]);
+  });
+  $('start').addEventListener('click', () => { modoPasos = true; paso = 0; render(); });
+  $('finish').addEventListener('click', () => { modoPasos = false; paso = pasos.length - 1; render(); });
+  $('previous').addEventListener('click', () => { paso = Math.max(0, paso - 1); render(); });
+  $('next').addEventListener('click', () => { paso = Math.min(pasos.length - 1, paso + 1); render(); });
+  $('next-row').addEventListener('click', () => {
+    do { paso++; } while (paso < pasos.length - 1 && pasos[paso].tipo !== 'fin-fila');
+    paso = Math.min(paso, pasos.length - 1);
+    render();
+  });
+  $('matrix-form').addEventListener('submit', event => {
+    event.preventDefault();
+    try {
+      const nueva = parsearMatriz($('matrix-input').value);
+      personalizada = nueva;
+      $('custom-option').disabled = false;
+      $('example').value = 'custom';
+      cargarMatriz(nueva);
+    } catch (error) {
+      $('input-error').textContent = error.message;
+      $('input-error').hidden = false;
+      $('matrix-input').setAttribute('aria-invalid', 'true');
+      $('matrix-input').focus();
+    }
+  });
+
+  const cpp = new TextDecoder().decode(Uint8Array.from(atob(CPP_BASE64), letra => letra.charCodeAt(0)));
+  $('source-code').textContent = cpp;
+  $('download-code').href = `data:text/plain;charset=utf-8;base64,${CPP_BASE64}`;
+  cargarMatriz(EJEMPLOS[0]);
+}
+
+if (typeof document !== 'undefined') iniciarVista();
+</script>
+</body>
+</html>
