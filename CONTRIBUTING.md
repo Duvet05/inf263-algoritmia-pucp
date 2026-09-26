@@ -6,6 +6,6 @@ Las carpetas históricas se mantienen como referencia. Para una solución recien
 2. Añade una fila al catálogo con ciclo, evaluación, pregunta, enlace al código y al enunciado, y qué se comprobó. Distingue código verificado de material pendiente; no presentes una pregunta sin compilar como resuelta.
 3. Documenta desde qué carpeta se compila y ejecuta. Si un programa usa `main`, compílalo de forma independiente. Añade una prueba que compruebe el resultado o una propiedad del algoritmo y registra el caso del enunciado.
 4. Incorpora la nueva prueba a `scripts/verificar_actuales.py` y ejecuta `python3 scripts/verificar_actuales.py` antes de enviar cambios. El flujo de GitHub Actions ejecuta esa misma orden en cada propuesta y cambio a la rama principal.
-5. Comprueba que los enlaces relativos de README y catálogo abren archivos existentes. Actualiza el índice de la portada con la nueva evaluación.
+5. Comprueba que los enlaces relativos de README y catálogo abren archivos existentes. Actualiza el índice de la portada y el [índice de laboratorios](laboratorios/README.md) con la nueva evaluación. Añade la huella SHA-256 de cada PDF nuevo a `laboratorios/checksums.sha256`. Mantén los archivos de `material_original/` separados de las soluciones verificadas.
 
 Si una solución procede de material externo, conserva su procedencia y evita atribuirla a una evaluación distinta. Una prueba de compilación por sí sola no valida el algoritmo.

@@ -51,6 +51,7 @@ def main():
     if not compiler:
         raise RuntimeError("Se necesita clang++ o g++ con soporte C++17.")
     checks = [
+        ROOT / "scripts/verificar_laboratorios.py",
         ACTUAL / "2024_1_lab01_po/test_p1.py",
         ACTUAL / "04_listas_pilas_colas/tests/test_listas.py",
         ACTUAL / "04_listas_pilas_colas/robotjardin_2025_2/tests/test_robotjardin.py",

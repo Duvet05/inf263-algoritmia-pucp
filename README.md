@@ -13,6 +13,8 @@ e introduce técnicas básicas de análisis y medida de la eficiencia.
 
 Las soluciones incorporadas desde el material local se encuentran en [soluciones-actuales](soluciones-actuales/CATALOGO.md). El catálogo indica evaluación, pregunta, código, enunciado y estado de verificación. El contenido histórico de `laboratorios/`, `examenes/` y `problemas/` se conserva para consulta.
 
+El [índice de laboratorios por ciclo](laboratorios/README.md) reúne los enunciados recientes y señala cuáles tienen soluciones verificadas.
+
 | Ciclo y evaluación | Soluciones |
 | --- | --- |
 | 2024-1, laboratorio 1 | [Kung Fu Panda, P1](soluciones-actuales/2024_1_lab01_po/LEEME.md) |
@@ -53,7 +55,7 @@ Asimismo, adjunto [mi otro repositorio](https://github.com/ManuelLoaizaVasquez/a
 ## Organización de las carpetas
 `examenes` - contiene los enunciados y soluciones del examen parcial y final del curso.
 
-`laboratorios` - contiene los enunciados y soluciones de los laboratorios.
+`laboratorios` - contiene los [enunciados por ciclo](laboratorios/README.md), material de origen y soluciones históricas.
 
 `problemas` - contiene ejercicios agrupados por temas.
 

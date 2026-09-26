@@ -2,6 +2,8 @@
 
 [Volver al inicio](../README.md)
 
+[Ver todos los laboratorios por ciclo](../laboratorios/README.md)
+
 Esta sección incorpora código local reciente sin modificar las soluciones históricas. **Verificado** significa que el archivo compila con C++17 y que pasan las pruebas indicadas; no afirma una calificación oficial del curso. Cada programa con `main` se compila por separado.
 
 | Ciclo | Evaluación | Pregunta | Código | Enunciado | Verificación |
