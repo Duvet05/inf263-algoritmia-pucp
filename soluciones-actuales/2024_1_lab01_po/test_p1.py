@@ -2,6 +2,7 @@ import itertools
 from pathlib import Path
 import random
 import re
+import shutil
 import subprocess
 import tempfile
 import unittest
@@ -40,8 +41,11 @@ class FuerzaBrutaTests(unittest.TestCase):
         cls.temp = tempfile.TemporaryDirectory(prefix='po-p1-tests-')
         cls.addClassCleanup(cls.temp.cleanup)
         cls.binary = Path(cls.temp.name) / 'p1'
+        compiler = shutil.which('clang++') or shutil.which('g++')
+        if not compiler:
+            raise RuntimeError('Se necesita un compilador C++17 (clang++ o g++).')
         subprocess.run([
-            'clang++', '-std=c++17', '-O2', '-Wall', '-Wextra', '-Wpedantic',
+            compiler, '-std=c++17', '-O2', '-Wall', '-Wextra', '-Wpedantic',
             '-Werror', str(PROJECT / '2024_1_lab01_p01_po.cpp'), '-o', str(cls.binary),
         ], check=True, capture_output=True, text=True)
 
