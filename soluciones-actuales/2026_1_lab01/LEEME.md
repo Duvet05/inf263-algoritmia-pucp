@@ -1,6 +1,6 @@
 # Laboratorio 1 de 2026-1
 
-[Enunciado](enunciado.pdf) · [Índice general](../../README.md)
+[Enunciado](../../laboratorios/laboratorio-01/2026-1/enunciado.pdf) · [Índice general](../../README.md)
 
 | Pregunta | Código | Técnica |
 | --- | --- | --- |

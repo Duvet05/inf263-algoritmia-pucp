@@ -36,3 +36,6 @@
 __pycache__/
 *.pyc
 build/
+
+# Ejecutables de las tareas de VS Code
+.build/

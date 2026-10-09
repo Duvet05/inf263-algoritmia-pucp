@@ -1,4 +1,9 @@
 # INF263 Algoritmia
+
+[Catálogo con filtros](catalogo/index.html) · [Por temas](temas/README.md) · [Exámenes](examenes/README.md) · [Laboratorios](laboratorios/README.md) · [Clases y Excel](clases/README.md) · [Abrir en VS Code](algoritmia.code-workspace)
+
+El material del curso está organizado por evaluación y ciclo, con índices por tema y una sola copia de cada enunciado. Las soluciones actuales incluyen pruebas reproducibles; cada evaluación conserva también sus fuentes de origen. Para preparar la clase de hoy, empieza por [TortuNinjas](clases/tortuninjas/README.md), [Nautilus](soluciones-actuales/04_listas_pilas_colas/enunciados/nautilus.md) e [incidentes](soluciones-actuales/04_listas_pilas_colas/enunciados/incidentes.md).
+
 [![Verificación de soluciones actuales](https://github.com/Duvet05/inf263-algoritmia-pucp/actions/workflows/verificar-actuales.yml/badge.svg)](https://github.com/Duvet05/inf263-algoritmia-pucp/actions/workflows/verificar-actuales.yml)
 
 <img src="https://imgs.xkcd.com/comics/travelling_salesman_problem.png" width="100%">
@@ -17,6 +22,9 @@ El [índice de laboratorios por ciclo](laboratorios/README.md) reúne los enunci
 
 | Ciclo y evaluación | Soluciones |
 | --- | --- |
+| 2022-2, examen 1 | [Bad Sunny, P2](soluciones-actuales/04_listas_pilas_colas/LEEME.md) |
+| 2023-2, examen 1 | [TortuNinjas, P1; incidentes, P2](clases/README.md) |
+| 2024-1, examen 1 | [Nautilus, P2](soluciones-actuales/04_listas_pilas_colas/enunciados/nautilus.md) |
 | 2024-1, laboratorio 1 | [Kung Fu Panda, P1](soluciones-actuales/2024_1_lab01_po/LEEME.md) |
 | 2025-1, laboratorio 2 | [Cuadrigas, P1](soluciones-actuales/04_listas_pilas_colas/LEEME.md) |
 | 2025-2, examen 1 | [ROBOTJARDIN, P4](soluciones-actuales/04_listas_pilas_colas/robotjardin_2025_2/LEEME.md) |
@@ -53,16 +61,20 @@ En caso quieran aprender el tema con mayor profundidad, recomiendo lo siguiente:
 Asimismo, adjunto [mi otro repositorio](https://github.com/ManuelLoaizaVasquez/acm-icpc-solutions) con mayor variedad de temas y problemas resueltos.
 
 ## Organización de las carpetas
-`examenes` - contiene los enunciados y soluciones del examen parcial y final del curso.
 
-`laboratorios` - contiene los [enunciados por ciclo](laboratorios/README.md), material de origen y soluciones históricas.
+| Carpeta | Qué encontrarás |
+| --- | --- |
+| [catalogo](catalogo/README.md) | Registro de documentos, buscador y procedencia |
+| [temas](temas/README.md) | Nueve rutas para preparar una clase por tema |
+| [examenes](examenes/README.md) | Parciales y finales por ciclo, con enunciados y fuentes |
+| [laboratorios](laboratorios/README.md) | Laboratorios por número y ciclo, con su material original |
+| [soluciones-actuales](soluciones-actuales/CATALOGO.md) | Código reciente y estado de verificación de cada pregunta |
+| [clases](clases/README.md) | Guías de enseñanza y tablas para Excel |
+| [material-de-apoyo](material-de-apoyo/README.md) | Teoría, ejercicios, grabaciones y fuentes adicionales |
+| [problemas](problemas) | Ejercicios históricos agrupados por tema |
+| [tarea-academica](tarea-academica) | Informe del curso sobre Segment Tree |
 
-`problemas` - contiene ejercicios agrupados por temas.
-
-`tarea-academica` - contiene el informe final del curso, el cual lo basé en Segment Tree,
-mi estructura de datos favorita en programación competitiva.
-
-`soluciones-actuales` - reúne soluciones recientes verificadas, sus datos y enunciados disponibles.
+Abre `algoritmia.code-workspace` en VS Code. En **Terminal → Ejecutar tarea** encontrarás la compilación y ejecución del archivo activo, las variantes con biblioteca de listas y pilas y la verificación completa del curso.
 
 ## Lista de cursos universitarios sobre algoritmos
 

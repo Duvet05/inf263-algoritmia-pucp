@@ -1,0 +1,560 @@
+origen_relativo,destino,md5_original
+04_listas_pilas_colas/LEEME.md,soluciones-actuales/04_listas_pilas_colas/LEEME.md,9c53a712b9a9b504692c5edde66d0bf3
+04_listas_pilas_colas/biblioteca/listas/Estructuras.h,soluciones-actuales/04_listas_pilas_colas/biblioteca/listas/Estructuras.h,b2a9b025aca3ef0077148c06fa0a13cf
+04_listas_pilas_colas/biblioteca/listas/FuncionesLista.cpp,soluciones-actuales/04_listas_pilas_colas/biblioteca/listas/FuncionesLista.cpp,f9d7fa773994edcd3c15dbf84cefe580
+04_listas_pilas_colas/biblioteca/listas/FuncionesLista.h,soluciones-actuales/04_listas_pilas_colas/biblioteca/listas/FuncionesLista.h,b3e173b933170318dcfdfde6d36b6d47
+04_listas_pilas_colas/biblioteca/listas/LEEME.md,soluciones-actuales/04_listas_pilas_colas/biblioteca/listas/LEEME.md,fc328c147656061ee1f06d7f0ae55a0c
+04_listas_pilas_colas/biblioteca/pilas/FuncionesPila.cpp,soluciones-actuales/04_listas_pilas_colas/biblioteca/pilas/FuncionesPila.cpp,3527c48f72afea6e16bed4fd03d26d0e
+04_listas_pilas_colas/biblioteca/pilas/FuncionesPila.h,soluciones-actuales/04_listas_pilas_colas/biblioteca/pilas/FuncionesPila.h,e2ea052a28f5472d3f1cc9f2e398b85d
+04_listas_pilas_colas/biblioteca/pilas/LEEME.md,soluciones-actuales/04_listas_pilas_colas/biblioteca/pilas/LEEME.md,43228c4a1b78e1fcc37cf5129f5a9718
+04_listas_pilas_colas/clase-listas-y-pilas.md,soluciones-actuales/04_listas_pilas_colas/clase-listas-y-pilas.md,b043ad8a53c5b5ab4a186babd36fbb59
+04_listas_pilas_colas/ejemplos/bad_sunny_pila_simple.cpp,soluciones-actuales/04_listas_pilas_colas/ejemplos/bad_sunny_pila_simple.cpp,b53a80bcd03773a01da817b31ff6ad96
+04_listas_pilas_colas/ejemplos/torres_de_hanoi.cpp,soluciones-actuales/04_listas_pilas_colas/ejemplos/torres_de_hanoi.cpp,9425e2d401415eef11f709af4a7cb009
+04_listas_pilas_colas/ejemplos/uso_lista.cpp,soluciones-actuales/04_listas_pilas_colas/ejemplos/uso_lista.cpp,5ed8d62174a83ea92e0c16f00914ab14
+04_listas_pilas_colas/enunciados/2026_1_lab02_barajado_y_canarios.pdf,laboratorios/laboratorio-02/2026-1/enunciado.pdf,86b926b265c78e507efc0fd44b34e965
+04_listas_pilas_colas/enunciados/incidentes.md,soluciones-actuales/04_listas_pilas_colas/enunciados/incidentes.md,65ee75fd6109203731b6d2fce88983d1
+04_listas_pilas_colas/enunciados/nautilus.md,soluciones-actuales/04_listas_pilas_colas/enunciados/nautilus.md,6fb31b88c703819cb93ca7763d4c481a
+04_listas_pilas_colas/enunciados/tortuninjas.md,soluciones-actuales/04_listas_pilas_colas/enunciados/tortuninjas.md,cac6122f73bda08c85e6a3fc795ccbbd
+04_listas_pilas_colas/practica/01-listas/LEEME.md,soluciones-actuales/04_listas_pilas_colas/practica/01-listas/LEEME.md,22c7ba51dc41ec7bbb4f65877f548aa8
+04_listas_pilas_colas/practica/01-listas/main.cpp,soluciones-actuales/04_listas_pilas_colas/practica/01-listas/main.cpp,1de2d6e69896ed9c62dbd5652549e1db
+04_listas_pilas_colas/practica/02-pilas/LEEME.md,soluciones-actuales/04_listas_pilas_colas/practica/02-pilas/LEEME.md,6695da9dfd2c38ed0b4d0b2ddc0e4df2
+04_listas_pilas_colas/practica/02-pilas/main.cpp,soluciones-actuales/04_listas_pilas_colas/practica/02-pilas/main.cpp,0e550e694978ee2adc53a322dc16afdc
+04_listas_pilas_colas/practica/LEEME.md,soluciones-actuales/04_listas_pilas_colas/practica/LEEME.md,a3b5d243dd87a6ea27c6f5fda4f4f7ca
+04_listas_pilas_colas/robotjardin_2025_2/LEEME.md,soluciones-actuales/04_listas_pilas_colas/robotjardin_2025_2/LEEME.md,db24bd85d67e45e3be3a3e097b7ed6ce
+04_listas_pilas_colas/robotjardin_2025_2/index.html,soluciones-actuales/04_listas_pilas_colas/robotjardin_2025_2/index.html,3fdc380e39c4de6a25fd265c423fc7a5
+04_listas_pilas_colas/robotjardin_2025_2/tests/test_robotjardin.py,soluciones-actuales/04_listas_pilas_colas/robotjardin_2025_2/tests/test_robotjardin.py,c9a131cb93b7f5a18aaed396d453ed04
+04_listas_pilas_colas/robotjardin_2025_2/tests/verificar_visual.cjs,soluciones-actuales/04_listas_pilas_colas/robotjardin_2025_2/tests/verificar_visual.cjs,525e831812afba92212709fe762ea3d2
+04_listas_pilas_colas/soluciones/2022_2_ex01_p02_bad_sunny.cpp,soluciones-actuales/04_listas_pilas_colas/soluciones/2022_2_ex01_p02_bad_sunny.cpp,1b8c4c987e455b8d6950a7e2b9c95bfe
+04_listas_pilas_colas/soluciones/2023_2_ex01_p02_incidentes.cpp,soluciones-actuales/04_listas_pilas_colas/soluciones/2023_2_ex01_p02_incidentes.cpp,03d740dad66848e8948009dbdcf799fe
+04_listas_pilas_colas/soluciones/2024_1_ex01_p02_nautilus.cpp,soluciones-actuales/04_listas_pilas_colas/soluciones/2024_1_ex01_p02_nautilus.cpp,a37ea7897f58a74d49bc7ee2ff6ce02d
+04_listas_pilas_colas/soluciones/2025_1_lab02_p01_cuadrigas.cpp,soluciones-actuales/04_listas_pilas_colas/soluciones/2025_1_lab02_p01_cuadrigas.cpp,36919a562832f99b714e77541c88cebb
+04_listas_pilas_colas/soluciones/2025_1_lab02_p02_vetas_de_oro.cpp,soluciones-actuales/04_listas_pilas_colas/soluciones/2025_1_lab02_p02_vetas_de_oro.cpp,b66c4ca86316c179d6322c3364e27dcc
+04_listas_pilas_colas/soluciones/2025_2_ex01_p04_robotjardin.cpp,soluciones-actuales/04_listas_pilas_colas/soluciones/2025_2_ex01_p04_robotjardin.cpp,9e77108fdcef0750551339cf34ad1e24
+04_listas_pilas_colas/soluciones/2026_1_lab02_lista_enlazada.cpp,soluciones-actuales/04_listas_pilas_colas/soluciones/2026_1_lab02_lista_enlazada.cpp,b66e07910fafa5823acdb589665d0468
+04_listas_pilas_colas/soluciones/2026_1_lab02_p01_barajado.cpp,soluciones-actuales/04_listas_pilas_colas/soluciones/2026_1_lab02_p01_barajado.cpp,c9eb4f31da4883aa61a3a1cb20e690a0
+04_listas_pilas_colas/soluciones/2026_1_lab02_p02_canarios.cpp,soluciones-actuales/04_listas_pilas_colas/soluciones/2026_1_lab02_p02_canarios.cpp,fc216ee79d900ca5b60b447a08ccc10a
+04_listas_pilas_colas/tests/datos/tortuninjas-ejemplo.txt,soluciones-actuales/04_listas_pilas_colas/tests/datos/tortuninjas-ejemplo.txt,98b2c7442faa730d3c8b25efd2f9832f
+04_listas_pilas_colas/tests/test_bad_sunny.cpp,soluciones-actuales/04_listas_pilas_colas/tests/test_bad_sunny.cpp,8c32548c6fd3c67669896d1f031fe24b
+04_listas_pilas_colas/tests/test_barajado.cpp,soluciones-actuales/04_listas_pilas_colas/tests/test_barajado.cpp,802fd12be999248b37db3541b18f1bc7
+04_listas_pilas_colas/tests/test_cuadrigas.cpp,soluciones-actuales/04_listas_pilas_colas/tests/test_cuadrigas.cpp,a8026a293f7e543d9fcb51da51916f21
+04_listas_pilas_colas/tests/test_funciones_lista.cpp,soluciones-actuales/04_listas_pilas_colas/tests/test_funciones_lista.cpp,c6d89880ffd0ead00a93e57750e73f8c
+04_listas_pilas_colas/tests/test_funciones_pila.cpp,soluciones-actuales/04_listas_pilas_colas/tests/test_funciones_pila.cpp,c7f6c4be97d9441e5c278c1006b9c6d1
+04_listas_pilas_colas/tests/test_incidentes.cpp,soluciones-actuales/04_listas_pilas_colas/tests/test_incidentes.cpp,37cfac2476f73596a2d70b96d0a1e2f3
+04_listas_pilas_colas/tests/test_listas.py,soluciones-actuales/04_listas_pilas_colas/tests/test_listas.py,ec5e4e05eff445078004e92d95bca335
+04_listas_pilas_colas/tests/test_nautilus.cpp,soluciones-actuales/04_listas_pilas_colas/tests/test_nautilus.cpp,2c2a92d41de2c4891553451e1339dca4
+VIDEOS.md,material-de-apoyo/VIDEOS.md,eb7b577f68d746748054dabd9e6f784f
+originales/2024-2/EX1/Martes 15／10/Copia de p1.cpp,examenes/parcial/2024-1/material_original/p1.cpp,31987beaf952457b513c181fc8bfecd6
+originales/2024-2/EX1/Martes 15／10/Copia de p1.txt,examenes/parcial/2024-1/material_original/p1.txt,bc40a0e613097f7c1398063311b42b19
+originales/2024-2/EX1/Martes 15／10/Copia de p1formula.txt,examenes/parcial/2024-1/material_original/p1Formula.txt,e6f34105e7c72b11efe554ba82ce58a0
+originales/2024-2/EX1/Martes 15／10/Copia de p1formula.txt,examenes/parcial/2024-1/material_original/p1formula.txt,e6f34105e7c72b11efe554ba82ce58a0
+originales/2024-2/EX1/Martes 15／10/Copia de p2.cpp,examenes/parcial/2024-1/material_original/p2.cpp,e028a62af9aafe8d18f26602dead4775
+originales/2024-2/EX1/Martes 15／10/Copia de p2.txt,examenes/parcial/2024-1/material_original/p2.txt,3b7cc049dddf9ff976b0fd05e1f5c037
+originales/2024-2/EX1/Miercoles 16／10/Copia de p3.cpp,material-de-apoyo/fuentes-adicionales/2024-2/EX1/Miercoles 16／10/Copia de p3.cpp,8a7ca48c6c7b3faf073fa20ac22651b3
+originales/2024-2/EX1/Miercoles 16／10/Copia de p3.txt,material-de-apoyo/fuentes-adicionales/2024-2/EX1/Miercoles 16／10/Copia de p3.txt,51ae376c9ed292555c7f581473a8213a
+originales/2024-2/EX1/Miercoles 16／10/Copia de p3b.cpp,material-de-apoyo/fuentes-adicionales/2024-2/EX1/Miercoles 16／10/Copia de p3b.cpp,d09d2aa69454ec6dc727cc7956397ed3
+originales/2024-2/EX1/Miercoles 16／10/Copia de p3b.txt,material-de-apoyo/fuentes-adicionales/2024-2/EX1/Miercoles 16／10/Copia de p3b.txt,0281f256b083e8d91b84064b62adbb89
+originales/2024-2/EX1/Viernes 18／10/Copia de cola.txt,examenes/parcial/2023-2/material_original/cola.txt,3dbb4ab09cd1b6d132134a33ecac0697
+originales/2024-2/EX1/Viernes 18／10/Copia de p2.cpp,examenes/parcial/2023-2/material_original/p2.cpp,8e382d2a8552ae767d81e0e5247169c8
+originales/2024-2/EX1/Viernes 18／10/Copia de pila1.txt,examenes/parcial/2023-2/material_original/pila1.txt,5e8ffe9272fa50b69141e8791b47757b
+originales/2024-2/EX1/Viernes 18／10/Copia de pila2.txt,examenes/parcial/2023-2/material_original/pila2.txt,faedde233e0a74292e5cd952b48fc1e7
+originales/2024-2/EX2/Jueves 05／12/2023-1/Copia de p1.cpp,examenes/final/2023-1/material_original/2023-1/p1.cpp,481784ef866638c5d0f059b21ce1cf97
+originales/2024-2/EX2/Jueves 05／12/2023-1/p1.cpp,examenes/final/2023-1/material_original/2023-1/p1.cpp,481784ef866638c5d0f059b21ce1cf97
+originales/2024-2/EX2/Jueves 05／12/Examen 2.pdf,examenes/final/2023-1/enunciado.pdf,20e76054101c139d8bad2642c16b6066
+originales/2024-2/EX2/Martes 03／12/2024-1/Copia de p1.cpp,examenes/final/2024-1/material_original/2024-1/p1.cpp,0539744f7f6bb37c312048aef22b6868
+originales/2024-2/EX2/Martes 03／12/2024-1/Copia de p2.cpp,examenes/final/2024-1/material_original/2024-1/p2.cpp,898aa68f06ca948307999982bd10fdbc
+originales/2024-2/EX2/Martes 03／12/2024-1/Copia de p2.txt,examenes/final/2024-1/material_original/2024-1/p2.txt,f687995a69ad60fe166fd1330d4abc39
+originales/2024-2/EX2/Martes 03／12/2024-1/Copia de p3b.cpp,examenes/final/2024-1/material_original/2024-1/p3b.cpp,bc7f655bc9d76a453bc626e7229cd681
+originales/2024-2/EX2/Martes 03／12/2024-1/p1.cpp,examenes/final/2024-1/material_original/2024-1/p1.cpp,0539744f7f6bb37c312048aef22b6868
+originales/2024-2/EX2/Martes 03／12/2024-1/p2.cpp,examenes/final/2024-1/material_original/2024-1/p2.cpp,898aa68f06ca948307999982bd10fdbc
+originales/2024-2/EX2/Martes 03／12/2024-1/p2.txt,examenes/final/2024-1/material_original/2024-1/p2.txt,f687995a69ad60fe166fd1330d4abc39
+originales/2024-2/EX2/Martes 03／12/2024-1/p3b.cpp,examenes/final/2024-1/material_original/2024-1/p3b.cpp,bc7f655bc9d76a453bc626e7229cd681
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/ArbolBinario.h,examenes/final/2024-1/material_original/ArbolesBinarios/ArbolBinario.h,b907a97f5c97b325e7c8bd673656a13c
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/ArbolBinario.h,laboratorios/laboratorio-04/2023-1/material_original/ArbolesBinarios/ArbolBinario.h,b907a97f5c97b325e7c8bd673656a13c
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/ArbolBinarioBusqueda.h,examenes/final/2024-1/material_original/ArbolesBinarios/ArbolBinarioBusqueda.h,5239b3b0743b2218f76f732a314de95f
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/ArbolBinarioBusqueda.h,material-de-apoyo/arboles/material_original/ArbolesBinarios/ArbolBinarioBusqueda.h,5239b3b0743b2218f76f732a314de95f
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/Makefile,examenes/final/2024-1/material_original/ArbolesBinarios/Makefile,a9ed26ab7eaad2726af7a610a26eb390
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/Makefile,material-de-apoyo/arboles/material_original/ArbolesBinarios/Makefile,a9ed26ab7eaad2726af7a610a26eb390
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/NodoArbol.h,examenes/final/2024-1/material_original/ArbolesBinarios/NodoArbol.h,553b4ad635f85e1de96595bee4dbc6a5
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/NodoArbol.h,laboratorios/laboratorio-04/2023-1/material_original/ArbolesBinarios/NodoArbol.h,553b4ad635f85e1de96595bee4dbc6a5
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/funcionesArbolesBB.cpp,examenes/final/2024-1/material_original/ArbolesBinarios/funcionesArbolesBB.cpp,193f76b915a475132b1dcb0949e3c49b
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/funcionesArbolesBB.cpp,material-de-apoyo/arboles/material_original/ArbolesBinarios/funcionesArbolesBB.cpp,193f76b915a475132b1dcb0949e3c49b
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/funcionesArbolesBB.h,examenes/final/2024-1/material_original/ArbolesBinarios/funcionesArbolesBB.h,e768f70f532692ed6b1aafe5bdfa9c24
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/funcionesArbolesBB.h,material-de-apoyo/arboles/material_original/ArbolesBinarios/funcionesArbolesBB.h,e768f70f532692ed6b1aafe5bdfa9c24
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/funcionesArbolesBinarios.cpp,examenes/final/2024-1/material_original/ArbolesBinarios/funcionesArbolesBinarios.cpp,4556c0782a5456c6280e792add612ec4
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/funcionesArbolesBinarios.cpp,material-de-apoyo/arboles/material_original/ArbolesBinarios/funcionesArbolesBinarios.cpp,4556c0782a5456c6280e792add612ec4
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/funcionesArbolesBinarios.h,examenes/final/2024-1/material_original/ArbolesBinarios/funcionesArbolesBinarios.h,a2c5bb4f3bb54d06c3704930934d9302
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/funcionesArbolesBinarios.h,material-de-apoyo/arboles/material_original/ArbolesBinarios/funcionesArbolesBinarios.h,a2c5bb4f3bb54d06c3704930934d9302
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/main.cpp,examenes/final/2024-1/material_original/ArbolesBinarios/main.cpp,2d8d7bf375795f2ba3970b3cd4dcf074
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/main.cpp,material-de-apoyo/arboles/material_original/ArbolesBinarios/main.cpp,2d8d7bf375795f2ba3970b3cd4dcf074
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/nbproject/Makefile-Debug.mk,examenes/final/2024-1/material_original/ArbolesBinarios/nbproject/Makefile-Debug.mk,761b58e1664153ebadf84ffe11b5e878
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/nbproject/Makefile-Debug.mk,material-de-apoyo/arboles/material_original/ArbolesBinarios/nbproject/Makefile-Debug.mk,761b58e1664153ebadf84ffe11b5e878
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/nbproject/Makefile-Release.mk,examenes/final/2024-1/material_original/ArbolesBinarios/nbproject/Makefile-Release.mk,620fc9e42c9874f0ada509182fbcd518
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/nbproject/Makefile-Release.mk,material-de-apoyo/arboles/material_original/ArbolesBinarios/nbproject/Makefile-Release.mk,620fc9e42c9874f0ada509182fbcd518
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/nbproject/Makefile-impl.mk,examenes/final/2024-1/material_original/ArbolesBinarios/nbproject/Makefile-impl.mk,0b59a2e82af58d23cf0ce5e64ea56a55
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/nbproject/Makefile-impl.mk,material-de-apoyo/arboles/material_original/ArbolesBinarios/nbproject/Makefile-impl.mk,0b59a2e82af58d23cf0ce5e64ea56a55
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/nbproject/Makefile-variables.mk,examenes/final/2024-1/material_original/ArbolesBinarios/nbproject/Makefile-variables.mk,a31df7864268afa7e722badeb8007a94
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/nbproject/Makefile-variables.mk,material-de-apoyo/arboles/material_original/ArbolesBinarios/nbproject/Makefile-variables.mk,a31df7864268afa7e722badeb8007a94
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/nbproject/Package-Debug.bash,examenes/final/2024-1/material_original/ArbolesBinarios/nbproject/Package-Debug.bash,fbaa66c3d2943db446745a5f472a5f0e
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/nbproject/Package-Debug.bash,material-de-apoyo/arboles/material_original/ArbolesBinarios/nbproject/Package-Debug.bash,fbaa66c3d2943db446745a5f472a5f0e
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/nbproject/Package-Release.bash,examenes/final/2024-1/material_original/ArbolesBinarios/nbproject/Package-Release.bash,4126209830a11c4cfaab7127dc44f8ff
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/nbproject/Package-Release.bash,material-de-apoyo/arboles/material_original/ArbolesBinarios/nbproject/Package-Release.bash,4126209830a11c4cfaab7127dc44f8ff
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/nbproject/configurations.xml,examenes/final/2024-1/material_original/ArbolesBinarios/nbproject/configurations.xml,ba0edbeb5371190d74a4c29b86f3d013
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/nbproject/configurations.xml,material-de-apoyo/arboles/material_original/ArbolesBinarios/nbproject/configurations.xml,ba0edbeb5371190d74a4c29b86f3d013
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/nbproject/project.xml,examenes/final/2024-1/material_original/ArbolesBinarios/nbproject/project.xml,fec403c4a2986d63889afadbcd83b361
+originales/2024-2/EX2/Martes 03／12/ArbolesBinarios/nbproject/project.xml,material-de-apoyo/arboles/material_original/ArbolesBinarios/nbproject/project.xml,fec403c4a2986d63889afadbcd83b361
+originales/2024-2/EX2/Martes 03／12/Ex2 2024-1 [Enunciado].pdf,examenes/final/2024-1/enunciado.pdf,5470380e4d650dc73bf49fe77f414132
+originales/2024-2/EX2/Viernes 06／12/Laboratorio 3.pdf,laboratorios/laboratorio-03/2024-2/enunciado.pdf,d4e6eb0f16bf1e6b8f6a6a04862ede01
+originales/2024-2/EX2/Viernes 06／12/lab3/Copia de p2.cpp,laboratorios/laboratorio-03/2024-2/material_original/lab3/p2.cpp,2ced9c00d28ee8488f1d0a579b3dbb44
+originales/2024-2/EX2/Viernes 06／12/lab3/Copia de p2.txt,laboratorios/laboratorio-03/2024-2/material_original/lab3/p2.txt,9fac54c15481106a35b52ddf6a463e05
+originales/2024-2/EX2/Viernes 06／12/lab3/p2.cpp,laboratorios/laboratorio-03/2024-2/material_original/lab3/p2.cpp,2ced9c00d28ee8488f1d0a579b3dbb44
+originales/2024-2/EX2/Viernes 06／12/lab3/p2.txt,laboratorios/laboratorio-03/2024-2/material_original/lab3/p2.txt,9fac54c15481106a35b52ddf6a463e05
+originales/2024-2/LAB1/Miercoles 11／09/Copia de P1.cpp,laboratorios/laboratorio-01/2023-1/material_original/P1.cpp,fbbe7433222739ed2390dea035ebf300
+originales/2024-2/LAB1/Miercoles 11／09/Copia de P2.cpp,laboratorios/laboratorio-01/2023-1/material_original/P2.cpp,0db37bdd33c41d3a7dd14e3adb510491
+originales/2024-2/LAB1/Miercoles 11／09/Copia de datos1.txt,laboratorios/laboratorio-01/2023-1/material_original/datos1.txt,6fafcb893a4d5a8b25cbd17ea8f7e46b
+originales/2024-2/LAB1/Miercoles 11／09/Copia de datos2.txt,laboratorios/laboratorio-01/2023-1/material_original/datos2.txt,656e7795c9aeb89041810aae29a12f6d
+originales/2024-2/LAB1/Viernes 13／09/Copia de P1.cpp,laboratorios/laboratorio-01/2024-1/material_original/variantes/2024-2/LAB1/Viernes 13／09/Copia de P1.cpp,dc3da3c766dd59f44a37edcbb2981d5e
+originales/2024-2/LAB1/Viernes 13／09/Copia de P2.cpp,laboratorios/laboratorio-01/2024-1/material_original/variantes/2024-2/LAB1/Viernes 13／09/Copia de P2.cpp,2ca314dd94ae19d4533dbab9c2b27a3e
+originales/2024-2/LAB1/Viernes 13／09/Copia de datos1.txt,laboratorios/laboratorio-01/2024-1/material_original/variantes/2024-2/LAB1/Viernes 13／09/Copia de datos1.txt,d7982a8ce669c17c65b3673a4bfacaf2
+originales/2024-2/LAB1/Viernes 13／09/Copia de datos2.txt,laboratorios/laboratorio-01/2024-1/material_original/variantes/2024-2/LAB1/Viernes 13／09/Copia de datos2.txt,1d9b6275e88db0b48c158a1c086595b1
+originales/2024-2/LAB2/Jueves 26／09/Copia de A.txt,laboratorios/laboratorio-03/2023-1/material_original/A.txt,1d9d626d94b35709397517ce47cde7e0
+originales/2024-2/LAB2/Jueves 26／09/Copia de B.txt,laboratorios/laboratorio-03/2023-1/material_original/B.txt,e24b466410ee9b6d24a601c13c67abb5
+originales/2024-2/LAB2/Jueves 26／09/Copia de C.txt,laboratorios/laboratorio-03/2023-1/material_original/C.txt,6b0d404ff66fee5ab8f350f359708d17
+originales/2024-2/LAB2/Jueves 26／09/Copia de D.txt,laboratorios/laboratorio-03/2023-1/material_original/D.txt,2a7ac65fe1fbeab33ddcd46a4d24fa9b
+originales/2024-2/LAB2/Jueves 26／09/Copia de E.txt,laboratorios/laboratorio-03/2023-1/material_original/E.txt,3f6d56de0e13db6506b996b0d44accf9
+originales/2024-2/LAB2/Jueves 26／09/Copia de kupa1.txt,laboratorios/laboratorio-03/2023-1/material_original/kupa1.txt,5749fd3861b70135b131e425dd97cb43
+originales/2024-2/LAB2/Jueves 26／09/Copia de kupa2.txt,laboratorios/laboratorio-03/2023-1/material_original/kupa2.txt,97f4047e6bcf1088766d957e1991b832
+originales/2024-2/LAB2/Jueves 26／09/Copia de p1.cpp,laboratorios/laboratorio-03/2023-1/material_original/p1.cpp,d24c16950b7e6e43e189ef7837fe2c40
+originales/2024-2/LAB2/Jueves 26／09/Copia de p2.cpp,laboratorios/laboratorio-03/2023-1/material_original/variantes/2024-2/LAB2/Jueves 26／09/Copia de p2.cpp,9ea34d9203b14483417bcf0543134417
+originales/2024-2/LAB2/Miercoles 25／09/Copia de datos1.txt,laboratorios/laboratorio-02/2024-1/material_original/datos1.txt,0a9754856c3a15df9c62d6aa72b7b975
+originales/2024-2/LAB2/Miercoles 25／09/Copia de datos2.txt,laboratorios/laboratorio-02/2024-1/material_original/datos2.txt,a82f75eeb8bdd5212c2a5c3d3b4cadd2
+originales/2024-2/LAB2/Miercoles 25／09/Copia de p1.cpp,laboratorios/laboratorio-02/2024-1/material_original/p1.cpp,8fa90feed1e95853dd7c609119b7c717
+originales/2024-2/LAB2/Miercoles 25／09/Copia de p2.cpp,laboratorios/laboratorio-02/2024-1/material_original/p2.cpp,0389a3fc8077a18c4c133ec6b7f4100f
+originales/2024-2/LAB2/Miercoles 2／10/Copia de p2.cpp,examenes/parcial/2022-2/material_original/p2.cpp,5153bdd0e9de93a980630d1bfc8d5417
+originales/2024-2/LAB3/Viernes 1／1/2024-1/Copia de p1.cpp,laboratorios/laboratorio-03/2024-1/material_original/p1.cpp,35d5fea1ce72289f9ff98b3e51a9a792
+originales/2024-2/LAB3/Viernes 1／1/2024-1/Copia de p2.cpp,laboratorios/laboratorio-03/2024-1/material_original/p2.cpp,492cb3ab65c3cce515f0bdc930c29f34
+originales/2024-2/LAB3/Viernes 1／1/2024-1/Laboratorio 3 (3).pdf,laboratorios/laboratorio-03/2024-1/enunciado.pdf,126a33dadf135701aa43c59e842e420d
+originales/2024-2/LAB3/Viernes 1／1/2024-1/p1.cpp,laboratorios/laboratorio-03/2024-1/material_original/p1.cpp,35d5fea1ce72289f9ff98b3e51a9a792
+originales/2024-2/LAB3/Viernes 1／1/2024-1/p2.cpp,laboratorios/laboratorio-03/2024-1/material_original/p2.cpp,492cb3ab65c3cce515f0bdc930c29f34
+originales/2024-2/LAB3/Viernes 1／1/Ejercicios/Copia de p1.cpp,material-de-apoyo/divide-y-venceras/material_original/p1.cpp,6c1c3deb8336b47e9e70a5c1f3b5f3bd
+originales/2024-2/LAB3/Viernes 1／1/Ejercicios/Copia de p2.cpp,material-de-apoyo/divide-y-venceras/material_original/p2.cpp,84f1d4bac7c6d391c1129200ac226db7
+originales/2024-2/LAB3/Viernes 1／1/Ejercicios/Copia de p3.cpp,material-de-apoyo/divide-y-venceras/material_original/p3.cpp,5051f43b3b29ac3adc3b470002331d77
+originales/2024-2/LAB3/Viernes 1／1/Ejercicios/Copia de p4.cpp,material-de-apoyo/divide-y-venceras/material_original/p4.cpp,50ad85fb4adc5736452d94818255e41d
+originales/2024-2/LAB3/Viernes 1／1/Ejercicios/Copia de p5.cpp,material-de-apoyo/divide-y-venceras/material_original/p5.cpp,5e59b7acce856eae45ab751774a863e8
+originales/2024-2/LAB3/Viernes 1／1/Ejercicios/Copia de p6.cpp,material-de-apoyo/divide-y-venceras/material_original/p6.cpp,7bdbfee45729a0e3cdfb09baf92b3bd6
+originales/2024-2/LAB3/Viernes 1／1/Ejercicios/Copia de p6.txt,material-de-apoyo/divide-y-venceras/material_original/p6.txt,44683a7f14fe87fad71095f1378a492d
+originales/2024-2/LAB3/Viernes 1／1/Ejercicios/p1.cpp,material-de-apoyo/divide-y-venceras/material_original/p1.cpp,6c1c3deb8336b47e9e70a5c1f3b5f3bd
+originales/2024-2/LAB3/Viernes 1／1/Ejercicios/p2.cpp,material-de-apoyo/divide-y-venceras/material_original/p2.cpp,84f1d4bac7c6d391c1129200ac226db7
+originales/2024-2/LAB3/Viernes 1／1/Ejercicios/p3.cpp,material-de-apoyo/divide-y-venceras/material_original/p3.cpp,5051f43b3b29ac3adc3b470002331d77
+originales/2024-2/LAB3/Viernes 1／1/Ejercicios/p4.cpp,material-de-apoyo/divide-y-venceras/material_original/p4.cpp,50ad85fb4adc5736452d94818255e41d
+originales/2024-2/LAB3/Viernes 1／1/Ejercicios/p5.cpp,material-de-apoyo/divide-y-venceras/material_original/p5.cpp,5e59b7acce856eae45ab751774a863e8
+originales/2024-2/LAB3/Viernes 1／1/Ejercicios/p6.cpp,material-de-apoyo/divide-y-venceras/material_original/p6.cpp,7bdbfee45729a0e3cdfb09baf92b3bd6
+originales/2024-2/LAB3/Viernes 1／1/Ejercicios/p6.txt,material-de-apoyo/divide-y-venceras/material_original/p6.txt,44683a7f14fe87fad71095f1378a492d
+originales/2024-2/LAB3/Viernes 1／1/ejercicios/Copia de p1.cpp,material-de-apoyo/divide-y-venceras/material_original/p1.cpp,6c1c3deb8336b47e9e70a5c1f3b5f3bd
+originales/2024-2/LAB3/Viernes 1／1/ejercicios/Copia de p2.cpp,material-de-apoyo/divide-y-venceras/material_original/p2.cpp,84f1d4bac7c6d391c1129200ac226db7
+originales/2024-2/LAB3/Viernes 1／1/ejercicios/Copia de p3.cpp,material-de-apoyo/divide-y-venceras/material_original/p3.cpp,5051f43b3b29ac3adc3b470002331d77
+originales/2024-2/LAB3/Viernes 1／1/ejercicios/Copia de p4.cpp,material-de-apoyo/divide-y-venceras/material_original/p4.cpp,50ad85fb4adc5736452d94818255e41d
+originales/2024-2/LAB3/Viernes 1／1/ejercicios/Copia de p5.cpp,material-de-apoyo/divide-y-venceras/material_original/p5.cpp,5e59b7acce856eae45ab751774a863e8
+originales/2024-2/LAB3/Viernes 1／1/ejercicios/Copia de p6.cpp,material-de-apoyo/divide-y-venceras/material_original/p6.cpp,7bdbfee45729a0e3cdfb09baf92b3bd6
+originales/2024-2/LAB3/Viernes 1／1/ejercicios/Copia de p6.txt,material-de-apoyo/divide-y-venceras/material_original/p6.txt,44683a7f14fe87fad71095f1378a492d
+originales/2024-2/LAB3/Viernes 1／1/ejercicios/Ejercicios Divide y Venceras (2).pdf,material-de-apoyo/divide-y-venceras/ejercicios.pdf,21c845fb9ba659192520b950419141d0
+originales/2024-2/LAB3/Viernes 1／1/ejercicios/p1.cpp,material-de-apoyo/divide-y-venceras/material_original/p1.cpp,6c1c3deb8336b47e9e70a5c1f3b5f3bd
+originales/2024-2/LAB3/Viernes 1／1/ejercicios/p2.cpp,material-de-apoyo/divide-y-venceras/material_original/p2.cpp,84f1d4bac7c6d391c1129200ac226db7
+originales/2024-2/LAB3/Viernes 1／1/ejercicios/p3.cpp,material-de-apoyo/divide-y-venceras/material_original/p3.cpp,5051f43b3b29ac3adc3b470002331d77
+originales/2024-2/LAB3/Viernes 1／1/ejercicios/p4.cpp,material-de-apoyo/divide-y-venceras/material_original/p4.cpp,50ad85fb4adc5736452d94818255e41d
+originales/2024-2/LAB3/Viernes 1／1/ejercicios/p5.cpp,material-de-apoyo/divide-y-venceras/material_original/p5.cpp,5e59b7acce856eae45ab751774a863e8
+originales/2024-2/LAB3/Viernes 1／1/ejercicios/p6.cpp,material-de-apoyo/divide-y-venceras/material_original/p6.cpp,7bdbfee45729a0e3cdfb09baf92b3bd6
+originales/2024-2/LAB3/Viernes 1／1/ejercicios/p6.txt,material-de-apoyo/divide-y-venceras/material_original/p6.txt,44683a7f14fe87fad71095f1378a492d
+originales/2024-2/LAB3/Viernes 1／1/lab3-2022-2/Copia de p1.cpp,laboratorios/laboratorio-03/2022-2/material_original/variantes/2024-2/LAB3/Viernes 1／1/lab3-2022-2/Copia de p1.cpp,bca883bde334100f1d33826b7caed00b
+originales/2024-2/LAB3/Viernes 1／1/lab3-2022-2/Copia de p2.cpp,laboratorios/laboratorio-03/2022-2/material_original/variantes/2024-2/LAB3/Viernes 1／1/lab3-2022-2/Copia de p2.cpp,09b48e9bf85681cd19cd2298399bba97
+originales/2024-2/LAB3/Viernes 1／1/lab3-2022-2/Copia de p2.txt,laboratorios/laboratorio-03/2022-2/material_original/p2.txt,e3aaa41bb41c2ffd05378cba49829a3f
+originales/2024-2/LAB3/Viernes 1／1/lab3-2022-2/p1.cpp,laboratorios/laboratorio-03/2022-2/material_original/variantes/2024-2/LAB3/Viernes 1／1/lab3-2022-2/Copia de p1.cpp,bca883bde334100f1d33826b7caed00b
+originales/2024-2/LAB3/Viernes 1／1/lab3-2022-2/p2.cpp,laboratorios/laboratorio-03/2022-2/material_original/variantes/2024-2/LAB3/Viernes 1／1/lab3-2022-2/Copia de p2.cpp,09b48e9bf85681cd19cd2298399bba97
+originales/2024-2/LAB3/Viernes 1／1/lab3-2022-2/p2.txt,laboratorios/laboratorio-03/2022-2/material_original/p2.txt,e3aaa41bb41c2ffd05378cba49829a3f
+originales/2024-2/LAB4/Martes 19／11/2022-2/p1.cpp,laboratorios/laboratorio-04/2022-2/material_original/p1.cpp,dfa0dbb5b71eda6214b06edfdcb26ef6
+originales/2024-2/LAB4/Martes 19／11/2022-2/p2.cpp,laboratorios/laboratorio-04/2022-2/material_original/variantes/2024-2/LAB4/Martes 19／11/2022-2/p2.cpp,cbaf1fa6581a02f501131ab03dd48569
+originales/2024-2/LAB4/Martes 19／11/2023-1/p1.cpp,laboratorios/laboratorio-04/2022-2/material_original/variantes/2024-2/LAB4/Martes 19／11/2023-1/p1.cpp,6d64ba2a299a5d919b5d3543991aa21f
+originales/2024-2/LAB4/Martes 19／11/2023-1/p1.txt,laboratorios/laboratorio-04/2023-1/material_original/p1.txt,d41d8cd98f00b204e9800998ecf8427e
+originales/2024-2/LAB4/Martes 19／11/2023-1/p2.cpp,laboratorios/laboratorio-04/2022-2/material_original/variantes/2024-2/LAB4/Martes 19／11/2023-1/p2.cpp,f954b81005d56beb7692e932b3350a71
+originales/2024-2/LAB4/Martes 19／11/ArbolesBinarios/ArbolBinario.h,laboratorios/laboratorio-04/2023-1/material_original/ArbolesBinarios/ArbolBinario.h,b907a97f5c97b325e7c8bd673656a13c
+originales/2024-2/LAB4/Martes 19／11/ArbolesBinarios/ArbolBinario.h,material-de-apoyo/arboles/material_original/ArbolesBinarios/ArbolBinario.h,b907a97f5c97b325e7c8bd673656a13c
+originales/2024-2/LAB4/Martes 19／11/ArbolesBinarios/ArbolBinarioBusqueda.h,material-de-apoyo/arboles/material_original/ArbolesBinarios/ArbolBinarioBusqueda.h,5239b3b0743b2218f76f732a314de95f
+originales/2024-2/LAB4/Martes 19／11/ArbolesBinarios/Makefile,material-de-apoyo/arboles/material_original/ArbolesBinarios/Makefile,a9ed26ab7eaad2726af7a610a26eb390
+originales/2024-2/LAB4/Martes 19／11/ArbolesBinarios/NodoArbol.h,laboratorios/laboratorio-04/2023-1/material_original/ArbolesBinarios/NodoArbol.h,553b4ad635f85e1de96595bee4dbc6a5
+originales/2024-2/LAB4/Martes 19／11/ArbolesBinarios/NodoArbol.h,material-de-apoyo/arboles/material_original/ArbolesBinarios/NodoArbol.h,553b4ad635f85e1de96595bee4dbc6a5
+originales/2024-2/LAB4/Martes 19／11/ArbolesBinarios/funcionesArbolesBB.cpp,material-de-apoyo/arboles/material_original/ArbolesBinarios/funcionesArbolesBB.cpp,193f76b915a475132b1dcb0949e3c49b
+originales/2024-2/LAB4/Martes 19／11/ArbolesBinarios/funcionesArbolesBB.h,material-de-apoyo/arboles/material_original/ArbolesBinarios/funcionesArbolesBB.h,e768f70f532692ed6b1aafe5bdfa9c24
+originales/2024-2/LAB4/Martes 19／11/ArbolesBinarios/funcionesArbolesBinarios.cpp,material-de-apoyo/arboles/material_original/ArbolesBinarios/funcionesArbolesBinarios.cpp,4556c0782a5456c6280e792add612ec4
+originales/2024-2/LAB4/Martes 19／11/ArbolesBinarios/funcionesArbolesBinarios.h,material-de-apoyo/arboles/material_original/ArbolesBinarios/funcionesArbolesBinarios.h,a2c5bb4f3bb54d06c3704930934d9302
+originales/2024-2/LAB4/Martes 19／11/ArbolesBinarios/main.cpp,material-de-apoyo/arboles/material_original/ArbolesBinarios/main.cpp,2d8d7bf375795f2ba3970b3cd4dcf074
+originales/2024-2/LAB4/Martes 19／11/ArbolesBinarios/nbproject/Makefile-Debug.mk,material-de-apoyo/arboles/material_original/ArbolesBinarios/nbproject/Makefile-Debug.mk,761b58e1664153ebadf84ffe11b5e878
+originales/2024-2/LAB4/Martes 19／11/ArbolesBinarios/nbproject/Makefile-Release.mk,material-de-apoyo/arboles/material_original/ArbolesBinarios/nbproject/Makefile-Release.mk,620fc9e42c9874f0ada509182fbcd518
+originales/2024-2/LAB4/Martes 19／11/ArbolesBinarios/nbproject/Makefile-impl.mk,material-de-apoyo/arboles/material_original/ArbolesBinarios/nbproject/Makefile-impl.mk,0b59a2e82af58d23cf0ce5e64ea56a55
+originales/2024-2/LAB4/Martes 19／11/ArbolesBinarios/nbproject/Makefile-variables.mk,material-de-apoyo/arboles/material_original/ArbolesBinarios/nbproject/Makefile-variables.mk,a31df7864268afa7e722badeb8007a94
+originales/2024-2/LAB4/Martes 19／11/ArbolesBinarios/nbproject/Package-Debug.bash,material-de-apoyo/arboles/material_original/ArbolesBinarios/nbproject/Package-Debug.bash,fbaa66c3d2943db446745a5f472a5f0e
+originales/2024-2/LAB4/Martes 19／11/ArbolesBinarios/nbproject/Package-Release.bash,material-de-apoyo/arboles/material_original/ArbolesBinarios/nbproject/Package-Release.bash,4126209830a11c4cfaab7127dc44f8ff
+originales/2024-2/LAB4/Martes 19／11/ArbolesBinarios/nbproject/configurations.xml,material-de-apoyo/arboles/material_original/ArbolesBinarios/nbproject/configurations.xml,ba0edbeb5371190d74a4c29b86f3d013
+originales/2024-2/LAB4/Martes 19／11/ArbolesBinarios/nbproject/project.xml,material-de-apoyo/arboles/material_original/ArbolesBinarios/nbproject/project.xml,fec403c4a2986d63889afadbcd83b361
+originales/2024-2/LAB4/Martes 19／11/Calculadora/main.cpp,material-de-apoyo/arboles/material_original/Calculadora/main.cpp,400bc73b5daf9a705afb98c61aad368c
+originales/2024-2/LAB4/Martes 19／11/Copia de Ejercicios Arboles 2013-2 Parte 1.pdf,material-de-apoyo/arboles/ejercicios-parte-1.pdf,de27ad8e0aacd42a1ac2a212b0560f31
+originales/2024-2/LAB4/Martes 19／11/Copia de Ejercicios Arboles 2013-2 Parte 2.pdf,material-de-apoyo/arboles/ejercicios-parte-2.pdf,ae93c542709f53d61f29f96c37bf9784
+originales/2024-2/LAB4/Martes 19／11/Ejercicios1/p10.cpp,material-de-apoyo/arboles/material_original/Ejercicios1/p10.cpp,446d7a8f937a2a27fcabf0e29efb99d0
+originales/2024-2/LAB4/Martes 19／11/Ejercicios1/p11.cpp,material-de-apoyo/arboles/material_original/Ejercicios1/p11.cpp,033eb5aab2a1f7ba97bd1199dc9ae3dd
+originales/2024-2/LAB4/Martes 19／11/Ejercicios1/p2.cpp,material-de-apoyo/arboles/material_original/Ejercicios1/p2.cpp,44326512aa365120ff47c70e0a74b521
+originales/2024-2/LAB4/Martes 19／11/Ejercicios1/p3.cpp,material-de-apoyo/arboles/material_original/Ejercicios1/p3.cpp,b30617fba1871fa1a93e1116efb36124
+originales/2024-2/LAB4/Martes 19／11/Ejercicios1/p4.cpp,material-de-apoyo/arboles/material_original/Ejercicios1/p4.cpp,4547f7eab8596a46bf8cc3758c5b7a6e
+originales/2024-2/LAB4/Martes 19／11/Ejercicios1/p5.cpp,material-de-apoyo/arboles/material_original/Ejercicios1/p5.cpp,01ad374b456adbd47f4a5ca6c987d5c7
+originales/2024-2/LAB4/Martes 19／11/Ejercicios1/p6.cpp,material-de-apoyo/arboles/material_original/Ejercicios1/p6.cpp,a9718ce311c91143fd1b3c9fe3c43c45
+originales/2024-2/LAB4/Martes 19／11/Ejercicios1/p7.cpp,material-de-apoyo/arboles/material_original/Ejercicios1/p7.cpp,ec67a1307e601d9a722c58887b76e03f
+originales/2024-2/LAB4/Martes 19／11/Ejercicios1/p8.cpp,material-de-apoyo/arboles/material_original/Ejercicios1/p8.cpp,fe39a96a9e0e5c9badef1af060f026cd
+originales/2024-2/LAB4/Martes 19／11/Ejercicios1/p9.cpp,material-de-apoyo/arboles/material_original/Ejercicios1/p9.cpp,045b11d9fbe9f65370c6ee6789a5653b
+originales/2024-2/LAB4/Martes 19／11/Ejercicios2/p1.cpp,material-de-apoyo/arboles/material_original/Ejercicios2/p1.cpp,ed3e7b040770390ad39c236a87ceabe7
+originales/2024-2/LAB4/Martes 19／11/Ejercicios2/p2.cpp,material-de-apoyo/arboles/material_original/Ejercicios2/p2.cpp,dd1d4e7f12fa9c45e4e601aba32945ba
+originales/2024-2/LAB4/Martes 19／11/Ejercicios2/p3.cpp,material-de-apoyo/arboles/material_original/Ejercicios2/p3.cpp,f53a92ee1dbb926411ba5032c6a60b96
+originales/2024-2/LAB4/Martes 19／11/Ejercicios2/p4.cpp,material-de-apoyo/arboles/material_original/Ejercicios2/p4.cpp,f3d467775b9daea65c66fe87ef70e519
+originales/2025-0/Semana 1 - Fuerza Bruta/SESIÓN 1/Copia de main.cpp,material-de-apoyo/fuentes-adicionales/2025-0/Semana 1 - Fuerza Bruta/SESIÓN 1/Copia de main.cpp,41db8ebe07681b2a6e4fe757a7a31bb0
+originales/2025-0/Semana 1 - Fuerza Bruta/SESIÓN 2/Copia de P1.cpp,laboratorios/laboratorio-01/2023-1/material_original/variantes/2025-0/Semana 1 - Fuerza Bruta/SESIÓN 2/Copia de P1.cpp,07e3c60753ffd2d47fe7fa49f4020520
+originales/2025-0/Semana 1 - Fuerza Bruta/SESIÓN 2/Copia de datos1.txt,laboratorios/laboratorio-01/2023-1/material_original/datos1.txt,6fafcb893a4d5a8b25cbd17ea8f7e46b
+originales/2025-0/Semana 1 - Fuerza Bruta/SESIÓN 2/Copia de mochila.cpp,laboratorios/laboratorio-01/2023-1/material_original/variantes/2025-0/Semana 1 - Fuerza Bruta/SESIÓN 2/Copia de mochila.cpp,99fac6f3254b5f366ce4e51d03875b99
+originales/2025-0/Semana 2 - Recursión/SESIÓN 1/Copia de hanoi.cpp,material-de-apoyo/fuentes-adicionales/2025-0/Semana 2 - Recursión/SESIÓN 1/Copia de hanoi.cpp,9791605990037702aa21f39e33e23ad4
+originales/2025-0/Semana 2 - Recursión/SESIÓN 1/Copia de main.cpp,material-de-apoyo/fuentes-adicionales/2025-0/Semana 2 - Recursión/SESIÓN 1/Copia de main.cpp,486ed01a8944c76307e7008baa4e8ecf
+originales/2025-0/Semana 2 - Recursión/SESIÓN 2/Copia de 2024-1-Lab1.pdf,laboratorios/laboratorio-01/2024-1/enunciado.pdf,e9a98f4ca300b714801ead53d23c208a
+originales/2025-0/Semana 2 - Recursión/SESIÓN 2/Copia de Cap II - 3 - Estrategias - Divide y Vencerás.pdf,material-de-apoyo/divide-y-venceras/teoria.pdf,29b9bcc8647911b5fdd0da8a28f2f711
+originales/2025-0/Semana 2 - Recursión/SESIÓN 2/Copia de P2.cpp,laboratorios/laboratorio-01/2024-1/material_original/variantes/2025-0/Semana 2 - Recursión/SESIÓN 2/Copia de P2.cpp,253077905c461896bd7b2f747531d10a
+originales/2025-0/Semana 2 - Recursión/SESIÓN 2/Copia de binary_search.cpp,material-de-apoyo/divide-y-venceras/material_original/binary_search.cpp,aee3e75e4adfffb7d7ba1c11660b3a09
+originales/2025-0/Semana 2 - Recursión/SESIÓN 2/Copia de datos2.txt,laboratorios/laboratorio-01/2024-1/material_original/variantes/2024-2/LAB1/Viernes 13／09/Copia de datos2.txt,1d9b6275e88db0b48c158a1c086595b1
+originales/2025-0/Semana 2 - Recursión/SESIÓN 2/Copia de merge_sort.cpp,material-de-apoyo/divide-y-venceras/material_original/merge_sort.cpp,3a60eebcbb534c86c6d0c832179d5694
+"originales/2025-0/Semana 3 - Lista, pilas y colas/SESIÓN 1/Copia de Listas.cpp",material-de-apoyo/listas/material_original/Listas.cpp,d00b99ca84c70a8213d4b55d791b1380
+"originales/2025-0/Semana 3 - Lista, pilas y colas/SESIÓN 1/Copia de Listas.h",material-de-apoyo/listas/material_original/Listas.h,22812c7aca7f229ddb6619447e642a99
+"originales/2025-0/Semana 3 - Lista, pilas y colas/SESIÓN 1/Copia de main.cpp",material-de-apoyo/listas/material_original/main.cpp,c7413ce42c9da926968dae8b2e72f60e
+"originales/2025-0/Semana 3 - Lista, pilas y colas/SESIÓN 2/Copia de Colas.h","material-de-apoyo/fuentes-adicionales/2025-0/Semana 3 - Lista, pilas y colas/SESIÓN 2/Copia de Colas.h",d74cd36ad9655edd04802c13ff50e1f9
+"originales/2025-0/Semana 3 - Lista, pilas y colas/SESIÓN 2/Copia de Listas.cpp",material-de-apoyo/listas/material_original/Listas.cpp,d00b99ca84c70a8213d4b55d791b1380
+"originales/2025-0/Semana 3 - Lista, pilas y colas/SESIÓN 2/Copia de Pilas.cpp","material-de-apoyo/fuentes-adicionales/2025-0/Semana 3 - Lista, pilas y colas/SESIÓN 2/Copia de Pilas.cpp",c457eb164ffb5864fe8e0cb0c5041d42
+"originales/2025-0/Semana 3 - Lista, pilas y colas/SESIÓN 2/Copia de Pilas.h","material-de-apoyo/fuentes-adicionales/2025-0/Semana 3 - Lista, pilas y colas/SESIÓN 2/Copia de Pilas.h",acaefb1d17a3984e31746b0b12ad580b
+"originales/2025-0/Semana 3 - Lista, pilas y colas/SESIÓN 2/Copia de calculadoraPostfija.cpp","material-de-apoyo/fuentes-adicionales/2025-0/Semana 3 - Lista, pilas y colas/SESIÓN 2/Copia de calculadoraPostfija.cpp",7071a1e775df7cbe40dd98823fc45a8b
+"originales/2025-0/Semana 3 - Lista, pilas y colas/SESIÓN 2/Copia de main.cpp","material-de-apoyo/fuentes-adicionales/2025-0/Semana 3 - Lista, pilas y colas/SESIÓN 2/Copia de main.cpp",a7312d01be522b187dd44bfca03a506e
+originales/2025-0/Semana 4 - Árboles/Copia de arbol.cpp,material-de-apoyo/arboles/material_semana4/arbol.cpp,c930ec649e82b35a50716ade82d65055
+originales/2025-0/Semana 4 - Árboles/Copia de arbol.h,material-de-apoyo/arboles/material_semana4/arbol.h,1cc0c2f9247ad5e7c1675ab88e594285
+originales/2025-0/Semana 4 - Árboles/Copia de main.cpp,material-de-apoyo/arboles/material_semana4/main.cpp,78d9bcc87449aa87754d6458341ba560
+originales/2025-0/Semana 4 - Árboles/Copia de p2.cpp,material-de-apoyo/arboles/material_semana4/p2.cpp,13093d966e7aca6f4629e2d383352c5d
+originales/2025-0/Semana 4 - Árboles/Copia de p3.cpp,material-de-apoyo/arboles/material_semana4/p3.cpp,cdb24c934787dbdd4c3f4616bf9bb04b
+originales/2025-0/Semana 4 - Árboles/Copia de p4.cpp,material-de-apoyo/arboles/material_semana4/p4.cpp,bfff46427ef88e8f016578b207916083
+originales/2025-0/Semana 4 - Árboles/Copia de p5.cpp,material-de-apoyo/arboles/material_semana4/p5.cpp,584973ecdbcf28c219c0c3d8b8021c22
+originales/2025-0/Semana 4 - Árboles/Copia de p6.cpp,material-de-apoyo/arboles/material_semana4/p6.cpp,9b15958d74fd93d250fbf559b892c268
+originales/2025-2/EX1/2023-2/Ex1 2023-2 [Enunciado].pdf,examenes/parcial/2023-2/enunciado.pdf,87aba8a76cd5ac4b35bb6b97dde62b26
+originales/2025-2/EX1/2023-2/cola.txt,examenes/parcial/2023-2/material_original/cola.txt,3dbb4ab09cd1b6d132134a33ecac0697
+originales/2025-2/EX1/2023-2/p2.cpp,examenes/parcial/2023-2/material_original/p2.cpp,8e382d2a8552ae767d81e0e5247169c8
+originales/2025-2/EX1/2023-2/p2_copy.cpp,examenes/parcial/2023-2/material_original/p2_copy.cpp,48c55842fc0165d2b74714ba1b86d5f9
+originales/2025-2/EX1/2023-2/pila1.txt,examenes/parcial/2023-2/material_original/pila1.txt,5e8ffe9272fa50b69141e8791b47757b
+originales/2025-2/EX1/2023-2/pila2.txt,examenes/parcial/2023-2/material_original/pila2.txt,faedde233e0a74292e5cd952b48fc1e7
+originales/2025-2/EX1/2025-1/Cola/BibliotecaCola/Cola.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/Cola.h,f03c126e17984c63b12b86a2d24944f1
+originales/2025-2/EX1/2025-1/Cola/BibliotecaCola/ElementoCola.h,material-de-apoyo/fuentes-adicionales/2025-2/EX1/2025-1/Cola/BibliotecaCola/ElementoCola.h,6ba7b27dce0301540cfe9bf3f664a601
+originales/2025-2/EX1/2025-1/Cola/BibliotecaCola/NodoCola.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/NodoCola.h,94b110f5e9e4e73f7ba28aed8266e672
+originales/2025-2/EX1/2025-1/Cola/BibliotecaCola/funcionesCola.cpp,material-de-apoyo/fuentes-adicionales/2025-2/EX1/2025-1/Cola/BibliotecaCola/funcionesCola.cpp,c7d3ac7f5567408545d4972e257f7038
+originales/2025-2/EX1/2025-1/Cola/BibliotecaCola/funcionesCola.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/funcionesCola.h,aa0934bb946f2266ae85a15a77bb7616
+originales/2025-2/EX1/2025-1/Cola/CMakeLists.txt,material-de-apoyo/fuentes-adicionales/2025-2/EX1/2025-1/Cola/CMakeLists.txt,289a11ac3b3d97829845d1af0228bcee
+originales/2025-2/EX1/2025-1/Cola/main.cpp,material-de-apoyo/fuentes-adicionales/2025-2/EX1/2025-1/Cola/main.cpp,87fe54f0ec36e089c14644f7df5f8f47
+originales/2025-2/EX1/2025-1/Cola2/BibliotecaCola/Cola.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/Cola.h,f03c126e17984c63b12b86a2d24944f1
+originales/2025-2/EX1/2025-1/Cola2/BibliotecaCola/ElementoCola.h,material-de-apoyo/fuentes-adicionales/2025-2/EX1/2025-1/Cola/BibliotecaCola/ElementoCola.h,6ba7b27dce0301540cfe9bf3f664a601
+originales/2025-2/EX1/2025-1/Cola2/BibliotecaCola/NodoCola.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/NodoCola.h,94b110f5e9e4e73f7ba28aed8266e672
+originales/2025-2/EX1/2025-1/Cola2/BibliotecaCola/funcionesCola.cpp,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/funcionesCola.cpp,6127fc74dd2a8cc2caa382b65f5e12c2
+originales/2025-2/EX1/2025-1/Cola2/BibliotecaCola/funcionesCola.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/funcionesCola.h,aa0934bb946f2266ae85a15a77bb7616
+originales/2025-2/EX1/2025-1/Cola2/CMakeLists.txt,material-de-apoyo/fuentes-adicionales/2025-2/EX1/2025-1/Cola/CMakeLists.txt,289a11ac3b3d97829845d1af0228bcee
+originales/2025-2/EX1/2025-1/Cola2/main.cpp,material-de-apoyo/fuentes-adicionales/2025-2/EX1/2025-1/Cola/main.cpp,87fe54f0ec36e089c14644f7df5f8f47
+originales/2025-2/EX1/2025-1/ListaSimplementeEnlazada/BibliotecaLista/ElementoLista.h,material-de-apoyo/fuentes-adicionales/2025-2/EX1/2025-1/ListaSimplementeEnlazada/BibliotecaLista/ElementoLista.h,b9e80a11de9ee88598f8673ac38617ad
+originales/2025-2/EX1/2025-1/ListaSimplementeEnlazada/BibliotecaLista/Lista.h,material-de-apoyo/fuentes-adicionales/2025-2/EX1/2025-1/ListaSimplementeEnlazada/BibliotecaLista/Lista.h,394eb5f9ba51b204c8c064ea181268ca
+originales/2025-2/EX1/2025-1/ListaSimplementeEnlazada/BibliotecaLista/NodoLista.h,material-de-apoyo/fuentes-adicionales/2025-2/EX1/2025-1/ListaSimplementeEnlazada/BibliotecaLista/NodoLista.h,ae59ec1c92590e23586a63a0535e7d2a
+originales/2025-2/EX1/2025-1/ListaSimplementeEnlazada/BibliotecaLista/funcionesLista.cpp,material-de-apoyo/fuentes-adicionales/2025-2/EX1/2025-1/ListaSimplementeEnlazada/BibliotecaLista/funcionesLista.cpp,26ebf30808b5062082db230aaf34cedf
+originales/2025-2/EX1/2025-1/ListaSimplementeEnlazada/BibliotecaLista/funcionesLista.h,material-de-apoyo/fuentes-adicionales/2025-2/EX1/2025-1/ListaSimplementeEnlazada/BibliotecaLista/funcionesLista.h,d9a47fa28ee5c38331a6f199ddee8519
+originales/2025-2/EX1/2025-1/ListaSimplementeEnlazada/CMakeLists.txt,material-de-apoyo/fuentes-adicionales/2025-2/EX1/2025-1/ListaSimplementeEnlazada/CMakeLists.txt,90b64a333c04b388a5028119ec88fa32
+originales/2025-2/EX1/2025-1/ListaSimplementeEnlazada/main.cpp,material-de-apoyo/fuentes-adicionales/2025-2/EX1/2025-1/ListaSimplementeEnlazada/main.cpp,bde914eef36742494b57245612d86033
+originales/2025-2/EX1/2025-1/Pila/BibliotecaPila/ElementoPila.h,examenes/parcial/2025-2/material_original/20190213_EX1_P4/BibliotecaPila/ElementoPila.h,8c80b483e2476c9f682da2163f0d6738
+originales/2025-2/EX1/2025-1/Pila/BibliotecaPila/NodoPila.h,laboratorios/laboratorio-05/2025-2/material_original/BibliotecaPila/NodoPila.h,22a12a049333a41bd97cfd44eb80e4fb
+originales/2025-2/EX1/2025-1/Pila/BibliotecaPila/Pila.h,laboratorios/laboratorio-05/2025-2/material_original/BibliotecaPila/Pila.h,419eeb58db01e56b830bf616ecb81d4f
+originales/2025-2/EX1/2025-1/Pila/BibliotecaPila/funcionesPila.cpp,examenes/parcial/2025-2/material_original/20190213_EX1_P4/BibliotecaPila/funcionesPila.cpp,dea15e43134bf73b3e6e4c47a4950375
+originales/2025-2/EX1/2025-1/Pila/BibliotecaPila/funcionesPila.h,laboratorios/laboratorio-05/2025-2/material_original/BibliotecaPila/funcionesPila.h,b3247553b3aef78e432e075bc63b2922
+originales/2025-2/EX1/2025-1/Pila/CMakeLists.txt,material-de-apoyo/fuentes-adicionales/2025-2/EX1/2025-1/Pila/CMakeLists.txt,512e5e1656e24a6ff3e74e8d60eba69b
+originales/2025-2/EX1/2025-1/Pila/main.cpp,material-de-apoyo/fuentes-adicionales/2025-2/EX1/2025-1/Pila/main.cpp,7d1652cc6ef5b34820be05557dddebba
+originales/2025-2/EX1/2025-1/p1a.cpp,material-de-apoyo/fuentes-adicionales/2025-2/EX1/2025-1/p1a.cpp,dbb5ad50acfd911a85c7d7c1eb307d92
+originales/2025-2/EX1/2025-1/p1b.cpp,material-de-apoyo/fuentes-adicionales/2025-2/EX1/2025-1/p1b.cpp,d8fb6492c79d23f579809dd5621eb275
+originales/2025-2/EX1/2025-1/p2b-20242.cpp,material-de-apoyo/fuentes-adicionales/2025-2/EX1/2025-1/p2b-20242.cpp,68c72c59df3673c9fa183130257476b0
+originales/2025-2/EX1/2025-1/p2b.cpp,material-de-apoyo/fuentes-adicionales/2025-2/EX1/2025-1/p2b.cpp,b6a2012575996376509122b2d625c37c
+originales/2025-2/EX1/2025-2/jugadores.csv,material-de-apoyo/fuentes-adicionales/2025-2/EX1/2025-2/jugadores.csv,073a4e603a10abb8e757b37d5f0ee59e
+originales/2025-2/EX1/2025-2/ordenarLista.cpp,material-de-apoyo/fuentes-adicionales/2025-2/EX1/2025-2/ordenarLista.cpp,06727d464cee2de0d354d1ef4aa7ab70
+originales/2025-2/EX1/2025-2/p1.cpp,material-de-apoyo/fuentes-adicionales/2025-2/EX1/2025-2/p1.cpp,de439b34a9cf2b455337b7500c0f9af5
+originales/2025-2/EX1/2025-2/p2.cpp,material-de-apoyo/fuentes-adicionales/2025-2/EX1/2025-2/p2.cpp,459676ee14dced48f01059d38a3308ed
+originales/2025-2/EX1/2025-2/posiciones.txt,material-de-apoyo/fuentes-adicionales/2025-2/EX1/2025-2/posiciones.txt,74f722ab1ce34c6501380658efc0b332
+originales/2025-2/EX2/Ex1 - 2022-2/2022-2_E1.pdf,examenes/parcial/2022-2/enunciado.pdf,c54bbcd5dda45b1ddb733e5b3df25aa9
+originales/2025-2/EX2/Ex1 - 2022-2/p2 (2).cpp,examenes/parcial/2022-2/material_original/p2.cpp,5153bdd0e9de93a980630d1bfc8d5417
+originales/2025-2/EX2/Ex2 - 2024-2/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/ArbolBinario.h,examenes/final/2024-2/material_original/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/ArbolBinario.h,bcc8ea70716da0f9909cc77ff896cb92
+originales/2025-2/EX2/Ex2 - 2024-2/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/ArbolBinario.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/ArbolBinario.h,bcc8ea70716da0f9909cc77ff896cb92
+originales/2025-2/EX2/Ex2 - 2024-2/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/ElementoArbolBinario.h,examenes/final/2024-2/material_original/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/ElementoArbolBinario.h,bb5e0fd5f07b1bd778645b70c1aeb5b7
+originales/2025-2/EX2/Ex2 - 2024-2/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/ElementoArbolBinario.h,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinario/BibliotecaArbolBinario/ElementoArbolBinario.h,bb5e0fd5f07b1bd778645b70c1aeb5b7
+originales/2025-2/EX2/Ex2 - 2024-2/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/NodoArbolBinario.h,examenes/final/2024-2/material_original/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/NodoArbolBinario.h,b88485dd7266b7bb586d532f907e0c89
+originales/2025-2/EX2/Ex2 - 2024-2/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/NodoArbolBinario.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/NodoArbolBinario.h,b88485dd7266b7bb586d532f907e0c89
+originales/2025-2/EX2/Ex2 - 2024-2/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/funcionesArbolBinario.cpp,examenes/final/2024-2/material_original/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/funcionesArbolBinario.cpp,c80ff06cf6b2fdfc925c0aee1dc04292
+originales/2025-2/EX2/Ex2 - 2024-2/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/funcionesArbolBinario.h,examenes/final/2024-2/material_original/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/funcionesArbolBinario.h,4beed328be3c574b610e3fe1b05a6e11
+originales/2025-2/EX2/Ex2 - 2024-2/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/funcionesArbolBinario.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/funcionesArbolBinario.h,4beed328be3c574b610e3fe1b05a6e11
+originales/2025-2/EX2/Ex2 - 2024-2/ArbolBinario/ArbolBinario/BibliotecaCola/Cola.h,examenes/final/2024-2/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/Cola.h,f03c126e17984c63b12b86a2d24944f1
+originales/2025-2/EX2/Ex2 - 2024-2/ArbolBinario/ArbolBinario/BibliotecaCola/Cola.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/Cola.h,f03c126e17984c63b12b86a2d24944f1
+originales/2025-2/EX2/Ex2 - 2024-2/ArbolBinario/ArbolBinario/BibliotecaCola/ElementoCola.h,examenes/final/2024-2/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/ElementoCola.h,4129c6106c7503d7a1f2336145b1f8b6
+originales/2025-2/EX2/Ex2 - 2024-2/ArbolBinario/ArbolBinario/BibliotecaCola/ElementoCola.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/ElementoCola.h,4129c6106c7503d7a1f2336145b1f8b6
+originales/2025-2/EX2/Ex2 - 2024-2/ArbolBinario/ArbolBinario/BibliotecaCola/NodoCola.h,examenes/final/2024-2/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/NodoCola.h,94b110f5e9e4e73f7ba28aed8266e672
+originales/2025-2/EX2/Ex2 - 2024-2/ArbolBinario/ArbolBinario/BibliotecaCola/NodoCola.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/NodoCola.h,94b110f5e9e4e73f7ba28aed8266e672
+originales/2025-2/EX2/Ex2 - 2024-2/ArbolBinario/ArbolBinario/BibliotecaCola/funcionesCola.cpp,examenes/final/2024-2/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/funcionesCola.cpp,6127fc74dd2a8cc2caa382b65f5e12c2
+originales/2025-2/EX2/Ex2 - 2024-2/ArbolBinario/ArbolBinario/BibliotecaCola/funcionesCola.cpp,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/funcionesCola.cpp,6127fc74dd2a8cc2caa382b65f5e12c2
+originales/2025-2/EX2/Ex2 - 2024-2/ArbolBinario/ArbolBinario/BibliotecaCola/funcionesCola.h,examenes/final/2024-2/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/funcionesCola.h,aa0934bb946f2266ae85a15a77bb7616
+originales/2025-2/EX2/Ex2 - 2024-2/ArbolBinario/ArbolBinario/BibliotecaCola/funcionesCola.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/funcionesCola.h,aa0934bb946f2266ae85a15a77bb7616
+originales/2025-2/EX2/Ex2 - 2024-2/ArbolBinario/ArbolBinario/CMakeLists.txt,examenes/final/2024-2/material_original/ArbolBinario/ArbolBinario/CMakeLists.txt,65a6ebc850c5719177103828356e9700
+originales/2025-2/EX2/Ex2 - 2024-2/ArbolBinario/ArbolBinario/CMakeLists.txt,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/CMakeLists.txt,65a6ebc850c5719177103828356e9700
+originales/2025-2/EX2/Ex2 - 2024-2/ArbolBinario/ArbolBinario/main.cpp,examenes/final/2024-2/material_original/ArbolBinario/ArbolBinario/main.cpp,ade098d6c5d0fc9186ff53e59bd9e5d0
+originales/2025-2/EX2/Ex2 - 2024-2/ArbolBinario/ArbolBinario/main.cpp,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/main.cpp,ade098d6c5d0fc9186ff53e59bd9e5d0
+originales/2025-2/EX2/Ex2 - 2024-2/Copia de p1b.cpp,examenes/final/2024-2/material_original/p1b.cpp,29ecec9f75ff49fd1aeb6cd6036ec433
+originales/2025-2/EX2/Ex2 - 2024-2/Copia de p2a.cpp,examenes/final/2024-2/material_original/p2a.cpp,b4f39cd949d5ae6bbbe4a9ea39090bde
+originales/2025-2/EX2/Ex2 - 2024-2/EX2-2024_2.pdf,examenes/final/2024-2/enunciado.pdf,de19810484c3951784c380357182a33c
+originales/2025-2/EX2/Ex2 - 2024-2/p1a.cpp,examenes/final/2024-2/material_original/p1a.cpp,ed9dfacd97f3d6d295095f7049cfa7b8
+originales/2025-2/EX2/Ex2 - 2025-1/ArbolBinario/BibliotecaArbolBinario/ArbolBinario.h,examenes/final/2025-1/material_original/ArbolBinario/BibliotecaArbolBinario/ArbolBinario.h,bcc8ea70716da0f9909cc77ff896cb92
+originales/2025-2/EX2/Ex2 - 2025-1/ArbolBinario/BibliotecaArbolBinario/ArbolBinario.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/ArbolBinario.h,bcc8ea70716da0f9909cc77ff896cb92
+originales/2025-2/EX2/Ex2 - 2025-1/ArbolBinario/BibliotecaArbolBinario/ElementoArbolBinario.h,examenes/final/2025-1/material_original/ArbolBinario/BibliotecaArbolBinario/ElementoArbolBinario.h,48703a37dac5b49e75c22da01a7f394f
+originales/2025-2/EX2/Ex2 - 2025-1/ArbolBinario/BibliotecaArbolBinario/NodoArbolBinario.h,examenes/final/2025-1/material_original/ArbolBinario/BibliotecaArbolBinario/NodoArbolBinario.h,ea6a9040ca23ca4b3daf50aaa8c93b96
+originales/2025-2/EX2/Ex2 - 2025-1/ArbolBinario/BibliotecaArbolBinario/NodoArbolBinario.h,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinario/BibliotecaArbolBinario/NodoArbolBinario.h,ea6a9040ca23ca4b3daf50aaa8c93b96
+originales/2025-2/EX2/Ex2 - 2025-1/ArbolBinario/BibliotecaArbolBinario/funcionesArbolBinario.cpp,examenes/final/2025-1/material_original/ArbolBinario/BibliotecaArbolBinario/funcionesArbolBinario.cpp,cac65a15df990b7dad906de108dc1086
+originales/2025-2/EX2/Ex2 - 2025-1/ArbolBinario/BibliotecaArbolBinario/funcionesArbolBinario.h,examenes/final/2025-1/material_original/ArbolBinario/BibliotecaArbolBinario/funcionesArbolBinario.h,4beed328be3c574b610e3fe1b05a6e11
+originales/2025-2/EX2/Ex2 - 2025-1/ArbolBinario/BibliotecaArbolBinario/funcionesArbolBinario.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/funcionesArbolBinario.h,4beed328be3c574b610e3fe1b05a6e11
+originales/2025-2/EX2/Ex2 - 2025-1/ArbolBinario/BibliotecaCola/Cola.h,examenes/final/2025-1/material_original/ArbolBinario/BibliotecaCola/Cola.h,b8157f66922e2d1ce06561a42cb84e1d
+originales/2025-2/EX2/Ex2 - 2025-1/ArbolBinario/BibliotecaCola/Cola.h,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinario/BibliotecaCola/Cola.h,b8157f66922e2d1ce06561a42cb84e1d
+originales/2025-2/EX2/Ex2 - 2025-1/ArbolBinario/BibliotecaCola/ElementoCola.h,examenes/final/2025-1/material_original/ArbolBinario/BibliotecaCola/ElementoCola.h,5b9fafae77b7b90f7041952840e4fcce
+originales/2025-2/EX2/Ex2 - 2025-1/ArbolBinario/BibliotecaCola/ElementoCola.h,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinario/BibliotecaCola/ElementoCola.h,5b9fafae77b7b90f7041952840e4fcce
+originales/2025-2/EX2/Ex2 - 2025-1/ArbolBinario/BibliotecaCola/NodoCola.h,examenes/final/2025-1/material_original/ArbolBinario/BibliotecaCola/NodoCola.h,94b110f5e9e4e73f7ba28aed8266e672
+originales/2025-2/EX2/Ex2 - 2025-1/ArbolBinario/BibliotecaCola/NodoCola.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/NodoCola.h,94b110f5e9e4e73f7ba28aed8266e672
+originales/2025-2/EX2/Ex2 - 2025-1/ArbolBinario/BibliotecaCola/funcionesCola.cpp,examenes/final/2025-1/material_original/ArbolBinario/BibliotecaCola/funcionesCola.cpp,3f113d053969921fc7eba3f7609fab09
+originales/2025-2/EX2/Ex2 - 2025-1/ArbolBinario/BibliotecaCola/funcionesCola.cpp,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinario/BibliotecaCola/funcionesCola.cpp,3f113d053969921fc7eba3f7609fab09
+originales/2025-2/EX2/Ex2 - 2025-1/ArbolBinario/BibliotecaCola/funcionesCola.h,examenes/final/2025-1/material_original/ArbolBinario/BibliotecaCola/funcionesCola.h,aa0934bb946f2266ae85a15a77bb7616
+originales/2025-2/EX2/Ex2 - 2025-1/ArbolBinario/BibliotecaCola/funcionesCola.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/funcionesCola.h,aa0934bb946f2266ae85a15a77bb7616
+originales/2025-2/EX2/Ex2 - 2025-1/ArbolBinario/CMakeLists.txt,examenes/final/2025-1/material_original/ArbolBinario/CMakeLists.txt,65a6ebc850c5719177103828356e9700
+originales/2025-2/EX2/Ex2 - 2025-1/ArbolBinario/CMakeLists.txt,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/CMakeLists.txt,65a6ebc850c5719177103828356e9700
+originales/2025-2/EX2/Ex2 - 2025-1/ArbolBinario/main.cpp,examenes/final/2025-1/material_original/ArbolBinario/main.cpp,ade098d6c5d0fc9186ff53e59bd9e5d0
+originales/2025-2/EX2/Ex2 - 2025-1/ArbolBinario/main.cpp,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/main.cpp,ade098d6c5d0fc9186ff53e59bd9e5d0
+originales/2025-2/EX2/Ex2 - 2025-1/Examen 2 (2).pdf,examenes/final/2025-1/enunciado.pdf,64727a77dd8189c824e34eb49c33bb10
+originales/2025-2/EX2/Ex2 - 2025-1/p3.cpp,examenes/final/2025-1/material_original/p3.cpp,a478271a7a3e04ff98ac1c007b110ea5
+originales/2025-2/EX2/Ex2 - 2025-1/p4.cpp,examenes/final/2025-1/material_original/p4.cpp,ffedf8163aa99c7e3f797f7c5f0e55da
+originales/2025-2/EX2/Lab4 - 2025-2/2025-2_Lab4.pdf,laboratorios/laboratorio-04/2025-2/enunciado.pdf,3b0bc5acff655efcbb5903ab1e619cb2
+originales/2025-2/EX2/Lab4 - 2025-2/ArbolBinario/BibliotecaArbolBinario/ArbolBinario.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/ArbolBinario.h,bcc8ea70716da0f9909cc77ff896cb92
+originales/2025-2/EX2/Lab4 - 2025-2/ArbolBinario/BibliotecaArbolBinario/ElementoArbolBinario.h,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinario/BibliotecaArbolBinario/ElementoArbolBinario.h,bb5e0fd5f07b1bd778645b70c1aeb5b7
+originales/2025-2/EX2/Lab4 - 2025-2/ArbolBinario/BibliotecaArbolBinario/NodoArbolBinario.h,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinario/BibliotecaArbolBinario/NodoArbolBinario.h,ea6a9040ca23ca4b3daf50aaa8c93b96
+originales/2025-2/EX2/Lab4 - 2025-2/ArbolBinario/BibliotecaArbolBinario/funcionesArbolBinario.cpp,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinario/BibliotecaArbolBinario/funcionesArbolBinario.cpp,d079a0585bd775662b7ce5ba85b3802f
+originales/2025-2/EX2/Lab4 - 2025-2/ArbolBinario/BibliotecaArbolBinario/funcionesArbolBinario.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/funcionesArbolBinario.h,4beed328be3c574b610e3fe1b05a6e11
+originales/2025-2/EX2/Lab4 - 2025-2/ArbolBinario/BibliotecaCola/Cola.h,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinario/BibliotecaCola/Cola.h,b8157f66922e2d1ce06561a42cb84e1d
+originales/2025-2/EX2/Lab4 - 2025-2/ArbolBinario/BibliotecaCola/ElementoCola.h,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinario/BibliotecaCola/ElementoCola.h,5b9fafae77b7b90f7041952840e4fcce
+originales/2025-2/EX2/Lab4 - 2025-2/ArbolBinario/BibliotecaCola/NodoCola.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/NodoCola.h,94b110f5e9e4e73f7ba28aed8266e672
+originales/2025-2/EX2/Lab4 - 2025-2/ArbolBinario/BibliotecaCola/funcionesCola.cpp,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinario/BibliotecaCola/funcionesCola.cpp,3f113d053969921fc7eba3f7609fab09
+originales/2025-2/EX2/Lab4 - 2025-2/ArbolBinario/BibliotecaCola/funcionesCola.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/funcionesCola.h,aa0934bb946f2266ae85a15a77bb7616
+originales/2025-2/EX2/Lab4 - 2025-2/ArbolBinario/CMakeLists.txt,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/CMakeLists.txt,65a6ebc850c5719177103828356e9700
+originales/2025-2/EX2/Lab4 - 2025-2/ArbolBinario/main.cpp,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/main.cpp,ade098d6c5d0fc9186ff53e59bd9e5d0
+originales/2025-2/EX2/Lab4 - 2025-2/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/ArbolBinarioBusqueda.h,laboratorios/laboratorio-05/2025-2/material_original/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/ArbolBinarioBusqueda.h,86d39c5d2074011406f7894ffcb5a059
+originales/2025-2/EX2/Lab4 - 2025-2/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/ElementoArbolBinarioBusqueda.h,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/ElementoArbolBinarioBusqueda.h,e1c0463d598a32cb82e8755c11be51fb
+originales/2025-2/EX2/Lab4 - 2025-2/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/NodoArbolBinarioBusqueda.h,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/NodoArbolBinarioBusqueda.h,ca6993b5a8480a7bc794da2954ee73bd
+originales/2025-2/EX2/Lab4 - 2025-2/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/funcionesArbolBinarioBusqueda.cpp,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/funcionesArbolBinarioBusqueda.cpp,dc7faeb7e4bb3dc32218e2e3df045938
+originales/2025-2/EX2/Lab4 - 2025-2/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/funcionesArbolBinarioBusqueda.h,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/funcionesArbolBinarioBusqueda.h,827671f4fae70b340d584fa757657e7f
+originales/2025-2/EX2/Lab4 - 2025-2/ArbolBinarioBusqueda/CMakeLists.txt,laboratorios/laboratorio-05/2025-2/material_original/ArbolBinarioBusqueda/CMakeLists.txt,dc9d7b435b56db5f3068b38802a0ac5a
+originales/2025-2/EX2/Lab4 - 2025-2/ArbolBinarioBusqueda/main.cpp,laboratorios/laboratorio-05/2025-2/material_original/ArbolBinarioBusqueda/main.cpp,efd30fc03a60f0799593927fc50a6a38
+originales/2025-2/EX2/Lab4 - 2025-2/p2.cpp,laboratorios/laboratorio-04/2025-2/material_original/p2.cpp,526f4d9842c9655f91edb456d2abfac8
+originales/2025-2/EX2/Lab5 - 2025-1/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/ArbolBinario.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/ArbolBinario.h,bcc8ea70716da0f9909cc77ff896cb92
+originales/2025-2/EX2/Lab5 - 2025-1/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/ElementoArbolBinario.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/ElementoArbolBinario.h,71f777e600f68d18d75c94d7c03102ad
+originales/2025-2/EX2/Lab5 - 2025-1/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/NodoArbolBinario.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/NodoArbolBinario.h,b88485dd7266b7bb586d532f907e0c89
+originales/2025-2/EX2/Lab5 - 2025-1/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/funcionesArbolBinario.cpp,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/funcionesArbolBinario.cpp,bacf169a97d12ad6cd1998a96b179696
+originales/2025-2/EX2/Lab5 - 2025-1/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/funcionesArbolBinario.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/funcionesArbolBinario.h,4beed328be3c574b610e3fe1b05a6e11
+originales/2025-2/EX2/Lab5 - 2025-1/ArbolBinario/ArbolBinario/BibliotecaCola/Cola.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/Cola.h,f03c126e17984c63b12b86a2d24944f1
+originales/2025-2/EX2/Lab5 - 2025-1/ArbolBinario/ArbolBinario/BibliotecaCola/ElementoCola.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/ElementoCola.h,4129c6106c7503d7a1f2336145b1f8b6
+originales/2025-2/EX2/Lab5 - 2025-1/ArbolBinario/ArbolBinario/BibliotecaCola/NodoCola.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/NodoCola.h,94b110f5e9e4e73f7ba28aed8266e672
+originales/2025-2/EX2/Lab5 - 2025-1/ArbolBinario/ArbolBinario/BibliotecaCola/funcionesCola.cpp,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/funcionesCola.cpp,6127fc74dd2a8cc2caa382b65f5e12c2
+originales/2025-2/EX2/Lab5 - 2025-1/ArbolBinario/ArbolBinario/BibliotecaCola/funcionesCola.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/funcionesCola.h,aa0934bb946f2266ae85a15a77bb7616
+originales/2025-2/EX2/Lab5 - 2025-1/ArbolBinario/ArbolBinario/CMakeLists.txt,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/CMakeLists.txt,65a6ebc850c5719177103828356e9700
+originales/2025-2/EX2/Lab5 - 2025-1/ArbolBinario/ArbolBinario/main.cpp,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/main.cpp,ade098d6c5d0fc9186ff53e59bd9e5d0
+originales/2025-2/EX2/Lab5 - 2025-1/Laboratorio 5 (1).pdf,laboratorios/laboratorio-05/2025-1/enunciado.pdf,925b722c55d2a685bdf25fc032385f10
+originales/2025-2/EX2/Lab5 - 2025-1/p1.cpp,laboratorios/laboratorio-05/2025-1/material_original/p1.cpp,db97dceefd4553296c728e600efe11d9
+originales/2025-2/EX2/Lab5 - 2025-2/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/ArbolBinarioBusqueda.h,laboratorios/laboratorio-05/2025-2/material_original/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/ArbolBinarioBusqueda.h,86d39c5d2074011406f7894ffcb5a059
+originales/2025-2/EX2/Lab5 - 2025-2/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/ElementoArbolBinarioBusqueda.h,laboratorios/laboratorio-05/2025-2/material_original/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/ElementoArbolBinarioBusqueda.h,7fa95238ed0b7220a1d8de22eba719bb
+originales/2025-2/EX2/Lab5 - 2025-2/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/NodoArbolBinarioBusqueda.h,laboratorios/laboratorio-05/2025-2/material_original/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/NodoArbolBinarioBusqueda.h,17a487f69f9a3f2800185c8ad9f4fe3a
+originales/2025-2/EX2/Lab5 - 2025-2/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/funcionesArbolBinarioBusqueda.cpp,laboratorios/laboratorio-05/2025-2/material_original/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/funcionesArbolBinarioBusqueda.cpp,af899d86fbdf2f46b242939c69ffb05e
+originales/2025-2/EX2/Lab5 - 2025-2/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/funcionesArbolBinarioBusqueda.h,laboratorios/laboratorio-05/2025-2/material_original/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/funcionesArbolBinarioBusqueda.h,6950510c131920f4089813b25e9492e6
+originales/2025-2/EX2/Lab5 - 2025-2/ArbolBinarioBusqueda/CMakeLists.txt,laboratorios/laboratorio-05/2025-2/material_original/ArbolBinarioBusqueda/CMakeLists.txt,dc9d7b435b56db5f3068b38802a0ac5a
+originales/2025-2/EX2/Lab5 - 2025-2/ArbolBinarioBusqueda/main.cpp,laboratorios/laboratorio-05/2025-2/material_original/ArbolBinarioBusqueda/main.cpp,efd30fc03a60f0799593927fc50a6a38
+originales/2025-2/EX2/Lab5 - 2025-2/BibliotecaPila/ElementoPila.h,laboratorios/laboratorio-05/2025-2/material_original/BibliotecaPila/ElementoPila.h,35afdda716816695827472aa925728b7
+originales/2025-2/EX2/Lab5 - 2025-2/BibliotecaPila/NodoPila.h,laboratorios/laboratorio-05/2025-2/material_original/BibliotecaPila/NodoPila.h,22a12a049333a41bd97cfd44eb80e4fb
+originales/2025-2/EX2/Lab5 - 2025-2/BibliotecaPila/Pila.h,laboratorios/laboratorio-05/2025-2/material_original/BibliotecaPila/Pila.h,419eeb58db01e56b830bf616ecb81d4f
+originales/2025-2/EX2/Lab5 - 2025-2/BibliotecaPila/funcionesPila.cpp,laboratorios/laboratorio-05/2025-2/material_original/BibliotecaPila/funcionesPila.cpp,982db4d614d3b117f29ea0fa2f5cfedc
+originales/2025-2/EX2/Lab5 - 2025-2/BibliotecaPila/funcionesPila.h,laboratorios/laboratorio-05/2025-2/material_original/BibliotecaPila/funcionesPila.h,b3247553b3aef78e432e075bc63b2922
+originales/2025-2/EX2/Lab5 - 2025-2/Laboratorio 5 (1).pdf,laboratorios/laboratorio-05/2025-2/enunciado.pdf,ffe0ed21f5319933939d6934439ea6c4
+originales/2025-2/EX2/Lab5 - 2025-2/p2.cpp,laboratorios/laboratorio-05/2025-2/material_original/p2.cpp,2983fd8d15eacb66133588c7b08ac02f
+originales/2025-2/LAB1/2023-1/Laboratorio 1.pdf,laboratorios/laboratorio-01/2023-1/enunciado.pdf,1b73774c243cef9fe26f2e509d420b5f
+originales/2025-2/LAB1/2023-1/P1.cpp,laboratorios/laboratorio-01/2023-1/material_original/P1.cpp,fbbe7433222739ed2390dea035ebf300
+originales/2025-2/LAB1/2023-1/P2.cpp,laboratorios/laboratorio-01/2023-1/material_original/P2.cpp,0db37bdd33c41d3a7dd14e3adb510491
+originales/2025-2/LAB1/2023-1/datos1.txt,laboratorios/laboratorio-01/2023-1/material_original/datos1.txt,6fafcb893a4d5a8b25cbd17ea8f7e46b
+originales/2025-2/LAB1/2023-1/datos2.txt,laboratorios/laboratorio-01/2023-1/material_original/datos2.txt,656e7795c9aeb89041810aae29a12f6d
+originales/2025-2/LAB1/2025-1/Lab1/Laboratorio 1.pdf,laboratorios/laboratorio-01/2025-1/enunciado.pdf,a72914d560f18835a8fe58d06380fe3b
+originales/2025-2/LAB1/2025-1/Lab1/p1.cpp,laboratorios/laboratorio-01/2025-1/material_original/p1.cpp,5db5b52649a7c20488915d9cc10051c0
+originales/2025-2/LAB1/2025-1/Lab1/p1.txt,laboratorios/laboratorio-01/2025-1/material_original/p1.txt,c5a0ab62eb4a109b08368ac4286489fa
+originales/2025-2/LAB1/2025-1/Lab1/p2.cpp,laboratorios/laboratorio-01/2025-1/material_original/p2.cpp,3943b823bc6cd9b621ccce1e38ccbfb5
+originales/2025-2/LAB1/2025-1/Lab1/p2.txt,laboratorios/laboratorio-01/2025-1/material_original/p2.txt,6f187be84421b8740b584a601e50fa31
+originales/2025-2/LAB1/2025-1/Lab1/p2b.cpp,laboratorios/laboratorio-01/2025-1/material_original/p2b.cpp,6504ed304200d9d5f5ec166c58d8c7c1
+originales/2025-2/LAB1/2025-1/Lab2/Laboratorio 2.pdf,laboratorios/laboratorio-02/2025-1/enunciado.pdf,ef26420cc076d57855ba94c90468188a
+originales/2025-2/LAB1/2025-1/Lab2/p2.cpp,laboratorios/laboratorio-02/2025-1/material_original/variantes/2025-2/LAB1/2025-1/Lab2/p2.cpp,20ecb76124b843aaab1743d6e0118f79
+originales/2025-2/LAB1/2025-1/Lab2/p2.txt,laboratorios/laboratorio-02/2025-1/material_original/variantes/2025-2/LAB1/2025-1/Lab2/p2.txt,e75e754fd742e94acdaf6fe748e6fe72
+originales/2025-2/LAB2/2023-1/A.txt,laboratorios/laboratorio-03/2023-1/material_original/A.txt,1d9d626d94b35709397517ce47cde7e0
+originales/2025-2/LAB2/2023-1/B.txt,laboratorios/laboratorio-03/2023-1/material_original/B.txt,e24b466410ee9b6d24a601c13c67abb5
+originales/2025-2/LAB2/2023-1/C.txt,laboratorios/laboratorio-03/2023-1/material_original/C.txt,6b0d404ff66fee5ab8f350f359708d17
+originales/2025-2/LAB2/2023-1/D.txt,laboratorios/laboratorio-03/2023-1/material_original/D.txt,2a7ac65fe1fbeab33ddcd46a4d24fa9b
+originales/2025-2/LAB2/2023-1/E.txt,laboratorios/laboratorio-03/2023-1/material_original/E.txt,3f6d56de0e13db6506b996b0d44accf9
+originales/2025-2/LAB2/2023-1/Laboratorio 3.pdf,laboratorios/laboratorio-03/2023-1/enunciado.pdf,b3925a7c0da861324add3c55b00a0262
+originales/2025-2/LAB2/2023-1/kupa1.txt,laboratorios/laboratorio-03/2023-1/material_original/kupa1.txt,5749fd3861b70135b131e425dd97cb43
+originales/2025-2/LAB2/2023-1/kupa2.txt,laboratorios/laboratorio-03/2023-1/material_original/kupa2.txt,97f4047e6bcf1088766d957e1991b832
+originales/2025-2/LAB2/2023-1/p1.cpp,laboratorios/laboratorio-03/2023-1/material_original/p1.cpp,d24c16950b7e6e43e189ef7837fe2c40
+originales/2025-2/LAB2/2023-1/p2.cpp,laboratorios/laboratorio-03/2023-1/material_original/p2.cpp,10c504cd5ecc5dbdebc52984e2170af8
+originales/2025-2/LAB2/2024-1/2024-1 Lab2.pdf,laboratorios/laboratorio-02/2024-1/enunciado.pdf,2c1f637fc8cfaac64a8e0c3fdc15f1e6
+originales/2025-2/LAB2/2024-1/datos1.txt,laboratorios/laboratorio-02/2024-1/material_original/datos1.txt,0a9754856c3a15df9c62d6aa72b7b975
+originales/2025-2/LAB2/2024-1/datos2.txt,laboratorios/laboratorio-02/2024-1/material_original/datos2.txt,a82f75eeb8bdd5212c2a5c3d3b4cadd2
+originales/2025-2/LAB2/2024-1/p1.cpp,laboratorios/laboratorio-02/2024-1/material_original/p1.cpp,8fa90feed1e95853dd7c609119b7c717
+originales/2025-2/LAB2/2024-1/p2.cpp,laboratorios/laboratorio-02/2024-1/material_original/p2.cpp,0389a3fc8077a18c4c133ec6b7f4100f
+originales/2025-2/LAB2/2024-2/2024-2 Lab2.pdf,laboratorios/laboratorio-02/2024-2/enunciado.pdf,3011b0d75cab5814cfcec30b41f5d52f
+originales/2025-2/LAB2/2024-2/datos.csv,laboratorios/laboratorio-02/2024-2/material_original/variantes/2025-2/LAB2/2024-2/datos.csv,753bb68af45722acd530ff4d5661e962
+originales/2025-2/LAB2/2024-2/main.cpp,laboratorios/laboratorio-02/2024-2/material_original/main.cpp,0523190eb14dbbcc75f75c34d227b67b
+originales/2025-2/LAB2/2024-2/p2.cpp,laboratorios/laboratorio-02/2024-2/material_original/p2.cpp,a2a55ddb9831f5137c7947b228ae2752
+originales/2025-2/LAB3/2022-2/p2.cpp,examenes/parcial/2022-2/material_original/p2.cpp,5153bdd0e9de93a980630d1bfc8d5417
+originales/2025-2/LAB3/2023-1/A.txt,laboratorios/laboratorio-03/2023-1/material_original/A.txt,1d9d626d94b35709397517ce47cde7e0
+originales/2025-2/LAB3/2023-1/B.txt,laboratorios/laboratorio-03/2023-1/material_original/B.txt,e24b466410ee9b6d24a601c13c67abb5
+originales/2025-2/LAB3/2023-1/C.txt,laboratorios/laboratorio-03/2023-1/material_original/C.txt,6b0d404ff66fee5ab8f350f359708d17
+originales/2025-2/LAB3/2023-1/D.txt,laboratorios/laboratorio-03/2023-1/material_original/D.txt,2a7ac65fe1fbeab33ddcd46a4d24fa9b
+originales/2025-2/LAB3/2023-1/E.txt,laboratorios/laboratorio-03/2023-1/material_original/E.txt,3f6d56de0e13db6506b996b0d44accf9
+originales/2025-2/LAB3/2023-1/bibliotecas/ElementoLista.h,laboratorios/laboratorio-03/2023-1/material_original/variantes/2025-2/LAB3/2023-1/bibliotecas/ElementoLista.h,9a18a98ae50a7b01591a3ec617f56048
+originales/2025-2/LAB3/2023-1/bibliotecas/Lista.h,laboratorios/laboratorio-03/2023-1/material_original/variantes/2025-2/LAB3/2023-1/bibliotecas/Lista.h,62c08860792d8554457e773da5c6237d
+originales/2025-2/LAB3/2023-1/bibliotecas/NodoLista.h,material-de-apoyo/fuentes-adicionales/2025-2/EX1/2025-1/ListaSimplementeEnlazada/BibliotecaLista/NodoLista.h,ae59ec1c92590e23586a63a0535e7d2a
+originales/2025-2/LAB3/2023-1/bibliotecas/funcionesLista.cpp,laboratorios/laboratorio-03/2023-1/material_original/variantes/2025-2/LAB3/2023-1/bibliotecas/funcionesLista.cpp,10afacdac57b09b36479f8daecde3e28
+originales/2025-2/LAB3/2023-1/bibliotecas/funcionesLista.h,material-de-apoyo/fuentes-adicionales/2025-2/EX1/2025-1/ListaSimplementeEnlazada/BibliotecaLista/funcionesLista.h,d9a47fa28ee5c38331a6f199ddee8519
+originales/2025-2/LAB3/2023-1/kupa1.txt,laboratorios/laboratorio-03/2023-1/material_original/kupa1.txt,5749fd3861b70135b131e425dd97cb43
+originales/2025-2/LAB3/2023-1/kupa2.txt,laboratorios/laboratorio-03/2023-1/material_original/kupa2.txt,97f4047e6bcf1088766d957e1991b832
+originales/2025-2/LAB3/2023-1/p1.cpp,laboratorios/laboratorio-03/2023-1/material_original/p1.cpp,d24c16950b7e6e43e189ef7837fe2c40
+originales/2025-2/LAB3/2023-1/p2.cpp,laboratorios/laboratorio-03/2023-1/material_original/variantes/2025-2/LAB3/2023-1/p2.cpp,cbe922d7b577da2a242f7fd637debfc2
+originales/2025-2/LAB3/2024-1/Ex1 2024-1.pdf,examenes/parcial/2024-1/enunciado.pdf,24962446d34cb30ee55767a25b3336dc
+originales/2025-2/LAB3/2024-1/p1 copy.cpp,examenes/parcial/2024-1/material_original/p1 copy.cpp,e643e0317e49d630330e399357ea210d
+originales/2025-2/LAB3/2024-1/p1.cpp,examenes/parcial/2024-1/material_original/p1.cpp,31987beaf952457b513c181fc8bfecd6
+originales/2025-2/LAB3/2024-1/p1.txt,examenes/parcial/2024-1/material_original/p1.txt,bc40a0e613097f7c1398063311b42b19
+originales/2025-2/LAB3/2024-1/p1Formula.txt,examenes/parcial/2024-1/material_original/p1Formula.txt,e6f34105e7c72b11efe554ba82ce58a0
+originales/2025-2/LAB3/2024-1/p2.cpp,examenes/parcial/2024-1/material_original/p2.cpp,e028a62af9aafe8d18f26602dead4775
+originales/2025-2/LAB3/2024-1/p2.txt,examenes/parcial/2024-1/material_original/p2.txt,3b7cc049dddf9ff976b0fd05e1f5c037
+originales/2025-2/LAB3/2024-2/lab2-p1.cpp,laboratorios/laboratorio-02/2024-2/material_original/variantes/2025-2/LAB3/2024-2/lab2-p1.cpp,8f3debcc15496a4c245779af596c981a
+originales/2025-2/LAB3/2024-2/lab2-p1.txt,laboratorios/laboratorio-02/2024-2/material_original/variantes/2025-2/LAB3/2024-2/lab2-p1.txt,5c49a93e9611b1f4c37f479b0018701e
+originales/2025-2/LAB3/2025-2/20190213_EX1_P4/BibliotecaPila/ElementoPila.h,examenes/parcial/2025-2/material_original/20190213_EX1_P4/BibliotecaPila/ElementoPila.h,8c80b483e2476c9f682da2163f0d6738
+originales/2025-2/LAB3/2025-2/20190213_EX1_P4/BibliotecaPila/NodoPila.h,examenes/parcial/2025-2/material_original/20190213_EX1_P4/BibliotecaPila/NodoPila.h,22a12a049333a41bd97cfd44eb80e4fb
+originales/2025-2/LAB3/2025-2/20190213_EX1_P4/BibliotecaPila/NodoPila.h,laboratorios/laboratorio-05/2025-2/material_original/BibliotecaPila/NodoPila.h,22a12a049333a41bd97cfd44eb80e4fb
+originales/2025-2/LAB3/2025-2/20190213_EX1_P4/BibliotecaPila/Pila.h,examenes/parcial/2025-2/material_original/20190213_EX1_P4/BibliotecaPila/Pila.h,419eeb58db01e56b830bf616ecb81d4f
+originales/2025-2/LAB3/2025-2/20190213_EX1_P4/BibliotecaPila/Pila.h,laboratorios/laboratorio-05/2025-2/material_original/BibliotecaPila/Pila.h,419eeb58db01e56b830bf616ecb81d4f
+originales/2025-2/LAB3/2025-2/20190213_EX1_P4/BibliotecaPila/funcionesPila.cpp,examenes/parcial/2025-2/material_original/20190213_EX1_P4/BibliotecaPila/funcionesPila.cpp,dea15e43134bf73b3e6e4c47a4950375
+originales/2025-2/LAB3/2025-2/20190213_EX1_P4/BibliotecaPila/funcionesPila.h,examenes/parcial/2025-2/material_original/20190213_EX1_P4/BibliotecaPila/funcionesPila.h,b3247553b3aef78e432e075bc63b2922
+originales/2025-2/LAB3/2025-2/20190213_EX1_P4/BibliotecaPila/funcionesPila.h,laboratorios/laboratorio-05/2025-2/material_original/BibliotecaPila/funcionesPila.h,b3247553b3aef78e432e075bc63b2922
+originales/2025-2/LAB3/2025-2/20190213_EX1_P4/CMakeLists.txt,examenes/parcial/2025-2/material_original/20190213_EX1_P4/CMakeLists.txt,b2c4f3ca06c9f00f29f5c8e25f5bc0b1
+originales/2025-2/LAB3/2025-2/20190213_EX1_P4/FuncionesAuxiliares.cpp,examenes/parcial/2025-2/material_original/20190213_EX1_P4/FuncionesAuxiliares.cpp,9a33e9d5068c4d34a32dbe1e276a8903
+originales/2025-2/LAB3/2025-2/20190213_EX1_P4/FuncionesAuxiliares.h,examenes/parcial/2025-2/material_original/20190213_EX1_P4/FuncionesAuxiliares.h,debf2b2011871381bce7c19a050710e3
+originales/2025-2/LAB3/2025-2/20190213_EX1_P4/main.cpp,examenes/parcial/2025-2/material_original/20190213_EX1_P4/main.cpp,8fa21f5d49fb58957238ade98b24dfec
+originales/2025-2/LAB3/2025-2/Examen 1.pdf,examenes/parcial/2025-2/enunciado.pdf,8b896ca3cfd9aac8a6fc4c3ae1f816ba
+originales/2025-2/LAB4/2022-2/2022-2 Lab 3.pdf,laboratorios/laboratorio-03/2022-2/enunciado.pdf,3e0ad04fd9eac89f66a3a7891cb2d001
+originales/2025-2/LAB4/2022-2/p1.cpp,laboratorios/laboratorio-03/2022-2/material_original/p1.cpp,a6632bd5a397e30e0106d13a3955136a
+originales/2025-2/LAB4/2022-2/p2.cpp,laboratorios/laboratorio-03/2022-2/material_original/p2.cpp,3b18281b4a3b979b6640d35e8ac78c7f
+originales/2025-2/LAB4/2022-2/p2.txt,laboratorios/laboratorio-03/2022-2/material_original/p2.txt,e3aaa41bb41c2ffd05378cba49829a3f
+originales/2025-2/LAB4/2023-1/ArbolesBinarios/ArbolBinario.h,laboratorios/laboratorio-04/2023-1/material_original/ArbolesBinarios/ArbolBinario.h,b907a97f5c97b325e7c8bd673656a13c
+originales/2025-2/LAB4/2023-1/ArbolesBinarios/ArbolBinarioBusqueda.h,laboratorios/laboratorio-04/2023-1/material_original/ArbolesBinarios/ArbolBinarioBusqueda.h,9e5a1461ff12209cd5195f1a6a6c3666
+originales/2025-2/LAB4/2023-1/ArbolesBinarios/NodoArbol.h,laboratorios/laboratorio-04/2023-1/material_original/ArbolesBinarios/NodoArbol.h,553b4ad635f85e1de96595bee4dbc6a5
+originales/2025-2/LAB4/2023-1/ArbolesBinarios/arbol.cpp,laboratorios/laboratorio-04/2023-1/material_original/ArbolesBinarios/arbol.cpp,becddfc98678670e49c9597790ac36cb
+originales/2025-2/LAB4/2023-1/ArbolesBinarios/funcionesArbolesBB.cpp,laboratorios/laboratorio-04/2023-1/material_original/ArbolesBinarios/funcionesArbolesBB.cpp,68579e393f7c035e976bcec468fd94f4
+originales/2025-2/LAB4/2023-1/ArbolesBinarios/funcionesArbolesBB.h,laboratorios/laboratorio-04/2023-1/material_original/ArbolesBinarios/funcionesArbolesBB.h,efbbbcded17c8434aa15e92c58ddd46f
+originales/2025-2/LAB4/2023-1/ArbolesBinarios/funcionesArbolesBinarios.cpp,laboratorios/laboratorio-04/2023-1/material_original/ArbolesBinarios/funcionesArbolesBinarios.cpp,94cf687352d2ad5badce776361beeb85
+originales/2025-2/LAB4/2023-1/ArbolesBinarios/funcionesArbolesBinarios.h,laboratorios/laboratorio-04/2023-1/material_original/ArbolesBinarios/funcionesArbolesBinarios.h,216fdcec44a68aab13b01da4153d2c99
+originales/2025-2/LAB4/2023-1/L4-2023-1.pdf,laboratorios/laboratorio-04/2023-1/enunciado.pdf,db9ffc1741d06acab5da668c45a3854a
+originales/2025-2/LAB4/2023-1/p1.cpp,laboratorios/laboratorio-04/2023-1/material_original/p1.cpp,8a6626dddd14a4ca588e90fa56d1f642
+originales/2025-2/LAB4/2023-1/p1.txt,laboratorios/laboratorio-04/2023-1/material_original/p1.txt,d41d8cd98f00b204e9800998ecf8427e
+originales/2025-2/LAB4/2023-1/p2.cpp,laboratorios/laboratorio-04/2023-1/material_original/p2.cpp,797b247700f3c058207f1a86b5f22396
+originales/2025-2/LAB4/2025-1/L4-2025_1.pdf,laboratorios/laboratorio-04/2025-1/enunciado.pdf,406a42c1d99a1f4ef9a3b6c4063d0f73
+originales/2025-2/LAB4/2025-1/p1.cpp,laboratorios/laboratorio-04/2025-1/material_original/p1.cpp,293389714bc18e3f6fca37e6ced8f47b
+originales/2025-2/LAB4/Arboles Binarios/ArbolBinario/BibliotecaArbolBinario/ArbolBinario.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/ArbolBinario.h,bcc8ea70716da0f9909cc77ff896cb92
+originales/2025-2/LAB4/Arboles Binarios/ArbolBinario/BibliotecaArbolBinario/ArbolBinario.h,material-de-apoyo/arboles/material_original/ArbolBinario/BibliotecaArbolBinario/ArbolBinario.h,bcc8ea70716da0f9909cc77ff896cb92
+originales/2025-2/LAB4/Arboles Binarios/ArbolBinario/BibliotecaArbolBinario/ElementoArbolBinario.h,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinario/BibliotecaArbolBinario/ElementoArbolBinario.h,bb5e0fd5f07b1bd778645b70c1aeb5b7
+originales/2025-2/LAB4/Arboles Binarios/ArbolBinario/BibliotecaArbolBinario/ElementoArbolBinario.h,material-de-apoyo/arboles/material_original/ArbolBinario/BibliotecaArbolBinario/ElementoArbolBinario.h,bb5e0fd5f07b1bd778645b70c1aeb5b7
+originales/2025-2/LAB4/Arboles Binarios/ArbolBinario/BibliotecaArbolBinario/NodoArbolBinario.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/NodoArbolBinario.h,b88485dd7266b7bb586d532f907e0c89
+originales/2025-2/LAB4/Arboles Binarios/ArbolBinario/BibliotecaArbolBinario/NodoArbolBinario.h,material-de-apoyo/arboles/material_original/ArbolBinario/BibliotecaArbolBinario/NodoArbolBinario.h,b88485dd7266b7bb586d532f907e0c89
+originales/2025-2/LAB4/Arboles Binarios/ArbolBinario/BibliotecaArbolBinario/funcionesArbolBinario.cpp,material-de-apoyo/arboles/material_original/ArbolBinario/BibliotecaArbolBinario/funcionesArbolBinario.cpp,843e80a99ccc94e984cb0a4af3919e15
+originales/2025-2/LAB4/Arboles Binarios/ArbolBinario/BibliotecaArbolBinario/funcionesArbolBinario.h,material-de-apoyo/arboles/material_original/ArbolBinario/BibliotecaArbolBinario/funcionesArbolBinario.h,f0a9a2b205133ef235a265da02a483b1
+originales/2025-2/LAB4/Arboles Binarios/ArbolBinario/BibliotecaCola/Cola.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/Cola.h,f03c126e17984c63b12b86a2d24944f1
+originales/2025-2/LAB4/Arboles Binarios/ArbolBinario/BibliotecaCola/Cola.h,material-de-apoyo/arboles/material_original/ArbolBinario/BibliotecaCola/Cola.h,f03c126e17984c63b12b86a2d24944f1
+originales/2025-2/LAB4/Arboles Binarios/ArbolBinario/BibliotecaCola/ElementoCola.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/ElementoCola.h,4129c6106c7503d7a1f2336145b1f8b6
+originales/2025-2/LAB4/Arboles Binarios/ArbolBinario/BibliotecaCola/ElementoCola.h,material-de-apoyo/arboles/material_original/ArbolBinario/BibliotecaCola/ElementoCola.h,4129c6106c7503d7a1f2336145b1f8b6
+originales/2025-2/LAB4/Arboles Binarios/ArbolBinario/BibliotecaCola/NodoCola.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/NodoCola.h,94b110f5e9e4e73f7ba28aed8266e672
+originales/2025-2/LAB4/Arboles Binarios/ArbolBinario/BibliotecaCola/NodoCola.h,material-de-apoyo/arboles/material_original/ArbolBinario/BibliotecaCola/NodoCola.h,94b110f5e9e4e73f7ba28aed8266e672
+originales/2025-2/LAB4/Arboles Binarios/ArbolBinario/BibliotecaCola/funcionesCola.cpp,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/funcionesCola.cpp,6127fc74dd2a8cc2caa382b65f5e12c2
+originales/2025-2/LAB4/Arboles Binarios/ArbolBinario/BibliotecaCola/funcionesCola.cpp,material-de-apoyo/arboles/material_original/ArbolBinario/BibliotecaCola/funcionesCola.cpp,6127fc74dd2a8cc2caa382b65f5e12c2
+originales/2025-2/LAB4/Arboles Binarios/ArbolBinario/BibliotecaCola/funcionesCola.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/funcionesCola.h,aa0934bb946f2266ae85a15a77bb7616
+originales/2025-2/LAB4/Arboles Binarios/ArbolBinario/BibliotecaCola/funcionesCola.h,material-de-apoyo/arboles/material_original/ArbolBinario/BibliotecaCola/funcionesCola.h,aa0934bb946f2266ae85a15a77bb7616
+originales/2025-2/LAB4/Arboles Binarios/ArbolBinario/CMakeLists.txt,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/CMakeLists.txt,65a6ebc850c5719177103828356e9700
+originales/2025-2/LAB4/Arboles Binarios/ArbolBinario/CMakeLists.txt,material-de-apoyo/arboles/material_original/ArbolBinario/CMakeLists.txt,65a6ebc850c5719177103828356e9700
+originales/2025-2/LAB4/Arboles Binarios/ArbolBinario/main.cpp,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/main.cpp,ade098d6c5d0fc9186ff53e59bd9e5d0
+originales/2025-2/LAB4/Arboles Binarios/ArbolBinario/main.cpp,material-de-apoyo/arboles/material_original/ArbolBinario/main.cpp,ade098d6c5d0fc9186ff53e59bd9e5d0
+originales/2025-2/LAB4/Arboles Binarios/Cap III - 3 - ED - Arboles.pdf,material-de-apoyo/arboles/teoria.pdf,6439f3340510bb29f4b35ae57592a025
+originales/2025-2/LAB4/Arboles Binarios/arbol.cpp,material-de-apoyo/arboles/material_original/arbol.cpp,c930ec649e82b35a50716ade82d65055
+originales/2025-2/LAB4/Arboles Binarios/arbol.cpp,material-de-apoyo/arboles/material_semana4/arbol.cpp,c930ec649e82b35a50716ade82d65055
+originales/2025-2/LAB4/Arboles Binarios/arbol.h,material-de-apoyo/arboles/material_original/arbol.h,1cc0c2f9247ad5e7c1675ab88e594285
+originales/2025-2/LAB4/Arboles Binarios/arbol.h,material-de-apoyo/arboles/material_semana4/arbol.h,1cc0c2f9247ad5e7c1675ab88e594285
+originales/2025-2/LAB5/2022-2/ArbolBinarioBusqueda/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/ArbolBinarioBusqueda.h,laboratorios/laboratorio-05/2025-2/material_original/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/ArbolBinarioBusqueda.h,86d39c5d2074011406f7894ffcb5a059
+originales/2025-2/LAB5/2022-2/ArbolBinarioBusqueda/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/ElementoArbolBinarioBusqueda.h,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/ElementoArbolBinarioBusqueda.h,e1c0463d598a32cb82e8755c11be51fb
+originales/2025-2/LAB5/2022-2/ArbolBinarioBusqueda/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/NodoArbolBinarioBusqueda.h,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/NodoArbolBinarioBusqueda.h,ca6993b5a8480a7bc794da2954ee73bd
+originales/2025-2/LAB5/2022-2/ArbolBinarioBusqueda/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/funcionesArbolBinarioBusqueda.cpp,laboratorios/laboratorio-04/2022-2/material_original/ArbolBinarioBusqueda/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/funcionesArbolBinarioBusqueda.cpp,7da71f9f45cb6a2022251053168b07f1
+originales/2025-2/LAB5/2022-2/ArbolBinarioBusqueda/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/funcionesArbolBinarioBusqueda.h,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/funcionesArbolBinarioBusqueda.h,827671f4fae70b340d584fa757657e7f
+originales/2025-2/LAB5/2022-2/ArbolBinarioBusqueda/ArbolBinarioBusqueda/CMakeLists.txt,laboratorios/laboratorio-05/2025-2/material_original/ArbolBinarioBusqueda/CMakeLists.txt,dc9d7b435b56db5f3068b38802a0ac5a
+originales/2025-2/LAB5/2022-2/ArbolBinarioBusqueda/ArbolBinarioBusqueda/main.cpp,laboratorios/laboratorio-05/2025-2/material_original/ArbolBinarioBusqueda/main.cpp,efd30fc03a60f0799593927fc50a6a38
+originales/2025-2/LAB5/2022-2/L4-2022_2.pdf,laboratorios/laboratorio-04/2022-2/enunciado.pdf,65cfcf12ccf966ac9151e5e0325ca485
+originales/2025-2/LAB5/2022-2/p1.cpp,laboratorios/laboratorio-04/2022-2/material_original/p1.cpp,dfa0dbb5b71eda6214b06edfdcb26ef6
+originales/2025-2/LAB5/2022-2/p2.cpp,laboratorios/laboratorio-04/2022-2/material_original/p2.cpp,ed2e9bb1d080bbbcda5bf64833994a42
+originales/2025-2/LAB5/2025-1/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/ArbolBinarioBusqueda.h,laboratorios/laboratorio-05/2025-2/material_original/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/ArbolBinarioBusqueda.h,86d39c5d2074011406f7894ffcb5a059
+originales/2025-2/LAB5/2025-1/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/ElementoArbolBinarioBusqueda.h,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/ElementoArbolBinarioBusqueda.h,e1c0463d598a32cb82e8755c11be51fb
+originales/2025-2/LAB5/2025-1/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/NodoArbolBinarioBusqueda.h,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/NodoArbolBinarioBusqueda.h,ca6993b5a8480a7bc794da2954ee73bd
+originales/2025-2/LAB5/2025-1/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/funcionesArbolBinarioBusqueda.cpp,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/funcionesArbolBinarioBusqueda.cpp,dc7faeb7e4bb3dc32218e2e3df045938
+originales/2025-2/LAB5/2025-1/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/funcionesArbolBinarioBusqueda.h,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/funcionesArbolBinarioBusqueda.h,827671f4fae70b340d584fa757657e7f
+originales/2025-2/LAB5/2025-1/ArbolBinarioBusqueda/CMakeLists.txt,laboratorios/laboratorio-05/2025-2/material_original/ArbolBinarioBusqueda/CMakeLists.txt,dc9d7b435b56db5f3068b38802a0ac5a
+originales/2025-2/LAB5/2025-1/ArbolBinarioBusqueda/main.cpp,laboratorios/laboratorio-05/2025-2/material_original/ArbolBinarioBusqueda/main.cpp,efd30fc03a60f0799593927fc50a6a38
+originales/2025-2/LAB5/2025-1/Pila/BibliotecaPila/ElementoPila.h,laboratorios/laboratorio-05/2025-1/material_original/variantes/2025-2/LAB5/2025-1/Pila/BibliotecaPila/ElementoPila.h,d0ad615f3d61c0b6604999b5bab236f5
+originales/2025-2/LAB5/2025-1/Pila/BibliotecaPila/NodoPila.h,laboratorios/laboratorio-05/2025-2/material_original/BibliotecaPila/NodoPila.h,22a12a049333a41bd97cfd44eb80e4fb
+originales/2025-2/LAB5/2025-1/Pila/BibliotecaPila/Pila.h,laboratorios/laboratorio-05/2025-1/material_original/variantes/2025-2/LAB5/2025-1/Pila/BibliotecaPila/Pila.h,6c86d6aa825aad1b854c2ac09ce09844
+originales/2025-2/LAB5/2025-1/Pila/BibliotecaPila/funcionesPila.cpp,laboratorios/laboratorio-05/2025-1/material_original/variantes/2025-2/LAB5/2025-1/Pila/BibliotecaPila/funcionesPila.cpp,81fd110270bfbbed588d54ba32a995c5
+originales/2025-2/LAB5/2025-1/Pila/BibliotecaPila/funcionesPila.h,laboratorios/laboratorio-05/2025-1/material_original/variantes/2025-2/LAB5/2025-1/Pila/BibliotecaPila/funcionesPila.h,4dcfd61e070a60396c8f9f5040ff0204
+originales/2025-2/LAB5/2025-1/Pila/CMakeLists.txt,material-de-apoyo/fuentes-adicionales/2025-2/EX1/2025-1/Pila/CMakeLists.txt,512e5e1656e24a6ff3e74e8d60eba69b
+originales/2025-2/LAB5/2025-1/Pila/main.cpp,laboratorios/laboratorio-05/2025-1/material_original/variantes/2025-2/LAB5/2025-1/Pila/main.cpp,86dd8aaadd7a914f00c56380c719bd6c
+originales/2025-2/LAB5/2025-1/p2.cpp,laboratorios/laboratorio-05/2025-1/material_original/variantes/2025-2/LAB5/2025-1/p2.cpp,9eea5b4fbced70ee41752004aa9a40d4
+originales/2025-2/LAB5/2025-2/ArbolBinario/BibliotecaArbolBinario/ArbolBinario.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/ArbolBinario.h,bcc8ea70716da0f9909cc77ff896cb92
+originales/2025-2/LAB5/2025-2/ArbolBinario/BibliotecaArbolBinario/ElementoArbolBinario.h,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinario/BibliotecaArbolBinario/ElementoArbolBinario.h,bb5e0fd5f07b1bd778645b70c1aeb5b7
+originales/2025-2/LAB5/2025-2/ArbolBinario/BibliotecaArbolBinario/NodoArbolBinario.h,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinario/BibliotecaArbolBinario/NodoArbolBinario.h,ea6a9040ca23ca4b3daf50aaa8c93b96
+originales/2025-2/LAB5/2025-2/ArbolBinario/BibliotecaArbolBinario/funcionesArbolBinario.cpp,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinario/BibliotecaArbolBinario/funcionesArbolBinario.cpp,d079a0585bd775662b7ce5ba85b3802f
+originales/2025-2/LAB5/2025-2/ArbolBinario/BibliotecaArbolBinario/funcionesArbolBinario.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaArbolBinario/funcionesArbolBinario.h,4beed328be3c574b610e3fe1b05a6e11
+originales/2025-2/LAB5/2025-2/ArbolBinario/BibliotecaCola/Cola.h,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinario/BibliotecaCola/Cola.h,b8157f66922e2d1ce06561a42cb84e1d
+originales/2025-2/LAB5/2025-2/ArbolBinario/BibliotecaCola/ElementoCola.h,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinario/BibliotecaCola/ElementoCola.h,5b9fafae77b7b90f7041952840e4fcce
+originales/2025-2/LAB5/2025-2/ArbolBinario/BibliotecaCola/NodoCola.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/NodoCola.h,94b110f5e9e4e73f7ba28aed8266e672
+originales/2025-2/LAB5/2025-2/ArbolBinario/BibliotecaCola/funcionesCola.cpp,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinario/BibliotecaCola/funcionesCola.cpp,3f113d053969921fc7eba3f7609fab09
+originales/2025-2/LAB5/2025-2/ArbolBinario/BibliotecaCola/funcionesCola.h,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/BibliotecaCola/funcionesCola.h,aa0934bb946f2266ae85a15a77bb7616
+originales/2025-2/LAB5/2025-2/ArbolBinario/CMakeLists.txt,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/CMakeLists.txt,65a6ebc850c5719177103828356e9700
+originales/2025-2/LAB5/2025-2/ArbolBinario/main.cpp,laboratorios/laboratorio-05/2025-1/material_original/ArbolBinario/ArbolBinario/main.cpp,ade098d6c5d0fc9186ff53e59bd9e5d0
+originales/2025-2/LAB5/2025-2/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/ArbolBinarioBusqueda.h,laboratorios/laboratorio-05/2025-2/material_original/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/ArbolBinarioBusqueda.h,86d39c5d2074011406f7894ffcb5a059
+originales/2025-2/LAB5/2025-2/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/ElementoArbolBinarioBusqueda.h,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/ElementoArbolBinarioBusqueda.h,e1c0463d598a32cb82e8755c11be51fb
+originales/2025-2/LAB5/2025-2/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/NodoArbolBinarioBusqueda.h,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/NodoArbolBinarioBusqueda.h,ca6993b5a8480a7bc794da2954ee73bd
+originales/2025-2/LAB5/2025-2/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/funcionesArbolBinarioBusqueda.cpp,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/funcionesArbolBinarioBusqueda.cpp,dc7faeb7e4bb3dc32218e2e3df045938
+originales/2025-2/LAB5/2025-2/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/funcionesArbolBinarioBusqueda.h,laboratorios/laboratorio-04/2025-2/material_original/ArbolBinarioBusqueda/BibliotecaArbolBinarioBusqueda/funcionesArbolBinarioBusqueda.h,827671f4fae70b340d584fa757657e7f
+originales/2025-2/LAB5/2025-2/ArbolBinarioBusqueda/CMakeLists.txt,laboratorios/laboratorio-05/2025-2/material_original/ArbolBinarioBusqueda/CMakeLists.txt,dc9d7b435b56db5f3068b38802a0ac5a
+originales/2025-2/LAB5/2025-2/ArbolBinarioBusqueda/main.cpp,laboratorios/laboratorio-05/2025-2/material_original/ArbolBinarioBusqueda/main.cpp,efd30fc03a60f0799593927fc50a6a38
+originales/2025-2/LAB5/2025-2/p2.cpp,laboratorios/laboratorio-04/2025-2/material_original/p2.cpp,526f4d9842c9655f91edb456d2abfac8
+originales/MATERIAL ADICIONAL/github.txt,material-de-apoyo/fuentes-adicionales/MATERIAL ADICIONAL/github.txt,995cde12b50c561504ea0efce8e0f5ce
+originales/Material_local/2025-2/INSTRUCCIONES_ALUMNOS.md,laboratorios/laboratorio-01/2025-2/material_original/INSTRUCCIONES_ALUMNOS.md,47df9f7db0675d38dee1b3200be14579
+originales/Material_local/2025-2/lab1.pdf,laboratorios/laboratorio-01/2025-2/enunciado.pdf,e36196cbf58cddb49d11a63a183a874e
+originales/Material_local/2025-2/resolucion/CMakeLists.txt,laboratorios/laboratorio-01/2025-2/material_original/resolucion/CMakeLists.txt,973a62d92cb00d9dfa2a490edb868d65
+originales/Material_local/2025-2/resolucion/pregunta1.cpp,laboratorios/laboratorio-01/2025-2/material_original/resolucion/pregunta1.cpp,29445e4e87bdf8ca88dc09912b2a52d5
+originales/Material_local/2025-2/resolucion/pregunta2.cpp,laboratorios/laboratorio-01/2025-2/material_original/resolucion/pregunta2.cpp,c063fa1466028f62f43e9fc5068dad11
+originales/Material_local/2026-1/INSTRUCCIONES_ALUMNOS.md,laboratorios/laboratorio-01/2026-1/material_original/variantes/Material_local/2026-1/INSTRUCCIONES_ALUMNOS.md,44d3cbc3037e4e8bbdf60c5c955acdc0
+originales/Material_local/2026-1/lab1.pdf,laboratorios/laboratorio-01/2026-1/enunciado.pdf,e147d439bed8b2f34e48614177cc81e6
+originales/Material_local/2026-1/resolucion/CMakeLists.txt,laboratorios/laboratorio-01/2026-1/material_original/variantes/Material_local/2026-1/resolucion/CMakeLists.txt,362f50593134cb6b55d2e7efea30cbc3
+originales/Material_local/2026-1/resolucion/pregunta1.cpp,soluciones-actuales/2026_1_lab01/2026_1_lab01_p01_arqueologo.cpp,914e8eec725bec06df34ac9069a154af
+originales/Material_local/2026-1/resolucion/pregunta2.cpp,laboratorios/laboratorio-01/2026-1/material_original/variantes/Material_local/2026-1/resolucion/pregunta2.cpp,9704486f77a51d83321d941eeb3fdded
+originales/Material_local/2026-1/versiones_previas/pregunta2_carpeta_lab1_2.cpp,laboratorios/laboratorio-01/2026-1/material_original/variantes/Material_local/2026-1/versiones_previas/pregunta2_carpeta_lab1_2.cpp,3ad10d0d0ab4ddf9ddbc90481959045b

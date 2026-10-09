@@ -1,0 +1,744 @@
+[
+  {
+    "titulo": "Laboratorio 1 — Robot arqueólogo y citas odontológicas",
+    "tipo": "Laboratorio",
+    "ciclo": "2026-1",
+    "temas": [
+      "Recursión",
+      "Fuerza bruta"
+    ],
+    "preguntas": "P1 (p. 1): robot arqueólogo que cuenta artefactos y dibuja su despliegue en una matriz. P2 (p. 2): asignar dientes a citas para maximizar ganancias con fuerza bruta.",
+    "restricciones": "P1 exige una sola función recursiva sin iteraciones; solo se permiten ciclos para imprimir la matriz. No se permiten variables globales.",
+    "ruta": "laboratorios/laboratorio-01/2026-1/enunciado.pdf",
+    "detalle": "laboratorios/laboratorio-01/2026-1/README.md",
+    "fuente": "",
+    "estado": "disponible",
+    "material": [
+      "laboratorios/laboratorio-01/2026-1/material_original"
+    ],
+    "soluciones": [
+      {
+        "nombre": "Robot arqueólogo, P1",
+        "ruta": "soluciones-actuales/2026_1_lab01/2026_1_lab01_p01_arqueologo.cpp"
+      },
+      {
+        "nombre": "Citas odontológicas, P2",
+        "ruta": "soluciones-actuales/2026_1_lab01/2026_1_lab01_p02_citas.cpp"
+      }
+    ],
+    "sha256": "d98b69e48d5a5a17030e95e41a00d11deb8950ba7a2c156dbbcff251769844e1"
+  },
+  {
+    "titulo": "Laboratorio 1 — Kung Fu Panda y radar por anillos",
+    "tipo": "Laboratorio",
+    "ciclo": "2024-1",
+    "temas": [
+      "Recursión",
+      "Fuerza bruta"
+    ],
+    "preguntas": "P1 (p. 1): asignación de armas con fuerza bruta. P2 (p. 3): contar unidades detectadas por anillos completos de un radar.",
+    "restricciones": "P2 exige función recursiva; no admite iterativas anidadas ni variables globales salvo la matriz.",
+    "ruta": "laboratorios/laboratorio-01/2024-1/enunciado.pdf",
+    "detalle": "laboratorios/laboratorio-01/2024-1/README.md",
+    "fuente": "https://drive.google.com/file/d/1Nji0HL-LW5Z-hxeza3ReznJenp_3pHj_/view",
+    "estado": "disponible",
+    "material": [
+      "laboratorios/laboratorio-01/2024-1/material_original"
+    ],
+    "soluciones": [
+      {
+        "nombre": "Po, P1",
+        "ruta": "soluciones-actuales/2024_1_lab01_po/2024_1_lab01_p01_po.cpp"
+      }
+    ],
+    "sha256": "3fb69ec3dbec99070a0565606838d61e5eb238f2f3e6f3756db202cd111832a5"
+  },
+  {
+    "titulo": "Laboratorio 2 — Cuadrigas y vetas de oro",
+    "tipo": "Laboratorio",
+    "ciclo": "2025-1",
+    "temas": [
+      "Recursión",
+      "Listas, pilas y colas"
+    ],
+    "preguntas": "P1 (p. 1): partición estable de lista por IDs pares e impares. P2 (p. 2): robot que detecta vetas de oro con combustible limitado y cambios de dirección.",
+    "restricciones": "P2 exige una sola función recursiva y una matriz de entrada; prohíbe iterativas dobles y arreglos o matrices auxiliares.",
+    "ruta": "laboratorios/laboratorio-02/2025-1/enunciado.pdf",
+    "detalle": "laboratorios/laboratorio-02/2025-1/README.md",
+    "fuente": "https://drive.google.com/file/d/18GmBcnOoZqpissUcnyTQQnLzbGGUf_PD/view",
+    "estado": "disponible",
+    "material": [
+      "laboratorios/laboratorio-02/2025-1/material_original"
+    ],
+    "soluciones": [
+      {
+        "nombre": "Cuadrigas, P1",
+        "ruta": "soluciones-actuales/04_listas_pilas_colas/soluciones/2025_1_lab02_p01_cuadrigas.cpp"
+      }
+    ],
+    "sha256": "1f7a043bf0aced88079faa4e2a22853acbcc2b2d7f08a102dd9fbbb45f524fc5"
+  },
+  {
+    "titulo": "Laboratorio 1 — Controles de seguridad y galerías",
+    "tipo": "Laboratorio",
+    "ciclo": "2025-2",
+    "temas": [
+      "Recursión",
+      "Fuerza bruta",
+      "Backtracking"
+    ],
+    "preguntas": "Pregunta FuerzaBruta (p. 1): seleccionar controles con restricciones. Pregunta Recursion (p. 2): perforar galerías sin cruzar rocas ni otras galerías.",
+    "restricciones": "Una sola función recursiva sin iteraciones; se permiten ciclos para cargar datos antes o imprimir después. La solución local usa backtracking.",
+    "ruta": "laboratorios/laboratorio-01/2025-2/enunciado.pdf",
+    "detalle": "laboratorios/laboratorio-01/2025-2/README.md",
+    "fuente": "",
+    "estado": "disponible",
+    "material": [
+      "laboratorios/laboratorio-01/2025-2/material_original"
+    ],
+    "soluciones": [],
+    "sha256": "a6cd29269619b2f6b9b2032008476e18dd6465d54a5d2daad25f0436441b50ef"
+  },
+  {
+    "titulo": "Examen 1 — Listas, frecuencias y criba de Eratóstenes",
+    "tipo": "Examen",
+    "ciclo": "2022-2",
+    "temas": [
+      "Recursión",
+      "Listas, pilas y colas"
+    ],
+    "preguntas": "P1 (p. 1): fusión de pedidos en listas. P2 (p. 2): frecuencias con una pila. P3 (p. 3): criba de Eratóstenes recursiva con lista y cola.",
+    "restricciones": "P3 exige una función recursiva, lista y cola, sin arreglos ni otros TAD. El enunciado de P3 solicita C.",
+    "ruta": "examenes/parcial/2022-2/enunciado.pdf",
+    "detalle": "examenes/parcial/2022-2/README.md",
+    "fuente": "https://drive.google.com/file/d/15jhF2eZtN42NlyU9rtCg8ud6xQP0SasI/view",
+    "estado": "disponible",
+    "material": [
+      "examenes/parcial/2022-2/material_original"
+    ],
+    "soluciones": [
+      {
+        "nombre": "Bad Sunny, P2",
+        "ruta": "soluciones-actuales/04_listas_pilas_colas/soluciones/2022_2_ex01_p02_bad_sunny.cpp"
+      }
+    ],
+    "sha256": "a7c5485f2abc3c45cacd1a5541a455ff8be0c01f5da4f5338bda8ff5df913fca"
+  },
+  {
+    "titulo": "Examen 1 — Alertas, Hanói y estructuras lineales",
+    "tipo": "Examen",
+    "ciclo": "2025-2",
+    "temas": [
+      "Recursión",
+      "Fuerza bruta",
+      "Listas, pilas y colas"
+    ],
+    "preguntas": "P1 (p. 1): selección de alertas por fuerza bruta. P2 (p. 2): Hanói con movimientos solo entre almacenes adyacentes. P3 (p. 3): intercalar tipos en una lista. P4 (p. 4): rectángulos con pila. P5 (p. 4): cola de prioridad.",
+    "restricciones": "P2 exige una sola función recursiva y no permite A→C directamente. P4 prohíbe recursión.",
+    "ruta": "examenes/parcial/2025-2/enunciado.pdf",
+    "detalle": "examenes/parcial/2025-2/README.md",
+    "fuente": "https://drive.google.com/file/d/1holABPW8HmAoXZkkWLfrwpr1mtTZCCdi/view",
+    "estado": "disponible",
+    "material": [
+      "examenes/parcial/2025-2/material_original"
+    ],
+    "soluciones": [
+      {
+        "nombre": "ROBOTJARDIN, P4",
+        "ruta": "soluciones-actuales/04_listas_pilas_colas/soluciones/2025_2_ex01_p04_robotjardin.cpp"
+      }
+    ],
+    "sha256": "2ec126ea6b1c3c82f12a31ad42e60faea9a557b1bb3c76dbdb8d92c58cd5d4ee"
+  },
+  {
+    "titulo": "Laboratorio 3 — Pesos mínimos y detección de radiación",
+    "tipo": "Laboratorio",
+    "ciclo": "2022-2",
+    "temas": [
+      "Divide y vencerás"
+    ],
+    "preguntas": "P1 (p. 1): menor peso y rango de días consecutivos. P2 (p. 2): localizar máximos y posiciones en una matriz de radiación.",
+    "restricciones": "Divide y vencerás con restricciones de complejidad.",
+    "ruta": "laboratorios/laboratorio-03/2022-2/enunciado.pdf",
+    "detalle": "laboratorios/laboratorio-03/2022-2/README.md",
+    "fuente": "https://drive.google.com/file/d/19WEikFG8MaEkaFpe07j8L0uMyQRwM7_K/view",
+    "estado": "disponible",
+    "material": [
+      "laboratorios/laboratorio-03/2022-2/material_original"
+    ],
+    "soluciones": [],
+    "sha256": "929bbbd4c504f0fde6b63cc5819b4bfcedf3d1c480a08afa6a1049acbe1e2101"
+  },
+  {
+    "titulo": "Laboratorio 4 — Combinaciones y almacenes en ABB",
+    "tipo": "Laboratorio",
+    "ciclo": "2022-2",
+    "temas": [
+      "Árboles"
+    ],
+    "preguntas": "P1 (p. 1): representar combinaciones mediante ramas de un árbol. P2 (p. 2): gestionar existencias en árboles binarios de búsqueda.",
+    "restricciones": "",
+    "ruta": "laboratorios/laboratorio-04/2022-2/enunciado.pdf",
+    "detalle": "laboratorios/laboratorio-04/2022-2/README.md",
+    "fuente": "https://drive.google.com/file/d/1B-y8nmLfoiibm9qmd2fOeyoI_PapmhFa/view",
+    "estado": "disponible",
+    "material": [
+      "laboratorios/laboratorio-04/2022-2/material_original"
+    ],
+    "soluciones": [],
+    "sha256": "6d1dce30b97b275b554d2b9e8dc6965113a294cbfdd2280ec0fbc6a2b32d0aff"
+  },
+  {
+    "titulo": "Laboratorio 1 — Camiones y caminos de robots",
+    "tipo": "Laboratorio",
+    "ciclo": "2023-1",
+    "temas": [
+      "Fuerza bruta"
+    ],
+    "preguntas": "P1 (p. 1): asignación de paquetes a camiones. P2 (p. 3): caminos de robots entre edificios. Ambas preguntas exigen fuerza bruta.",
+    "restricciones": "El contexto de robots de P2 no implica que el enunciado pida recursión.",
+    "ruta": "laboratorios/laboratorio-01/2023-1/enunciado.pdf",
+    "detalle": "laboratorios/laboratorio-01/2023-1/README.md",
+    "fuente": "https://drive.google.com/file/d/1QWbB_fWi_Hd8AdnFzrVAlHt3ThUMbObI/view",
+    "estado": "disponible",
+    "material": [
+      "laboratorios/laboratorio-01/2023-1/material_original"
+    ],
+    "soluciones": [],
+    "sha256": "864d64482930062b56a0ec97f44f70a75afa3dffcb40168724ab3011e73e478e"
+  },
+  {
+    "titulo": "Laboratorio 3 — Pilas Kupa y fusión de listas",
+    "tipo": "Laboratorio",
+    "ciclo": "2023-1",
+    "temas": [
+      "Listas, pilas y colas"
+    ],
+    "preguntas": "P1 (p. 1): unir, ordenar y trasladar pilas de guerreros. P2 (p. 2): fusionar listas de problemas de seguridad.",
+    "restricciones": "",
+    "ruta": "laboratorios/laboratorio-03/2023-1/enunciado.pdf",
+    "detalle": "laboratorios/laboratorio-03/2023-1/README.md",
+    "fuente": "https://drive.google.com/file/d/13_vyx4L5drWIf68_2vyDB5XYnEKBWayA/view",
+    "estado": "disponible",
+    "material": [
+      "laboratorios/laboratorio-03/2023-1/material_original"
+    ],
+    "soluciones": [],
+    "sha256": "b1b3df0067e9a1e43af51d43752b375604ef77fa3923ac050092187a6f188964"
+  },
+  {
+    "titulo": "Laboratorio 4 — SkyNerd y fusión de ejércitos",
+    "tipo": "Laboratorio",
+    "ciclo": "2023-1",
+    "temas": [
+      "Árboles"
+    ],
+    "preguntas": "P1 (p. 1): búsqueda y operaciones sobre la red de SkyNerd. P2 (p. 2): fusión de ejércitos representados como árboles de búsqueda.",
+    "restricciones": "",
+    "ruta": "laboratorios/laboratorio-04/2023-1/enunciado.pdf",
+    "detalle": "laboratorios/laboratorio-04/2023-1/README.md",
+    "fuente": "https://drive.google.com/file/d/1f9m1oqGsBmKFYUmPUY6KopfkzPmNIThI/view",
+    "estado": "disponible",
+    "material": [
+      "laboratorios/laboratorio-04/2023-1/material_original"
+    ],
+    "soluciones": [],
+    "sha256": "40ae2765a26c00376a2cf59a786743d08611cf8ade13a847072410be984a1d4e"
+  },
+  {
+    "titulo": "Laboratorio 2 — Emergencias y robot Hanói 3.0",
+    "tipo": "Laboratorio",
+    "ciclo": "2024-1",
+    "temas": [
+      "Listas, pilas y colas"
+    ],
+    "preguntas": "P1 (p. 1): cola de prioridad de pacientes. P2 (p. 2): robot apilador con una lista y tres pilas auxiliares.",
+    "restricciones": "Aplicación complementaria a Hanói. P2 impone estructuras y movimientos, pero no exige expresamente recursión.",
+    "ruta": "laboratorios/laboratorio-02/2024-1/enunciado.pdf",
+    "detalle": "laboratorios/laboratorio-02/2024-1/README.md",
+    "fuente": "https://drive.google.com/file/d/1dDEIZpXS6MQmdypcor3egqB75j5pXG3r/view",
+    "estado": "disponible",
+    "material": [
+      "laboratorios/laboratorio-02/2024-1/material_original"
+    ],
+    "soluciones": [],
+    "sha256": "08d945874898f4418382a371e3dc1c23b54f73c3f9196ad4759e144e68c5849e"
+  },
+  {
+    "titulo": "Laboratorio 3 — Pérdida de datos y Oppenheimer",
+    "tipo": "Laboratorio",
+    "ciclo": "2024-1",
+    "temas": [
+      "Divide y vencerás"
+    ],
+    "preguntas": "P1 (p. 1): subarreglo de mayor acumulación negativa. P2 (p. 2): potencia y cobertura de una explosión.",
+    "restricciones": "P1 exige divide y vencerás sin iteraciones anidadas; P2 no permite iteraciones ni recorrer todo el arreglo.",
+    "ruta": "laboratorios/laboratorio-03/2024-1/enunciado.pdf",
+    "detalle": "laboratorios/laboratorio-03/2024-1/README.md",
+    "fuente": "https://drive.google.com/file/d/1Z6yUSb8FoAIQfyBWnPq-P7IY0CRmg6Zf/view",
+    "estado": "disponible",
+    "material": [
+      "laboratorios/laboratorio-03/2024-1/material_original"
+    ],
+    "soluciones": [],
+    "sha256": "14ad7391de91e9375af672b5da378b5f4d25f0a9f0f8f998b475b920d7495b3c"
+  },
+  {
+    "titulo": "Laboratorio 2 — Equipos y pedidos de delivery",
+    "tipo": "Laboratorio",
+    "ciclo": "2024-2",
+    "temas": [
+      "Listas, pilas y colas"
+    ],
+    "preguntas": "P1 (p. 1): formar equipos con una pila auxiliar. P2 (p. 2): ordenar pedidos de delivery por tiempo total.",
+    "restricciones": "",
+    "ruta": "laboratorios/laboratorio-02/2024-2/enunciado.pdf",
+    "detalle": "laboratorios/laboratorio-02/2024-2/README.md",
+    "fuente": "https://drive.google.com/file/d/1EbX-P6sR5F4XGLv_hM7mZfeD0sOT0xdV/view",
+    "estado": "disponible",
+    "material": [
+      "laboratorios/laboratorio-02/2024-2/material_original"
+    ],
+    "soluciones": [],
+    "sha256": "5301b9512230d89101735482b188a6a24918af8412827c1e118d971717dbc5ae"
+  },
+  {
+    "titulo": "Laboratorio 3 — Bitácoras y pureza de minerales",
+    "tipo": "Laboratorio",
+    "ciclo": "2024-2",
+    "temas": [
+      "Divide y vencerás"
+    ],
+    "preguntas": "P1 (p. 1): identificar el ingreso sin salida en una bitácora. P2 (p. 2): máxima pureza y cantidad de niveles de muestras.",
+    "restricciones": "Ambas preguntas exigen divide y vencerás con restricciones de complejidad.",
+    "ruta": "laboratorios/laboratorio-03/2024-2/enunciado.pdf",
+    "detalle": "laboratorios/laboratorio-03/2024-2/README.md",
+    "fuente": "https://drive.google.com/file/d/1F6_UfuQGmeWxDJ4lEVLk_RzXlR0O2kvn/view",
+    "estado": "disponible",
+    "material": [
+      "laboratorios/laboratorio-03/2024-2/material_original"
+    ],
+    "soluciones": [],
+    "sha256": "2aab40dfe255b896b22ede2751a9768aca7839ab96b2ff9c9b9fd59156d5a58a"
+  },
+  {
+    "titulo": "Laboratorio 1 — Discos y controles de seguridad",
+    "tipo": "Laboratorio",
+    "ciclo": "2025-1",
+    "temas": [
+      "Fuerza bruta"
+    ],
+    "preguntas": "P1 (p. 1): asignación óptima de tablas a discos. P2 (p. 2): subconjuntos de controles con presupuesto, dependencias y seguridad mínima.",
+    "restricciones": "",
+    "ruta": "laboratorios/laboratorio-01/2025-1/enunciado.pdf",
+    "detalle": "laboratorios/laboratorio-01/2025-1/README.md",
+    "fuente": "https://drive.google.com/file/d/1UZciB1dbkCc8bw1gnlajeaUrDPxhRfRg/view",
+    "estado": "disponible",
+    "material": [
+      "laboratorios/laboratorio-01/2025-1/material_original"
+    ],
+    "soluciones": [],
+    "sha256": "ef406c6ac40172f7c7b2d23743de9839f80efd1557e9a6830dfb957874140aeb"
+  },
+  {
+    "titulo": "Laboratorio 4 — Búsquedas y clasificación de productos",
+    "tipo": "Laboratorio",
+    "ciclo": "2025-1",
+    "temas": [
+      "Divide y vencerás"
+    ],
+    "preguntas": "P1 (p. 1): búsqueda de versiones de productos en O(log n). P2 (p. 2): clasificación de lotes, búsqueda y ordenamiento con divide y vencerás.",
+    "restricciones": "Extensión hacia búsqueda binaria y descomposición de problemas.",
+    "ruta": "laboratorios/laboratorio-04/2025-1/enunciado.pdf",
+    "detalle": "laboratorios/laboratorio-04/2025-1/README.md",
+    "fuente": "https://drive.google.com/file/d/1o9vCYV4KcWvUAJPNw1aFZJG4AeZx4tvS/view",
+    "estado": "disponible",
+    "material": [
+      "laboratorios/laboratorio-04/2025-1/material_original"
+    ],
+    "soluciones": [],
+    "sha256": "5dab9c4d0c648ff6446a69ad826ce92d0fbf99d3b205e5fab1b8ed073bcd3060"
+  },
+  {
+    "titulo": "Laboratorio 5 — Árbol gramatical y eliminación en ABB",
+    "tipo": "Laboratorio",
+    "ciclo": "2025-1",
+    "temas": [
+      "Árboles"
+    ],
+    "preguntas": "P1 (p. 1): construir y validar un árbol gramatical. P2 (p. 3): eliminar hojas que son hijos únicos de forma iterativa.",
+    "restricciones": "P1(c) exige funciones recursivas para mostrar los resultados. P2 exige una función iterativa.",
+    "ruta": "laboratorios/laboratorio-05/2025-1/enunciado.pdf",
+    "detalle": "laboratorios/laboratorio-05/2025-1/README.md",
+    "fuente": "https://drive.google.com/file/d/1ObezWC_n44LUqTW0Q8xqahKd6U9oB_xy/view",
+    "estado": "disponible",
+    "material": [
+      "laboratorios/laboratorio-05/2025-1/material_original"
+    ],
+    "soluciones": [],
+    "sha256": "23604036e8518e0f54074fbb0a461c642c65873bd0cce1326852b9dbe25bb317"
+  },
+  {
+    "titulo": "Laboratorio 4 — Canarios y min-heap",
+    "tipo": "Laboratorio",
+    "ciclo": "2025-2",
+    "temas": [
+      "Divide y vencerás",
+      "Árboles",
+      "Listas, pilas y colas"
+    ],
+    "preguntas": "P1 (p. 1): parejas y aves sobrantes con divide y vencerás. P2 (p. 2): construir un min-heap con árbol binario y una cola o pila.",
+    "restricciones": "P1 es útil para practicar búsqueda por mitades.",
+    "ruta": "laboratorios/laboratorio-04/2025-2/enunciado.pdf",
+    "detalle": "laboratorios/laboratorio-04/2025-2/README.md",
+    "fuente": "https://drive.google.com/file/d/1BU1oDUEgn9KkSd_map-cbYyuCLzIrNBU/view",
+    "estado": "disponible",
+    "material": [
+      "laboratorios/laboratorio-04/2025-2/material_original"
+    ],
+    "soluciones": [],
+    "sha256": "caa36c0d1cafe076415311b70e3e7b0ebaf54700f57fc4cb790f099651be112f"
+  },
+  {
+    "titulo": "Laboratorio 5 — AVL y red SkyNerd",
+    "tipo": "Laboratorio",
+    "ciclo": "2025-2",
+    "temas": [
+      "Árboles"
+    ],
+    "preguntas": "P1 (p. 1): inserción y rotaciones de un ABB tipo AVL. P2 (p. 6): operaciones en la red de SkyNerd.",
+    "restricciones": "",
+    "ruta": "laboratorios/laboratorio-05/2025-2/enunciado.pdf",
+    "detalle": "laboratorios/laboratorio-05/2025-2/README.md",
+    "fuente": "https://drive.google.com/file/d/1tBL5rYmxPtcyP_nCU_qufBY3ISINhF4F/view",
+    "estado": "disponible",
+    "material": [
+      "laboratorios/laboratorio-05/2025-2/material_original"
+    ],
+    "soluciones": [],
+    "sha256": "3a17c76ed1ea1c6ed7228316ec7a3ac9f4db4c9b43412373215126e38092ab95"
+  },
+  {
+    "titulo": "Ejercicios de árboles — Parte 1",
+    "tipo": "Ejercicios",
+    "ciclo": "2013-2",
+    "temas": [
+      "Árboles",
+      "Divide y vencerás",
+      "Material de apoyo"
+    ],
+    "preguntas": "Ejercicios de ABB, duplicados, altura, caminos y operaciones sobre árboles; ejercicio 4: número de niveles con divide y vencerás.",
+    "restricciones": "",
+    "ruta": "material-de-apoyo/arboles/ejercicios-parte-1.pdf",
+    "detalle": null,
+    "fuente": "https://drive.google.com/file/d/1GemlN0Iw-hEyAUNrx5ZYaG1yziM-0FBs/view",
+    "estado": "disponible",
+    "material": [
+      "material-de-apoyo/arboles/material_original",
+      "material-de-apoyo/arboles/material_semana4"
+    ],
+    "soluciones": [],
+    "sha256": "b9ee489c4a5a9753a8c2329d5e784dbe5aa0d4a0992ff103bbf425f2142647a1"
+  },
+  {
+    "titulo": "Ejercicios de árboles — Parte 2",
+    "tipo": "Ejercicios",
+    "ciclo": "2013-2",
+    "temas": [
+      "Árboles",
+      "Material de apoyo"
+    ],
+    "preguntas": "Similitud de árboles y operaciones sobre árboles binarios y ABB.",
+    "restricciones": "",
+    "ruta": "material-de-apoyo/arboles/ejercicios-parte-2.pdf",
+    "detalle": null,
+    "fuente": "https://drive.google.com/file/d/1602ZFC4Vzs9fb8Lkh3TL6K3laMQudc9W/view",
+    "estado": "disponible",
+    "material": [
+      "material-de-apoyo/arboles/material_original"
+    ],
+    "soluciones": [],
+    "sha256": "e02d4a32a8953bdc118bda72982f9f6901a721fdb6dacb47706df989d3fd6047"
+  },
+  {
+    "titulo": "Árboles: teoría y operaciones",
+    "tipo": "Teoría",
+    "ciclo": "2021-1",
+    "temas": [
+      "Árboles",
+      "Material de apoyo"
+    ],
+    "preguntas": "Definiciones, representaciones, recorridos y árboles binarios de búsqueda.",
+    "restricciones": "",
+    "ruta": "material-de-apoyo/arboles/teoria.pdf",
+    "detalle": null,
+    "fuente": "https://drive.google.com/file/d/1LVhj9IXqO7fEkk9WBM0h5WRYGsrM_QKD/view",
+    "estado": "disponible",
+    "material": [
+      "material-de-apoyo/arboles/material_original",
+      "material-de-apoyo/arboles/material_semana4"
+    ],
+    "soluciones": [],
+    "sha256": "c098bb13526a4f7fdc001519fb663eaddde145cdba8f352f5a1a8b756dcc60fb"
+  },
+  {
+    "titulo": "Divide y vencerás: búsqueda binaria y merge sort",
+    "tipo": "Teoría",
+    "ciclo": "2021-2",
+    "temas": [
+      "Divide y vencerás",
+      "Material de apoyo"
+    ],
+    "preguntas": "Diapositivas de búsqueda binaria, merge sort, casos base y recurrencias de complejidad.",
+    "restricciones": "Material de apoyo para explicar la división recursiva de problemas.",
+    "ruta": "material-de-apoyo/divide-y-venceras/teoria.pdf",
+    "detalle": null,
+    "fuente": "https://drive.google.com/file/d/18aXrjePQhYsy0-6YXlRET8i5Ryyct_sl/view",
+    "estado": "disponible",
+    "material": [
+      "material-de-apoyo/divide-y-venceras/material_original"
+    ],
+    "soluciones": [],
+    "sha256": "ae99fc102de0cc0e80bb18f664ba260a323bc9a05b1dd9aaa75848c00f682538"
+  },
+  {
+    "titulo": "Examen 2 — Tokens, programación dinámica y Bowser",
+    "tipo": "Examen",
+    "ciclo": "2023-1",
+    "temas": [
+      "Árboles",
+      "Programación dinámica",
+      "Backtracking"
+    ],
+    "preguntas": "P1 (p. 1): insertar y balancear ABB recursivamente. P2 (p. 3): optimizar cortes y contar jaulas con programación dinámica. P3 (p. 4): rutas de Bowser mediante backtracking.",
+    "restricciones": "P1 exige recursión y P3 backtracking. P2 exige programación dinámica totalmente iterativa.",
+    "ruta": "examenes/final/2023-1/enunciado.pdf",
+    "detalle": "examenes/final/2023-1/README.md",
+    "fuente": "https://drive.google.com/file/d/1aR1sHDI3II_9tWSRy28Zd6sySneyYpWt/view",
+    "estado": "disponible",
+    "material": [
+      "examenes/final/2023-1/material_original"
+    ],
+    "soluciones": [],
+    "sha256": "b88c4288c9ed05ec8b5bdc8979e2e2ea6716180866d597f74e753659c3e4e2d7"
+  },
+  {
+    "titulo": "Examen 1 — Tortuninjas, incidentes y robot apilador",
+    "tipo": "Examen",
+    "ciclo": "2023-2",
+    "temas": [
+      "Listas, pilas y colas",
+      "Backtracking"
+    ],
+    "preguntas": "P1 (p. 1): asignación, ordenamiento y fusión de listas. P2 (p. 3): gestión de incidentes con colas y pilas. P3 (p. 5): robot HEX que ordena productos.",
+    "restricciones": "P3 permite recursión como alternativa. P2 la prohíbe; no es un examen completo de recursión.",
+    "ruta": "examenes/parcial/2023-2/enunciado.pdf",
+    "detalle": "examenes/parcial/2023-2/README.md",
+    "fuente": "https://drive.google.com/file/d/1i3t988dOppw71peVTnrkNxQ09oyyG9Wn/view",
+    "estado": "disponible",
+    "material": [
+      "examenes/parcial/2023-2/material_original"
+    ],
+    "soluciones": [
+      {
+        "nombre": "TortuNinjas, P1",
+        "ruta": "soluciones-actuales/04_listas_pilas_colas/soluciones/2023_2_ex01_p01_tortuninjas.cpp"
+      },
+      {
+        "nombre": "Incidentes, P2",
+        "ruta": "soluciones-actuales/04_listas_pilas_colas/soluciones/2023_2_ex01_p02_incidentes.cpp"
+      }
+    ],
+    "sha256": "3f618dee07315727eaf1ea2f7e9e189105f69a1c81e366eabaff43ed84476ac9"
+  },
+  {
+    "titulo": "Examen 1 — Vaguito, Nautilus, riesgos y aterrizajes",
+    "tipo": "Examen",
+    "ciclo": "2024-1",
+    "temas": [
+      "Listas, pilas y colas",
+      "Divide y vencerás"
+    ],
+    "preguntas": "P1 (p. 1): fusión de listas de productos. P2 (p. 3): movimientos de Nautilus usando una pila. P3(a) (p. 4): ordenar riesgos con divide y vencerás; P3(b): gestionar cola de aterrizaje.",
+    "restricciones": "P3(a) sirve como práctica de ordenamiento por divide y vencerás.",
+    "ruta": "examenes/parcial/2024-1/enunciado.pdf",
+    "detalle": "examenes/parcial/2024-1/README.md",
+    "fuente": "https://drive.google.com/file/d/1sPgnxLAnw5NPMLS1lVbI6clzIenZ73K-/view",
+    "estado": "disponible",
+    "material": [
+      "examenes/parcial/2024-1/material_original"
+    ],
+    "soluciones": [
+      {
+        "nombre": "Nautilus, P2",
+        "ruta": "soluciones-actuales/04_listas_pilas_colas/soluciones/2024_1_ex01_p02_nautilus.cpp"
+      }
+    ],
+    "sha256": "4c5ac6cc36ad49928d4d3d447cdc9b1ad5434e9c641abbc92d800200138869ef"
+  },
+  {
+    "titulo": "Examen 2 — Pilas, emociones, grafos y Josephus",
+    "tipo": "Examen",
+    "ciclo": "2024-1",
+    "temas": [
+      "Árboles",
+      "Listas, pilas y colas",
+      "Grafos"
+    ],
+    "preguntas": "P1 (p. 1): clonar una pila. P2 (p. 1): secuencias de emociones en ABB. P3(a) (p. 4): rutas de mínima latencia en un grafo; P3(b): eliminación circular de Josephus.",
+    "restricciones": "P3(b) permite una solución iterativa o recursiva con lista circular.",
+    "ruta": "examenes/final/2024-1/enunciado.pdf",
+    "detalle": "examenes/final/2024-1/README.md",
+    "fuente": "https://drive.google.com/file/d/1kqDc5_oOQsW4jJvs8RFvN7NEtlb9cm_t/view",
+    "estado": "disponible",
+    "material": [
+      "examenes/final/2024-1/material_original"
+    ],
+    "soluciones": [],
+    "sha256": "80169b3994a286ba4995b756805f16078cb484ef39f699b65fd301a5db2728d6"
+  },
+  {
+    "titulo": "Examen 2 — Quicksort, árboles y contraseñas",
+    "tipo": "Examen",
+    "ciclo": "2024-2",
+    "temas": [
+      "Divide y vencerás",
+      "Árboles"
+    ],
+    "preguntas": "P1 (p. 1): límites de lotes y quicksort. P2 (p. 3): árbol digital y validación de contraseña en ABB. P3 (p. 6): red SkyNerd.",
+    "restricciones": "P2(b) exige recursividad para todas las operaciones del ABB. P1 practica divide y vencerás.",
+    "ruta": "examenes/final/2024-2/enunciado.pdf",
+    "detalle": "examenes/final/2024-2/README.md",
+    "fuente": "https://drive.google.com/file/d/1Zy-bkNSFHA6pj-51C_wl0Fxfucx9fcrZ/view",
+    "estado": "disponible",
+    "material": [
+      "examenes/final/2024-2/material_original"
+    ],
+    "soluciones": [],
+    "sha256": "d8dedeb23f6cd8b4522ea6ce7199c03a253f736d80c8719296e0fb7defe36bfa"
+  },
+  {
+    "titulo": "Examen 2 — ABB, búsquedas, SQL e inversiones",
+    "tipo": "Examen",
+    "ciclo": "2025-1",
+    "temas": [
+      "Divide y vencerás",
+      "Árboles",
+      "Listas, pilas y colas"
+    ],
+    "preguntas": "P1 (p. 1): ABB balanceado desde un arreglo. P2 (p. 2): búsqueda en arreglo rotado. P3 (p. 3): AST para SELECT. P4 (p. 4): conteo de inversiones. P5 (p. 5): capacidad de comederos con pila o cola.",
+    "restricciones": "P1 sugiere construcción recursiva; P2 y P4 exigen divide y vencerás. P5 prohíbe recursión.",
+    "ruta": "examenes/final/2025-1/enunciado.pdf",
+    "detalle": "examenes/final/2025-1/README.md",
+    "fuente": "https://drive.google.com/file/d/1mf50X8F0mb8fDiB2go0wjMU_w9yBv1fl/view",
+    "estado": "disponible",
+    "material": [
+      "examenes/final/2025-1/material_original"
+    ],
+    "soluciones": [],
+    "sha256": "7db222b68c845e4d6b41c96c1aac7f19c70a242e70beec82dc2e615e5c07078d"
+  },
+  {
+    "titulo": "Listas, pilas y colas — PDF vacío en Drive",
+    "tipo": "Archivo vacío",
+    "ciclo": "Sin confirmar",
+    "temas": [
+      "Material de apoyo"
+    ],
+    "preguntas": "El archivo de origen tiene 0 bytes. No se puede leer ni clasificar su contenido.",
+    "restricciones": "",
+    "ruta": null,
+    "detalle": "material-de-apoyo/listas/README.md",
+    "fuente": "https://drive.google.com/file/d/1F5wu6o13VE7bXAi8wV7Q62o7zmfd-LT-/view",
+    "estado": "vacío_en_origen",
+    "material": [
+      "material-de-apoyo/listas/material_original"
+    ],
+    "soluciones": []
+  },
+  {
+    "titulo": "Ejercicios de divide y vencerás",
+    "tipo": "Ejercicios",
+    "ciclo": "Sin fecha",
+    "temas": [
+      "Divide y vencerás",
+      "Material de apoyo"
+    ],
+    "preguntas": "Elemento único entre pares, arreglos de ceros y unos y otros ejercicios de búsqueda.",
+    "restricciones": "Práctica adicional de búsqueda por mitades.",
+    "ruta": "material-de-apoyo/divide-y-venceras/ejercicios.pdf",
+    "detalle": null,
+    "fuente": "https://drive.google.com/file/d/1vUte9kyxt7MZ7EKlVC3vBtgifdIb5aqa/view",
+    "estado": "disponible",
+    "material": [
+      "material-de-apoyo/divide-y-venceras/material_original"
+    ],
+    "soluciones": [],
+    "sha256": "8a5b30924561e353116913451ca914d8c2adab4b6c1dc85641c803e65f7bb06f"
+  },
+  {
+    "titulo": "Laboratorio 2 — Barajado y canario ancestral",
+    "tipo": "Laboratorio",
+    "ciclo": "2026-1",
+    "temas": [
+      "Listas, pilas y colas",
+      "Divide y vencerás"
+    ],
+    "preguntas": "P1: barajar una lista de cartas. P2: identificar el canario ancestral mediante divide y vencerás.",
+    "restricciones": "",
+    "ruta": "laboratorios/laboratorio-02/2026-1/enunciado.pdf",
+    "detalle": "laboratorios/laboratorio-02/2026-1/README.md",
+    "fuente": "",
+    "estado": "disponible",
+    "sha256": "02afad509b0be26ffbaea7d1f10f74f110fe5851a4160549348b54e222250a82",
+    "material": [],
+    "soluciones": [
+      {
+        "nombre": "Barajado, P1",
+        "ruta": "soluciones-actuales/04_listas_pilas_colas/soluciones/2026_1_lab02_p01_barajado.cpp"
+      },
+      {
+        "nombre": "Canario ancestral, P2",
+        "ruta": "soluciones-actuales/04_listas_pilas_colas/soluciones/2026_1_lab02_p02_canarios.cpp"
+      }
+    ]
+  },
+  {
+    "titulo": "Examen 1 — Material histórico de 2020-2",
+    "tipo": "Examen",
+    "ciclo": "2020-2",
+    "temas": [
+      "Material de apoyo"
+    ],
+    "preguntas": "Enunciado y resoluciones históricas conservados en su carpeta de origen.",
+    "restricciones": "",
+    "ruta": "examenes/parcial/EX1-20202.pdf",
+    "detalle": null,
+    "fuente": "",
+    "estado": "disponible",
+    "sha256": "528e947ba17761561bc17567c413da17e9b0df93c078c34146fc15520981eb8e",
+    "material": [
+      "examenes/parcial"
+    ],
+    "soluciones": []
+  },
+  {
+    "titulo": "Examen 2 — Material histórico de 2020-2",
+    "tipo": "Examen",
+    "ciclo": "2020-2",
+    "temas": [
+      "Material de apoyo"
+    ],
+    "preguntas": "Enunciado y resoluciones históricas conservados en su carpeta de origen.",
+    "restricciones": "",
+    "ruta": "examenes/final/2020-2_E2.pdf",
+    "detalle": null,
+    "fuente": "",
+    "estado": "disponible",
+    "sha256": "5dc51a5e1a97ce28cb0004ab5fb0bca0bc2e904b58d64ad3f9cc34192edbfc0a",
+    "material": [
+      "examenes/final"
+    ],
+    "soluciones": []
+  }
+]

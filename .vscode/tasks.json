@@ -1,0 +1,137 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Preparar compilación",
+            "type": "process",
+            "command": "mkdir",
+            "args": [
+                "-p",
+                "${workspaceFolder}/.build"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "silent",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Compilar C++: archivo activo",
+            "type": "process",
+            "command": "g++",
+            "args": [
+                "-std=c++17",
+                "-Wall",
+                "-Wextra",
+                "-Wpedantic",
+                "-g",
+                "${file}",
+                "-o",
+                "${workspaceFolder}/.build/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "dependsOn": "Preparar compilación",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Compilar C++: con biblioteca de listas y pilas",
+            "type": "process",
+            "command": "g++",
+            "args": [
+                "-std=c++17",
+                "-Wall",
+                "-Wextra",
+                "-Wpedantic",
+                "-g",
+                "${file}",
+                "${workspaceFolder}/soluciones-actuales/04_listas_pilas_colas/biblioteca/pilas/FuncionesPila.cpp",
+                "${workspaceFolder}/soluciones-actuales/04_listas_pilas_colas/biblioteca/listas/FuncionesLista.cpp",
+                "-o",
+                "${workspaceFolder}/.build/${fileBasenameNoExtension}-biblioteca"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "dependsOn": "Preparar compilación",
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Ejecutar C++: archivo activo",
+            "type": "process",
+            "command": "${workspaceFolder}/.build/${fileBasenameNoExtension}",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "dependsOn": "Compilar C++: archivo activo",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Ejecutar C++: con biblioteca de listas y pilas",
+            "type": "process",
+            "command": "${workspaceFolder}/.build/${fileBasenameNoExtension}-biblioteca",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "dependsOn": "Compilar C++: con biblioteca de listas y pilas",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Verificar listas y pilas",
+            "type": "process",
+            "command": "python3",
+            "args": [
+                "tests/test_listas.py"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/soluciones-actuales/04_listas_pilas_colas"
+            },
+            "group": "test",
+            "problemMatcher": []
+        },
+        {
+            "label": "Verificar ROBOTJARDIN",
+            "type": "process",
+            "command": "python3",
+            "args": [
+                "robotjardin_2025_2/tests/test_robotjardin.py"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/soluciones-actuales/04_listas_pilas_colas"
+            },
+            "group": "test",
+            "problemMatcher": []
+        },
+        {
+            "label": "Verificar todo el curso",
+            "type": "process",
+            "command": "python3",
+            "args": [
+                "scripts/verificar_actuales.py"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "test",
+            "problemMatcher": []
+        }
+    ]
+}

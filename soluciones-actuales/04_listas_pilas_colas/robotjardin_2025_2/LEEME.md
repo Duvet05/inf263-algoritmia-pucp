@@ -1,6 +1,6 @@
 # ROBOTJARDIN 1.0 · Pregunta 4
 
-[Abrir la representación visual](index.html) · [Código completo en C++](../soluciones/2025_2_ex01_p04_robotjardin.cpp) · [Volver al catálogo](../LEEME.md)
+[Abrir la representación visual](index.html) · [Código completo en C++](../soluciones/2025_2_ex01_p04_robotjardin.cpp) · [Volver al catálogo](../../../catalogo/index.html)
 
 Abre `index.html` directamente en el navegador. Incluye las dos matrices del enunciado, resalta el rectángulo máximo y permite introducir otra matriz de ceros y unos. En «Ver paso a paso» puedes recorrer las operaciones de la pila o saltar al cierre de cada fila. La vista funciona sin conexión y permite descargar el mismo `2025_2_ex01_p04_robotjardin.cpp` de la carpeta `soluciones`.
 

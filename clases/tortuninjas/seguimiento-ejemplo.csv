@@ -1,0 +1,22 @@
+Paso;Camion;Peso;Ninja;Capacidad;Carga antes;Camiones antes;Accion;Carga despues
+1;1;17;Leonardo;34;0;0;Asignar;17
+2;2;24;Leonardo;34;17;1;Rechazar;17
+3;2;24;Rafael;24;0;0;Asignar;24
+4;3;9;Leonardo;34;17;1;Asignar;26
+5;4;25;Leonardo;34;26;2;Rechazar;26
+6;4;25;Rafael;24;24;1;Rechazar;24
+7;4;25;Donatello;12;0;0;Rechazar;0
+8;4;25;Miguel Angel;30;0;0;Asignar;25
+9;5;14;Leonardo;34;26;2;Rechazar;26
+10;5;14;Rafael;24;24;1;Rechazar;24
+11;5;14;Donatello;12;0;0;Rechazar;0
+12;5;14;Miguel Angel;30;25;1;Rechazar;25
+13;4;25;Miguel Angel;30;25;1;Deshacer;0
+14;3;9;Leonardo;34;26;2;Deshacer;17
+15;3;9;Rafael;24;24;1;Rechazar;24
+16;3;9;Donatello;12;0;0;Asignar;9
+17;4;25;Leonardo;34;17;1;Rechazar;17
+18;4;25;Rafael;24;24;1;Rechazar;24
+19;4;25;Donatello;12;9;1;Rechazar;9
+20;4;25;Miguel Angel;30;0;0;Asignar;25
+21;5;14;Leonardo;34;17;1;Asignar;31

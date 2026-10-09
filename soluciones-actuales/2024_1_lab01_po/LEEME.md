@@ -1,6 +1,6 @@
 # Laboratorio 1 de 2024-1: Kung Fu Panda, P1
 
-[Código](2024_1_lab01_p01_po.cpp) · [Datos del ejemplo](datos1.txt) · [Enunciado](enunciado.pdf) · [Índice general](../../README.md)
+[Código](2024_1_lab01_p01_po.cpp) · [Datos del ejemplo](datos1.txt) · [Enunciado](../../laboratorios/laboratorio-01/2024-1/enunciado.pdf) · [Índice general](../../README.md)
 
 Esta versión usa fuerza bruta iterativa: cada arma queda libre o se asigna a un guerrero. Comprueba tipos permitidos, prerrequisitos en la misma mochila y poder estrictamente mayor que el del guerrero.
 

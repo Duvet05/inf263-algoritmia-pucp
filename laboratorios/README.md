@@ -11,20 +11,20 @@ Este índice reúne los **18 laboratorios distintos** del catálogo local de 202
 | 2023-1 | Lab. 1: camiones y caminos de robots | [PDF](laboratorio-01/2023-1/enunciado.pdf) | [Fuentes y datos](laboratorio-01/2023-1/material_original/) | Pendiente |
 | 2023-1 | Lab. 3: pilas Kupa y fusión de listas | [PDF](laboratorio-03/2023-1/enunciado.pdf) | [Fuentes y datos](laboratorio-03/2023-1/material_original/) | Pendiente |
 | 2023-1 | Lab. 4: SkyNerd y fusión de ejércitos | [PDF](laboratorio-04/2023-1/enunciado.pdf) | [Fuentes y biblioteca](laboratorio-04/2023-1/material_original/) | Pendiente |
-| 2024-1 | Lab. 1: Kung Fu Panda y radar | [PDF](../soluciones-actuales/2024_1_lab01_po/enunciado.pdf) | — | [P1, Po](../soluciones-actuales/2024_1_lab01_po/LEEME.md) |
+| 2024-1 | Lab. 1: Kung Fu Panda y radar | [PDF](laboratorio-01/2024-1/enunciado.pdf) | [Fuentes y datos](laboratorio-01/2024-1/material_original/) | [P1, Po](../soluciones-actuales/2024_1_lab01_po/LEEME.md) |
 | 2024-1 | Lab. 2: emergencias y robot Hanói 3.0 | [PDF](laboratorio-02/2024-1/enunciado.pdf) | [Fuentes y datos](laboratorio-02/2024-1/material_original/) | Pendiente |
 | 2024-1 | Lab. 3: pérdida de datos y Oppenheimer | [PDF](laboratorio-03/2024-1/enunciado.pdf) | [Fuentes](laboratorio-03/2024-1/material_original/) | Pendiente |
 | 2024-2 | Lab. 2: equipos y pedidos de delivery | [PDF](laboratorio-02/2024-2/enunciado.pdf) | [Fuentes](laboratorio-02/2024-2/material_original/) | Pendiente |
 | 2024-2 | Lab. 3: bitácoras y pureza de minerales | [PDF](laboratorio-03/2024-2/enunciado.pdf) | [Fuentes y datos](laboratorio-03/2024-2/material_original/) | Pendiente |
 | 2025-1 | Lab. 1: discos y controles de seguridad | [PDF](laboratorio-01/2025-1/enunciado.pdf) | [Fuentes y datos](laboratorio-01/2025-1/material_original/) | Pendiente |
-| 2025-1 | Lab. 2: cuadrigas y vetas de oro | [PDF](../soluciones-actuales/04_listas_pilas_colas/enunciados/2025_1_lab02_cuadrigas_y_vetas_de_oro.pdf) | — | [P1, cuadrigas](../soluciones-actuales/04_listas_pilas_colas/LEEME.md) |
+| 2025-1 | Lab. 2: cuadrigas y vetas de oro | [PDF](laboratorio-02/2025-1/enunciado.pdf) | [Fuentes y datos](laboratorio-02/2025-1/material_original/) | [P1, cuadrigas](../soluciones-actuales/04_listas_pilas_colas/LEEME.md) |
 | 2025-1 | Lab. 4: búsquedas y clasificación de productos | [PDF](laboratorio-04/2025-1/enunciado.pdf) | [Fuente](laboratorio-04/2025-1/material_original/) | Pendiente |
 | 2025-1 | Lab. 5: árbol gramatical y eliminación en ABB | [PDF](laboratorio-05/2025-1/enunciado.pdf) | [Fuentes y biblioteca](laboratorio-05/2025-1/material_original/) | Pendiente |
 | 2025-2* | Lab. 1: controles de seguridad y galerías | [PDF](laboratorio-01/2025-2/enunciado.pdf) | [Fuentes e instrucciones](laboratorio-01/2025-2/material_original/) | Pendiente |
 | 2025-2 | Lab. 4: canarios y min-heap | [PDF](laboratorio-04/2025-2/enunciado.pdf) | [Fuentes y bibliotecas](laboratorio-04/2025-2/material_original/) | Pendiente |
 | 2025-2 | Lab. 5: AVL y red SkyNerd | [PDF](laboratorio-05/2025-2/enunciado.pdf) | [Fuentes y bibliotecas](laboratorio-05/2025-2/material_original/) | Pendiente |
-| 2026-1 | Lab. 1: robot arqueólogo y citas odontológicas | [PDF](../soluciones-actuales/2026_1_lab01/enunciado.pdf) | — | [P1 y P2](../soluciones-actuales/2026_1_lab01/LEEME.md) |
-| 2026-1 | Lab. 2: barajado y canario ancestral | [PDF](../soluciones-actuales/04_listas_pilas_colas/enunciados/2026_1_lab02_barajado_y_canarios.pdf) | — | [P1 y P2](../soluciones-actuales/04_listas_pilas_colas/LEEME.md) |
+| 2026-1 | Lab. 1: robot arqueólogo y citas odontológicas | [PDF](laboratorio-01/2026-1/enunciado.pdf) | [Fuentes y datos](laboratorio-01/2026-1/material_original/) | [P1 y P2](../soluciones-actuales/2026_1_lab01/LEEME.md) |
+| 2026-1 | Lab. 2: barajado y canario ancestral | [PDF](laboratorio-02/2026-1/enunciado.pdf) | — | [P1 y P2](../soluciones-actuales/04_listas_pilas_colas/LEEME.md) |
 
 *El ciclo del Lab. 1 de 2025-2 procede de las instrucciones locales que acompañaban al PDF; el encabezado del PDF no lo indica.*
 
