@@ -1,0 +1,1 @@
+Abre 01 - Clase de mochilas.html con doble clic en un navegador. Funciona sin internet; incluye tres simuladores. Los PDF permiten leer e imprimir. El LEEME dentro de Codigo C++ explica los comandos de compilacion y los resultados esperados.

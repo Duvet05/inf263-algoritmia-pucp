@@ -2,7 +2,7 @@
 
 [Inicio](../README.md) · [Catálogo con filtros](index.html) · [Por temas](../temas/README.md) · [Exámenes](../examenes/README.md) · [Laboratorios](../laboratorios/README.md) · [Videos](../material-de-apoyo/VIDEOS.md)
 
-19 laboratorios, 10 exámenes y 5 documentos de teoría y ejercicios. El PDF vacío de origen se registra como incidencia. Cada enunciado tiene una sola ruta canónica.
+19 laboratorios, 10 exámenes y 10 documentos de teoría y ejercicios. El PDF vacío de origen se registra como incidencia. Cada enunciado tiene una sola ruta canónica.
 
 | Ciclo | Material | Temas | Soluciones verificadas |
 | --- | --- | --- | --- |
@@ -25,6 +25,7 @@
 | 2024-1 | [Laboratorio 1 — Kung Fu Panda y radar por anillos](../laboratorios/laboratorio-01/2024-1/enunciado.pdf) | Recursión; Fuerza bruta | [Po, P1](../soluciones-actuales/2024_1_lab01_po/2024_1_lab01_p01_po.cpp) |
 | 2024-1 | [Laboratorio 2 — Emergencias y robot Hanói 3.0](../laboratorios/laboratorio-02/2024-1/enunciado.pdf) | Listas, pilas y colas | Pendiente |
 | 2024-1 | [Laboratorio 3 — Pérdida de datos y Oppenheimer](../laboratorios/laboratorio-03/2024-1/enunciado.pdf) | Divide y vencerás | Pendiente |
+| 2024-2 | [Algoritmos Avanzados (1INF32) — Laboratorio 1: lavadoras y racks](../material-de-apoyo/algoritmos-avanzados/2024-2/laboratorio-01/enunciado.pdf) | Backtracking | Pendiente |
 | 2024-2 | [Examen 2 — Quicksort, árboles y contraseñas](../examenes/final/2024-2/enunciado.pdf) | Divide y vencerás; Árboles | Pendiente |
 | 2024-2 | [Laboratorio 2 — Equipos y pedidos de delivery](../laboratorios/laboratorio-02/2024-2/enunciado.pdf) | Listas, pilas y colas | Pendiente |
 | 2024-2 | [Laboratorio 3 — Bitácoras y pureza de minerales](../laboratorios/laboratorio-03/2024-2/enunciado.pdf) | Divide y vencerás | Pendiente |
@@ -39,6 +40,10 @@
 | 2025-2 | [Laboratorio 5 — AVL y red SkyNerd](../laboratorios/laboratorio-05/2025-2/enunciado.pdf) | Árboles | Pendiente |
 | 2026-1 | [Laboratorio 1 — Robot arqueólogo y citas odontológicas](../laboratorios/laboratorio-01/2026-1/enunciado.pdf) | Recursión; Fuerza bruta | [Robot arqueólogo, P1](../soluciones-actuales/2026_1_lab01/2026_1_lab01_p01_arqueologo.cpp) · [Citas odontológicas, P2](../soluciones-actuales/2026_1_lab01/2026_1_lab01_p02_citas.cpp) |
 | 2026-1 | [Laboratorio 2 — Barajado y canario ancestral](../laboratorios/laboratorio-02/2026-1/enunciado.pdf) | Listas, pilas y colas; Divide y vencerás | [Barajado, P1](../soluciones-actuales/04_listas_pilas_colas/soluciones/2026_1_lab02_p01_barajado.cpp) · [Canario ancestral, P2](../soluciones-actuales/04_listas_pilas_colas/soluciones/2026_1_lab02_p02_canarios.cpp) |
+| 2026-2 | [Mochilas — Práctica y soluciones](../clases/mochilas/practica.pdf) | Fuerza bruta; Material de apoyo | Pendiente |
+| 2026-2 | [Mochilas — Guion docente](../clases/mochilas/guion-docente.pdf) | Fuerza bruta; Material de apoyo | Pendiente |
+| 2026-2 | [Mochilas — Presentación de la clase de 60 minutos](../clases/mochilas/presentacion.pdf) | Fuerza bruta; Material de apoyo | Pendiente |
+| 2026-2 | [Sílabo de Algoritmia y Estructura de Datos (1INF27)](../material-de-apoyo/silabos/2026-2/enunciado.pdf) | Material de apoyo | Pendiente |
 | Sin confirmar | Listas, pilas y colas — PDF vacío en Drive (vacío en origen) | Material de apoyo | Pendiente |
 | Sin fecha | [Ejercicios de divide y vencerás](../material-de-apoyo/divide-y-venceras/ejercicios.pdf) | Divide y vencerás; Material de apoyo | Pendiente |
 

@@ -93,12 +93,24 @@ def main():
         if ".git" in source.parts: continue
         for target in re.findall(r"\]\(([^)]+)\)",source.read_text(encoding="utf-8")):
             local_link(source,target)
-    for source in [ROOT / "catalogo/index.html", ROOT / "soluciones-actuales/04_listas_pilas_colas/robotjardin_2025_2/index.html"]:
+    for source in ROOT.rglob("*.html"):
         Links(source).feed(source.read_text(encoding="utf-8"))
     result = subprocess.run([sys.executable,str(ROOT/"scripts/generar_catalogo.py"),"--check"],capture_output=True,text=True,timeout=30)
     assert result.returncode == 0, result.stdout + result.stderr
     print(result.stdout,end="")
     verify_trace()
+    with (ROOT / "catalogo/consolidacion-2026-10-09.csv").open(encoding="utf-8", newline="") as file:
+        rows = list(csv.DictReader(file))
+    for row in rows:
+        if row["destino"]:
+            target = ROOT / row["destino"]
+            assert target.is_file() and target.resolve().is_relative_to(ROOT), row["destino"]
+            assert re.fullmatch(r"[0-9a-f]{64}", row["sha256_destino"]), row["destino"]
+        else:
+            assert row["estado"] == "regenerable", row["origen"]
+        if row["estado"] == "exacto":
+            assert row["sha256_origen"] == row["sha256_destino"], row["origen"]
+    print(f"OK: {len(rows)} registros de consolidación y destinos conservados")
     subprocess.run(["node",str(ROOT / "scripts/verificar_catalogo_visual.cjs")],check=True,timeout=30)
     print(f"OK: {len(paths)} PDF unicos, SHA-256 y enlaces internos")
 

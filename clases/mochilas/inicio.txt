@@ -1,0 +1,3 @@
+MOCHILAS — CLASE GUIADA DE 60 MINUTOS
+
+Empieza por README.md. Abre presentacion.html, guion-docente.pdf y codigo/LEEME.md. El enunciado y el código de Po se consultan desde sus rutas canónicas, enlazadas en README.md.

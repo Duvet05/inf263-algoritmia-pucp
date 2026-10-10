@@ -10,6 +10,9 @@
 | 2025-2 | [Examen 1 — Alertas, Hanói y estructuras lineales](../../examenes/parcial/2025-2/enunciado.pdf) | Recursión; Fuerza bruta; Listas, pilas y colas | [ROBOTJARDIN, P4](../../soluciones-actuales/04_listas_pilas_colas/soluciones/2025_2_ex01_p04_robotjardin.cpp) |
 | 2025-2 | [Laboratorio 1 — Controles de seguridad y galerías](../../laboratorios/laboratorio-01/2025-2/enunciado.pdf) | Recursión; Fuerza bruta; Backtracking | Pendiente |
 | 2026-1 | [Laboratorio 1 — Robot arqueólogo y citas odontológicas](../../laboratorios/laboratorio-01/2026-1/enunciado.pdf) | Recursión; Fuerza bruta | [Robot arqueólogo, P1](../../soluciones-actuales/2026_1_lab01/2026_1_lab01_p01_arqueologo.cpp) · [Citas odontológicas, P2](../../soluciones-actuales/2026_1_lab01/2026_1_lab01_p02_citas.cpp) |
+| 2026-2 | [Mochilas — Práctica y soluciones](../../clases/mochilas/practica.pdf) | Fuerza bruta; Material de apoyo | Pendiente |
+| 2026-2 | [Mochilas — Guion docente](../../clases/mochilas/guion-docente.pdf) | Fuerza bruta; Material de apoyo | Pendiente |
+| 2026-2 | [Mochilas — Presentación de la clase de 60 minutos](../../clases/mochilas/presentacion.pdf) | Fuerza bruta; Material de apoyo | Pendiente |
 
 ### 2023-1: Laboratorio 1 — Camiones y caminos de robots
 
@@ -44,3 +47,21 @@ Restricciones del enunciado: Una sola función recursiva sin iteraciones; se per
 P1 (p. 1): robot arqueólogo que cuenta artefactos y dibuja su despliegue en una matriz. P2 (p. 2): asignar dientes a citas para maximizar ganancias con fuerza bruta.
 
 Restricciones del enunciado: P1 exige una sola función recursiva sin iteraciones; solo se permiten ciclos para imprimir la matriz. No se permiten variables globales.
+
+### 2026-2: Mochilas — Práctica y soluciones
+
+Ejercicios de selección binaria, fuerza bruta y restricciones, con respuestas.
+
+Restricciones del enunciado: Material didáctico; no es una evaluación oficial.
+
+### 2026-2: Mochilas — Guion docente
+
+Guion con tiempos, demostraciones, preguntas y respuestas.
+
+Restricciones del enunciado: Material didáctico; no es una evaluación oficial.
+
+### 2026-2: Mochilas — Presentación de la clase de 60 minutos
+
+Mochila binaria, bases 2 y 3, Po, tipos y prerrequisitos. Material docente preparado en septiembre de 2026.
+
+Restricciones del enunciado: Material didáctico; no es una evaluación oficial.

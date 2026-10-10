@@ -54,12 +54,17 @@ def main():
         ROOT / "scripts/verificar_catalogo.py",
         ROOT / "scripts/verificar_laboratorios.py",
         ACTUAL / "2024_1_lab01_po/test_p1.py",
+        ROOT / "clases/po-2024-1/tests/test_fuerza_bruta.py",
         ACTUAL / "04_listas_pilas_colas/tests/test_listas.py",
         ACTUAL / "04_listas_pilas_colas/robotjardin_2025_2/tests/test_robotjardin.py",
     ]
     for test in checks:
         ejecutar(sys.executable, str(test))
         print(f"OK {test.relative_to(ROOT)}")
+    for test in ["clases/po-2024-1/tests/po.test.cjs",
+                 "clases/radar-2024-1/tests/radar.test.cjs"]:
+        ejecutar("node", str(ROOT / test))
+        print(f"OK {test}")
     with tempfile.TemporaryDirectory(prefix="inf263-actuales-") as folder:
         comprobar_salida(compiler, Path(folder))
     print("Todas las soluciones actuales verificadas.")

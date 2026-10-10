@@ -740,5 +740,99 @@
       "examenes/final"
     ],
     "soluciones": []
+  },
+  {
+    "titulo": "Algoritmos Avanzados (1INF32) — Laboratorio 1: lavadoras y racks",
+    "tipo": "Ejercicios",
+    "ciclo": "2024-2",
+    "temas": [
+      "Backtracking"
+    ],
+    "preguntas": "Material complementario de otro curso. P1: maximizar ocupación de lavadoras y reportar costos, pacientes y pisos. P2: distribuir grupos completos en racks con capacidades fijas.",
+    "restricciones": "Ambas preguntas exigen backtracking. Curso 1INF32; no es un laboratorio de INF263.",
+    "ruta": "material-de-apoyo/algoritmos-avanzados/2024-2/laboratorio-01/enunciado.pdf",
+    "detalle": "material-de-apoyo/algoritmos-avanzados/2024-2/laboratorio-01/README.md",
+    "fuente": "",
+    "estado": "disponible",
+    "material": [],
+    "soluciones": [],
+    "sha256": "20ec179f23039b28e9bddc37ba46969bb495c4788d0e9518616db7e1c35c9c0f"
+  },
+  {
+    "titulo": "Sílabo de Algoritmia y Estructura de Datos (1INF27)",
+    "tipo": "Teoría",
+    "ciclo": "2026-2",
+    "temas": [
+      "Material de apoyo"
+    ],
+    "preguntas": "Información general, competencias, contenidos, evaluación y bibliografía de 2026-2.",
+    "restricciones": "",
+    "ruta": "material-de-apoyo/silabos/2026-2/enunciado.pdf",
+    "detalle": "material-de-apoyo/silabos/2026-2/README.md",
+    "fuente": "",
+    "estado": "disponible",
+    "material": [],
+    "soluciones": [],
+    "sha256": "1aa0f0b29f68ad9e0e75b6dba6b5f012e8401b6447a4a7b1057ecef51228f0a1"
+  },
+  {
+    "titulo": "Mochilas — Presentación de la clase de 60 minutos",
+    "tipo": "Teoría",
+    "ciclo": "2026-2",
+    "temas": [
+      "Fuerza bruta",
+      "Material de apoyo"
+    ],
+    "preguntas": "Mochila binaria, bases 2 y 3, Po, tipos y prerrequisitos. Material docente preparado en septiembre de 2026.",
+    "restricciones": "Material didáctico; no es una evaluación oficial.",
+    "ruta": "clases/mochilas/presentacion.pdf",
+    "detalle": null,
+    "fuente": "",
+    "estado": "disponible",
+    "material": [
+      "clases/mochilas"
+    ],
+    "soluciones": [],
+    "sha256": "ce9f0276ed3333a9717084ca8d6f25043a6a1f12ede92d14b61ccdceaebb1134"
+  },
+  {
+    "titulo": "Mochilas — Práctica y soluciones",
+    "tipo": "Ejercicios",
+    "ciclo": "2026-2",
+    "temas": [
+      "Fuerza bruta",
+      "Material de apoyo"
+    ],
+    "preguntas": "Ejercicios de selección binaria, fuerza bruta y restricciones, con respuestas.",
+    "restricciones": "Material didáctico; no es una evaluación oficial.",
+    "ruta": "clases/mochilas/practica.pdf",
+    "detalle": null,
+    "fuente": "",
+    "estado": "disponible",
+    "material": [
+      "clases/mochilas"
+    ],
+    "soluciones": [],
+    "sha256": "1d69ff822ebb0bbe12c5e744ff2e7b9f260094e8151abedf4c98e2538ddb5949"
+  },
+  {
+    "titulo": "Mochilas — Guion docente",
+    "tipo": "Teoría",
+    "ciclo": "2026-2",
+    "temas": [
+      "Fuerza bruta",
+      "Material de apoyo"
+    ],
+    "preguntas": "Guion con tiempos, demostraciones, preguntas y respuestas.",
+    "restricciones": "Material didáctico; no es una evaluación oficial.",
+    "ruta": "clases/mochilas/guion-docente.pdf",
+    "detalle": null,
+    "fuente": "",
+    "estado": "disponible",
+    "material": [
+      "clases/mochilas"
+    ],
+    "soluciones": [],
+    "sha256": "b77646e78967fe1968cc8a04c06cf9996cddce45966333e1f5a2c483a242d9c9"
   }
 ]

@@ -2,7 +2,7 @@
 
 [Inicio](../README.md) · [Soluciones verificadas](../soluciones-actuales/CATALOGO.md)
 
-Este índice reúne los **18 laboratorios distintos** del catálogo local de 2022-2 a 2026-1 y el laboratorio 2 de 2026-1 incorporado después. Los 15 enunciados que faltaban se copiaron a `laboratorio-NN/ciclo/enunciado.pdf`. Sus carpetas `material_original/` conservan los fuentes y datos que acompañaban al PDF, con sus nombres y subcarpetas de origen. **Ese material no tiene verificación funcional en este repositorio**; consulta la columna «Soluciones verificadas» para ver qué preguntas sí la tienen.
+Este índice reúne **19 laboratorios distintos** de 2022-2 a 2026-1. Los enunciados se guardan en `laboratorio-NN/ciclo/enunciado.pdf`. Sus carpetas `material_original/` conservan los fuentes y datos que acompañaban al PDF, con sus nombres y subcarpetas de origen. **Ese material no tiene verificación funcional en este repositorio**; consulta la columna «Soluciones verificadas» para ver qué preguntas sí la tienen.
 
 | Ciclo | Laboratorio | Enunciado | Material de origen | Soluciones verificadas |
 | --- | --- | --- | --- | --- |
@@ -29,3 +29,5 @@ Este índice reúne los **18 laboratorios distintos** del catálogo local de 202
 *El ciclo del Lab. 1 de 2025-2 procede de las instrucciones locales que acompañaban al PDF; el encabezado del PDF no lo indica.*
 
 Los [laboratorios históricos de 2015-2 a 2020-2](laboratorio-01/) y el material previo de [Lab. 2](laboratorio-02/), [Lab. 3](laboratorio-03/) y [Lab. 5](laboratorio-05/) permanecen en sus carpetas originales. Los archivos nuevos proceden del catálogo local de laboratorios, cuya [carpeta compartida de referencia](https://drive.google.com/drive/u/0/folders/1Vg4o5LVycKIGz8uxkPcCK66Gw-e5MZCp) se revisó el 9 de septiembre de 2026.
+
+La guía y los programas recuperados de Lab. 1 de 2025-1 están en [clase-docente](laboratorio-01/2025-1/material_original/clase-docente/GUIA_CLASE_DOCENTE.md). El laboratorio adicional de [Algoritmos Avanzados (1INF32)](../material-de-apoyo/algoritmos-avanzados/2024-2/laboratorio-01/README.md) se conserva como material complementario de otro curso.

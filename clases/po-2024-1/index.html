@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#183c31">
+  <title>Po y las mochilas · Copia de P1.cpp</title>
+  <style>
+    :root { color-scheme: light; --ink:#23372f; --muted:#69756d; --green:#28694e; --gold:#c98b2e; --line:#e1e5dc; --mono:ui-monospace,SFMono-Regular,Consolas,monospace; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:#f7f8f3; color:var(--ink); font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    button,input,select { font:inherit; color:inherit; }
+    button,select,summary { cursor:pointer; }
+    button { touch-action:manipulation; }
+    button:disabled { opacity:.4; cursor:default; }
+    :focus-visible { outline:3px solid #c18c32; outline-offset:3px; }
+    a { color:var(--green); text-underline-offset:4px; }
+    h1,h2,h3,p { margin:0; }
+    .wrap { max-width:1450px; margin:auto; padding:0 34px; }
+    .topbar { display:flex; align-items:center; justify-content:space-between; gap:16px; height:76px; border-bottom:1px solid var(--line); }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:750; letter-spacing:-.3px; }
+    .brand-icon { width:35px; height:35px; border-radius:10px; background:#e4eee5; display:grid; place-items:center; color:var(--green); font:22px var(--mono); }
+    nav { display:flex; gap:20px; font-size:12px; }
+    nav a { text-decoration:none; color:var(--muted); }
+    .hero { display:flex; align-items:center; justify-content:space-between; gap:32px; padding:30px 0 27px; }
+    .eyebrow { font-size:10px; font-weight:750; letter-spacing:1.8px; text-transform:uppercase; color:var(--green); }
+    h1 { font-size:clamp(31px,3.4vw,45px); letter-spacing:-1.8px; line-height:1.12; margin:9px 0 12px; }
+    .hero p { color:var(--muted); max-width:710px; font-size:13px; }
+    .po-badge { display:flex; align-items:center; gap:15px; padding:12px 20px 12px 12px; background:#f0eedf; border:1px solid #e5dfc7; border-radius:16px; flex:none; }
+    .panda { width:65px; height:65px; }
+    .po-badge strong { display:block; font-size:13px; }
+    .po-badge span { font-size:11px; color:#807557; }
+    .scenario-bar { display:flex; align-items:center; justify-content:space-between; gap:15px; margin-bottom:17px; }
+    .scenarios { display:flex; flex-wrap:wrap; gap:7px; }
+    .chip { padding:8px 12px; border:1px solid var(--line); background:#fff; border-radius:8px; font-size:11px; font-weight:600; }
+    .chip[aria-pressed="true"] { background:#e7f0e8; border-color:#88ac96; color:#205238; }
+    .scenario-note { font-size:11px; color:var(--muted); }
+    .layout { display:grid; grid-template-columns:minmax(0,1fr) 345px; gap:22px; align-items:start; }
+    .panel { background:white; border:1px solid var(--line); border-radius:15px; overflow:hidden; }
+    .left { min-width:0; }
+    .arena { background:#183c31; padding:20px; border-radius:0; color:#eaf3e9; }
+    .section-head { display:flex; justify-content:space-between; align-items:center; gap:15px; margin-bottom:14px; }
+    .section-label { font-size:10px; text-transform:uppercase; letter-spacing:1.5px; font-weight:700; }
+    .section-meta { font-size:10px; color:#a2bbaa; }
+    .warriors { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+    .warrior { border:1px solid #426052; background:#204537; padding:14px; border-radius:10px; min-width:0; transition:background .2s,border-color .2s; }
+    .warrior.active { border-color:#edc781; background:#2e5140; box-shadow:inset 0 3px #e6bb6d; }
+    .warrior.solved { border-color:#9acdb0; }
+    .warrior-top { display:flex; align-items:center; justify-content:space-between; gap:8px; }
+    .warrior h3 { font-size:13px; }
+    .warrior .number { font:10px var(--mono); color:#a6c1ad; }
+    .power { font:600 29px var(--mono); color:#f2d298; margin:8px 0 3px; }
+    .warrior .types { font-size:10px; color:#bed0c1; }
+    .bag { min-height:32px; display:flex; align-items:center; flex-wrap:wrap; gap:4px; margin-top:12px; }
+    .bag .empty { color:#91ad9a; font-size:10px; }
+    .weapon-token { display:inline-grid; place-items:center; min-width:23px; height:24px; padding:0 5px; background:#e7eedf; color:#284b38; border-radius:4px; font:600 12px var(--mono); }
+    .bag-power { margin-top:8px; font:10px var(--mono); color:#b6cbb9; }
+    .progress { margin-top:9px; height:3px; border-radius:3px; background:#3c5b47; overflow:hidden; }
+    .progress i { height:100%; display:block; background:#dabb78; width:0; }
+    .arsenal { padding:20px; background:#fff; border:1px solid var(--line); border-top:0; border-radius:0 0 15px 15px; }
+    .arsenal .section-meta { color:var(--muted); }
+    .weapons { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:9px; }
+    .weapon { text-align:left; border:1px solid #dfe5dc; background:#fafbf7; border-radius:9px; padding:11px 10px 9px; min-width:0; min-height:106px; position:relative; transition:background .18s,border-color .18s; }
+    .weapon:hover { border-color:#77a78b; }
+    .weapon.selected { background:#eef5e5; border-color:#7fa064; box-shadow:inset 0 3px #80a169; }
+    .weapon.occupied { background:#f0f1ee; border-color:#d5dcd2; }
+    .weapon.conflict { background:#fff0e8; border-color:#d49075; }
+    .weapon-head { display:flex; align-items:center; justify-content:space-between; gap:5px; }
+    .weapon-letter { font:700 25px var(--mono); }
+    .type { font-size:9px; color:#69785f; border:1px solid #dce3d4; border-radius:4px; padding:2px 4px; background:white; }
+    .weapon-power { font-size:11px; color:#53674e; margin:7px 0 4px; }
+    .weapon-deps { font-size:9px; color:var(--muted); white-space:nowrap; }
+    .ownership { margin-top:5px; font-size:9px; color:#69805f; }
+    .weapon.conflict .ownership { color:#ad5841; }
+    .arsenal-hint { font-size:10px; margin-top:11px; color:var(--muted); }
+    .chromosome { margin-top:19px; border-top:1px solid var(--line); padding-top:16px; }
+    .mono { font-family:var(--mono); }
+    .binary { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:5px; }
+    .bit { display:flex; flex-direction:column; align-items:center; gap:3px; border:1px solid var(--line); border-radius:6px; background:#f7f8f4; padding:6px 0; min-width:0; }
+    .bit span { font:9px var(--mono); color:var(--muted); }
+    .bit strong { font:600 17px var(--mono); color:#a0ab9c; }
+    .bit[aria-pressed="true"] { background:#e5efe0; border-color:#94b383; }
+    .bit[aria-pressed="true"] strong { color:#315d2a; }
+    .mask-controls { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:12px; }
+    .mask-field { display:flex; align-items:center; gap:7px; font-size:11px; }
+    .mask-field input { border:1px solid var(--line); border-radius:5px; padding:5px 8px; width:75px; font:12px var(--mono); background:#fafbf8; }
+    .small-button { border:1px solid var(--line); border-radius:6px; background:white; padding:5px 8px; font-size:11px; }
+    .small-button:hover { background:#edf3e7; }
+    .manual-tag { font-size:10px; color:#986124; }
+    .manual-tag[hidden] { display:none; }
+    .memory { margin-top:17px; padding:13px; border:1px dashed #d3ded0; background:#f7faf3; border-radius:8px; }
+    .memory-label { display:flex; justify-content:space-between; gap:8px; font-size:10px; color:var(--muted); margin-bottom:8px; }
+    .memory-label code { color:#44603c; }
+    .memory-values { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:5px; }
+    .memory-values span { text-align:center; font:12px var(--mono); padding:5px 0; background:#e9eee5; border-radius:4px; color:#83907b; }
+    .memory-values span.taken { background:#d6e4ce; color:#305027; font-weight:700; }
+    .playback { border:1px solid var(--line); border-bottom:0; background:white; padding:16px 20px; border-radius:15px 15px 0 0; }
+    .transport { display:flex; align-items:center; gap:8px; }
+    .transport button { border:1px solid var(--line); background:white; border-radius:8px; height:39px; padding:0 13px; font-size:11px; font-weight:600; }
+    .transport button:hover:not(:disabled) { background:#eef4e9; }
+    .transport .primary { background:var(--green); color:white; border-color:var(--green); flex:1; }
+    .transport .primary:hover { background:#1c503b; }
+    .transport .symbol { font-size:17px; width:38px; padding:0; flex:none; }
+    .timeline { display:block; width:100%; height:5px; margin:18px 0 12px; accent-color:var(--green); cursor:pointer; }
+    .playback-meta { display:flex; align-items:center; justify-content:space-between; gap:8px; font-size:10px; color:var(--muted); }
+    select { padding:4px 8px; font-size:11px; background:#f4f7f0; border:1px solid var(--line); border-radius:5px; }
+    .aside { padding:20px; }
+    .aside h2 { font-size:19px; letter-spacing:-.5px; margin:7px 0 15px; }
+    .stats { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .stat { background:#f2f5ed; border-radius:8px; padding:11px 12px; }
+    .stat strong { display:block; font:600 24px var(--mono); color:#386440; }
+    .stat span { font-size:10px; color:var(--muted); }
+    .story { margin:17px 0; padding:13px; background:#f6f7ee; border:1px solid #e5e8d8; border-radius:9px; }
+    .phase { display:block; color:#71814f; font-size:9px; text-transform:uppercase; font-weight:750; letter-spacing:1px; margin-bottom:5px; }
+    .story h3 { font-size:14px; margin-bottom:6px; }
+    .story p { font-size:11px; line-height:1.65; color:#697261; }
+    .story.undo { background:#fff1e7; border-color:#ead1b9; }
+    .story.success { background:#eaf5e8; border-color:#b4d4ac; }
+    .checks { display:grid; gap:7px; margin-top:10px; }
+    .check { display:flex; align-items:center; gap:9px; font-size:11px; color:#81907b; }
+    .check-icon { width:18px; height:18px; border:1px solid #d9e1d3; background:#f5f7f1; border-radius:50%; text-align:center; line-height:16px; font-size:10px; flex:none; }
+    .check.pass { color:#426139; }
+    .check.pass .check-icon { background:#e4f0dd; border-color:#b3cea2; }
+    .check.fail { color:#b25a3d; }
+    .check.fail .check-icon { background:#fcebe1; border-color:#e4b29c; }
+    .check-detail { font-size:10px; color:var(--muted); margin:10px 0 16px; line-height:1.6; }
+    .stack { display:flex; flex-direction:column; gap:7px; max-height:290px; overflow:auto; margin:10px 0 13px; }
+    .frame { border:1px solid #dce5d7; border-left:3px solid #99b488; padding:8px 10px; border-radius:6px; background:#f8faf4; font-size:10px; }
+    .frame.active { background:#edf3e4; border-left-color:#7f9d42; }
+    .frame strong { font:600 11px var(--mono); }
+    .frame p { margin-top:3px; color:var(--muted); font-size:10px; }
+    .empty-stack { color:#87937d; font-size:11px; padding:12px; border:1px dashed var(--line); border-radius:8px; text-align:center; }
+    .code-line { border-left:2px solid #c8d4b9; background:#f6f8f0; padding:10px; font:10px/1.7 var(--mono); color:#556b44; overflow-wrap:anywhere; }
+    .jump { margin-top:13px; width:100%; background:white; border:1px solid #d7e0ce; border-radius:7px; font-size:11px; padding:8px; }
+    .jump:hover { background:#f3f7eb; }
+    .learning { display:grid; grid-template-columns:repeat(3,1fr); gap:25px; margin:25px 0; }
+    .lesson { display:flex; gap:12px; }
+    .lesson-number { width:27px; height:27px; display:grid; place-items:center; border:1px solid #d1dfc5; border-radius:50%; color:#6e864d; font:11px var(--mono); flex:none; }
+    .lesson h3 { font-size:12px; margin:3px 0 5px; }
+    .lesson p { font-size:11px; color:var(--muted); line-height:1.65; }
+    .code-details { background:white; border:1px solid var(--line); border-radius:12px; padding:17px 20px; }
+    summary { font-size:12px; font-weight:650; }
+    summary span { font-weight:400; color:var(--muted); margin-left:8px; }
+    .source-info { margin:16px 0; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .source-info p { font-size:11px; color:var(--muted); max-width:780px; }
+    .source-actions { display:flex; flex-wrap:wrap; gap:7px; flex:none; max-width:440px; }
+    .source-actions button { border:1px solid var(--line); padding:7px 10px; border-radius:6px; background:#f8faf5; font-size:11px; }
+    pre { margin:0; background:#173329; color:#d0e2cb; border-radius:9px; padding:20px; overflow:auto; max-height:500px; font:11px/1.8 var(--mono); tab-size:4; }
+    .note { font-size:10px; color:var(--muted); margin-top:11px; line-height:1.6; }
+    footer { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:23px 0; font-size:10px; color:var(--muted); }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    [hidden] { display:none !important; }
+    @media(max-width:1100px) { .wrap { padding:0 22px; } .layout { grid-template-columns:minmax(0,1fr) 305px; gap:16px; } .aside,.arena,.arsenal { padding:16px; } .weapons { gap:6px; } .weapon { padding:9px 7px; } .weapon-letter { font-size:22px; } .weapon-deps { font-size:8px; } .warrior { padding:11px; } .po-badge { padding-right:13px; } .po-badge strong { max-width:100px; } }
+    @media(max-width:880px) { .hero { gap:20px; } .po-badge { display:none; } .layout { grid-template-columns:1fr; } .aside { display:grid; grid-template-columns:1fr 1fr; gap:0 22px; } .aside-heading,.stats,.story { grid-column:1; } .aside .validation { grid-column:2; grid-row:1 / 4; padding-top:4px; } .stack-area { grid-column:1 / -1; } .stack { display:grid; grid-template-columns:repeat(2,1fr); max-height:none; } .frame { margin-left:0 !important; } .weapons { gap:9px; } .weapon { padding:12px; } .weapon-deps { font-size:10px; } .scenario-note { max-width:240px; text-align:right; } }
+    @media(max-width:560px) { .wrap { padding:0 15px; } .topbar { height:64px; } nav { font-size:10px; gap:12px; } nav .catalog-link { display:none; } .brand { font-size:13px; } .hero { padding:25px 0 20px; } h1 { font-size:33px; letter-spacing:-1.2px; } .hero p { font-size:12px; } .eyebrow { font-size:9px; letter-spacing:1.25px; } .scenario-bar { align-items:start; flex-direction:column; gap:8px; } .scenario-note { max-width:none; text-align:left; font-size:10px; } .warriors { gap:6px; } .warrior { padding:9px 7px; } .warrior h3 { font-size:10px; } .warrior .number { display:none; } .power { font-size:24px; } .warrior .types { font-size:9px; } .bag-power { font-size:9px; } .weapons { grid-template-columns:repeat(4,minmax(0,1fr)); gap:7px; } .weapon { min-height:100px; padding:8px; } .weapon-letter { font-size:21px; } .weapon .type { font-size:8px; padding:1px 3px; } .weapon-deps { font-size:8px; } .weapon-power { font-size:10px; } .section-meta { font-size:9px; } .binary,.memory-values { gap:3px; } .bit strong { font-size:14px; } .bit span { font-size:8px; } .bit { padding:5px 0; } .mask-controls { align-items:start; flex-wrap:wrap; gap:8px; } .memory { padding:9px; } .memory-label { font-size:9px; } .playback { padding:15px; } .transport { gap:5px; } .transport button { padding:0 8px; font-size:10px; } .transport .symbol { width:29px; } .transport .primary { min-width:85px; } .aside { display:block; } .aside .validation { margin-top:18px; } .stack { display:flex; } .learning { grid-template-columns:1fr; gap:18px; } .source-info { align-items:start; flex-direction:column; } summary span { display:block; margin:5px 0 0; } .chip { font-size:10px; padding:7px 9px; } }
+    @media(prefers-reduced-motion:reduce) { * { transition:none !important; animation:none !important; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar"><div class="brand"><span class="brand-icon">{}</span>Algoritmia visual</div><nav><a class="catalog-link" href="../../catalogo/index.html">Catálogo</a><a href="../radar-2024-1/index.html">Radar · P2 ↗</a><a href="../../laboratorios/laboratorio-01/2024-1/enunciado.pdf#page=1" target="_blank" rel="noopener">Enunciado ↗</a></nav></header>
+    <main>
+      <section class="hero"><div><div class="eyebrow">Laboratorio 01 / Pregunta 01 / Copia de P1.cpp</div><h1>Po prepara sus mochilas.</h1><p>Una combinación a la vez. La animación explica la versión recursiva anterior: elige armas, comprueba las reglas y retrocede si el siguiente guerrero se queda sin una solución.</p></div><div class="po-badge"><svg class="panda" viewBox="0 0 80 80" role="img" aria-label="Ilustración de un panda"><circle cx="40" cy="40" r="39" fill="#e9d69f"/><circle cx="21" cy="22" r="12" fill="#24372e"/><circle cx="59" cy="22" r="12" fill="#24372e"/><ellipse cx="40" cy="43" rx="29" ry="27" fill="#fffdf3"/><ellipse cx="27" cy="40" rx="10" ry="13" transform="rotate(28 27 40)" fill="#24372e"/><ellipse cx="53" cy="40" rx="10" ry="13" transform="rotate(-28 53 40)" fill="#24372e"/><circle cx="29" cy="38" r="3" fill="#fffdf3"/><circle cx="51" cy="38" r="3" fill="#fffdf3"/><path d="M35 50Q40 47 45 50L40 55Z" fill="#24372e"/><path d="M40 55v3m-7 0q7 9 14 0" stroke="#24372e" stroke-width="2" fill="none" stroke-linecap="round"/></svg><div><strong>La última batalla de Po</strong><span>3 guerreros · 12 armas</span></div></div></section>
+      <p class="note" style="padding:12px 15px;border:1px solid #c7d9bc;border-radius:8px;background:#edf4e7;margin:0 0 17px"><strong>C++ actualizado: fuerza bruta sin recursión.</strong> Cada arma toma un destino 0, 1, 2 o 3; un ciclo prueba las asignaciones completas. <a href="#code-details" id="show-updated-code">Ver y descargar el C++ actualizado</a>. La animación inferior conserva la versión anterior.</p>
+      <div class="scenario-bar"><div class="scenarios"><button class="chip" id="original-case" aria-pressed="true">Datos del laboratorio</button><button class="chip" id="impossible-case" aria-pressed="false">¿Y si no hay solución?</button></div><span class="scenario-note" id="scenario-note">Mismos datos que Copia de datos1.txt.</span></div>
+      <noscript>Activa JavaScript para ver la búsqueda. El archivo original encuentra las mochilas R I J; Z P K; G L.</noscript>
+      <div class="layout">
+        <section class="left" aria-label="Armas, guerreros y reproducción">
+          <div class="playback"><div class="transport"><button id="restart" class="symbol" aria-label="Reiniciar">↺</button><button id="back" class="symbol" aria-label="Paso anterior">‹</button><button id="play" class="primary">▶ Reproducir</button><button id="next">Paso →</button><button id="finish" aria-label="Ver resultado de la búsqueda">Resultado</button></div><label for="timeline" class="sr-only">Paso de la búsqueda</label><input id="timeline" class="timeline" type="range" min="0" max="1" step="1" value="0"><div class="playback-meta"><span id="step-counter">Paso 0</span><label>Velocidad <select id="speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select></label></div><p class="note">Los rechazos consecutivos se agrupan para hacer visible el avance. Se conserva el orden de todas las combinaciones que prueba el C++.</p></div>
+          <div class="arena"><div class="section-head"><h2 class="section-label">Los rivales de Po</h2><span class="section-meta">Cada arma puede ir en una sola mochila</span></div><div id="warriors" class="warriors"></div></div>
+          <div class="arsenal">
+            <div class="section-head"><h2 class="section-label">El arsenal</h2><span id="available" class="section-meta">12 armas libres</span></div>
+            <div class="weapons" id="weapons"></div>
+            <p class="arsenal-hint">Haz clic en un arma para probar una combinación. Se abrirá una vista manual sin cambiar la búsqueda.</p>
+            <section class="chromosome" aria-label="Cromosoma binario">
+              <div class="section-head"><h3 class="section-label">cromosoma[12]</h3><span class="section-meta">1 = incluir · 0 = dejar fuera</span></div>
+              <div class="binary" id="binary"></div>
+              <div class="mask-controls"><div class="mask-field"><button id="mask-prev" class="small-button" aria-label="Combinación anterior">−</button><label for="mask">i =</label><input id="mask" type="number" min="0" max="4095" step="1" value="0"><button id="mask-next" class="small-button" aria-label="Combinación siguiente">+</button><span class="note" style="margin:0">de 4095</span></div><div id="manual-tag" class="manual-tag" hidden>Vista manual <button class="small-button" id="return-to-trace">Volver al paso</button></div></div>
+            </section>
+            <div class="memory"><div class="memory-label"><code>armas_utilizadas[12]</code><span>0 = libre · 1, 2, 3 = guerrero</span></div><div class="memory-values" id="memory-values"></div></div>
+          </div>
+
+        </section>
+        <aside class="panel aside" aria-label="Estado de la búsqueda">
+          <div class="aside-heading"><div class="eyebrow">Dentro del algoritmo</div><h2>Probar, avanzar, volver.</h2></div>
+          <div class="stats"><div class="stat"><strong id="tested">0</strong><span>combinaciones probadas</span></div><div class="stat"><strong id="backtracks">0</strong><span>retrocesos</span></div></div>
+          <div class="story" id="story" role="status" aria-live="polite" aria-atomic="true"><span class="phase" id="phase">Inicio</span><h3 id="story-title">Po empieza con 12 armas.</h3><p id="story-text">Pulsa Reproducir para ver la búsqueda.</p></div>
+          <div class="validation"><div class="section-label">¿Esta mochila es válida?</div><div id="checks" class="checks"></div><p class="check-detail" id="check-detail"></p></div>
+          <div class="stack-area"><div class="section-label">Pila de llamadas</div><div class="stack" id="stack"></div><div class="code-line" id="active-code"></div><button id="jump-backtrack" class="jump">↩ Ir al primer retroceso</button></div>
+        </aside>
+      </div>
+      <section class="learning" aria-label="Cómo funciona el programa"><article class="lesson"><span class="lesson-number">1</span><div><h3>Una mochila es un número binario</h3><p>cargarCromosoma convierte i en 12 bits. Cada bit corresponde a un arma, de Z a L. El ciclo prueba desde 0 hasta 4095.</p></div></article><article class="lesson"><span class="lesson-number">2</span><div><h3>Una mochila válida permite avanzar</h3><p>esCromosomaValido comprueba disponibilidad, prerrequisitos, tipos y poder. Se reservan las armas y se llama al siguiente guerrero.</p></div></article><article class="lesson"><span class="lesson-number">3</span><div><h3>Un callejón sin salida obliga a volver</h3><p>Si la llamada devuelve false, se liberan las armas de esa mochila. El ciclo continúa con la siguiente combinación. Ese paso es el backtracking.</p></div></article></section>
+      <details class="code-details" id="code-details"><summary>C++ actualizado de Po <span>Fuerza bruta iterativa · sin recursión</span></summary><div class="source-info"><p id="source-description">Un ciclo enumera las asignaciones en base G+1. Para tres guerreros y doce armas hay 4^12 posibilidades. Cada candidato asigna todas las armas y se comprueban los tipos, los requisitos en la misma mochila y poder estrictamente mayor.</p><div class="source-actions"><label class="sr-only" for="source-version">Versión del C++</label><select id="source-version"><option value="updated">Actualizado · sin recursión</option><option value="previous">Anterior · usada por la animación</option></select><button id="copy-code">Copiar C++</button><button id="download-code">Descargar P1.cpp</button><button id="download-data">Descargar datos1.txt</button></div></div><pre><code id="source-code"></code></pre><p class="note">Código actualizado: <a href="../../laboratorios/laboratorio-01/2024-1/material_original/variantes/clase-local/po-trabajo.cpp">P1.cpp</a>. El programa admite la ruta de los datos como argumento y también busca datos1.txt o Copia de datos1.txt en la carpeta de ejecución.</p><p class="note" id="copy-status" role="status"></p></details>
+    </main>
+    <footer><span>Laboratorio 1 · 2024-1 · Pregunta 1<br>Fuerza bruta con recursión y backtracking · funciona sin conexión</span><a href="../../catalogo/index.html">Volver al catálogo ↗</a></footer>
+  </div>
+  <script>
+    'use strict';
+
+    function parseData(text) {
+      const tokens = text.trim().split(/\s+/);
+      let i = 0;
+      const warriors = [], weapons = [];
+      const count = Number(tokens[i++]);
+      for (let j = 0; j < count; j++) {
+        const power = Number(tokens[i++]), typesCount = Number(tokens[i++]);
+        const types = tokens.slice(i, i + typesCount).map(Number); i += typesCount;
+        warriors.push({ power, types });
+      }
+      const weaponsCount = Number(tokens[i++]);
+      for (let j = 0; j < weaponsCount; j++) {
+        const id = tokens[i++], power = Number(tokens[i++]), type = Number(tokens[i++]);
+        const depsCount = Number(tokens[i++]), deps = tokens.slice(i, i + depsCount); i += depsCount;
+        weapons.push({ id, power, type, deps });
+      }
+      return { warriors, weapons };
+    }
+
+    function cargarCromosoma(count, mask) {
+      return Array.from({ length: count }, (_, j) => (mask >> (count - j - 1)) & 1);
+    }
+
+    // Same short-circuit order and >= power rule as esCromosomaValido in P1.cpp.
+    function validateCandidate(mask, used, warrior, weapons) {
+      const bits = cargarCromosoma(weapons.length, mask);
+      const selected = weapons.filter((_, i) => bits[i]);
+      const checks = [null, null, null, null];
+      const fail = (reason, message) => ({ valid: false, reason, message, checks, bits });
+      for (let i = 0; i < weapons.length; i++) {
+        if (bits[i] && used[i]) { checks[0] = false; return fail('used', `${weapons[i].id} ya está reservada para el guerrero ${used[i]}.`); }
+      }
+      checks[0] = true;
+      for (const weapon of selected) {
+        for (const dependency of weapon.deps) {
+          const index = weapons.findIndex(item => item.id === dependency);
+          if (index >= 0 && !bits[index]) { checks[1] = false; return fail('prereq', `${weapon.id} necesita ${dependency} en la misma mochila.`); }
+        }
+      }
+      checks[1] = true;
+      let power = 0;
+      for (const weapon of selected) {
+        if (!warrior.types.includes(weapon.type)) { checks[2] = false; return fail('type', `${weapon.id} es de tipo ${weapon.type}; este guerrero admite ${warrior.types.join(' y ')}.`); }
+        power += weapon.power;
+      }
+      checks[2] = true;
+      if (power < warrior.power) { checks[3] = false; return fail('power', `Poder ${power} < ${warrior.power}: no alcanza.`); }
+      checks[3] = true;
+      return { valid: true, reason: 'valid', message: `Poder ${power} ≥ ${warrior.power}. Cumple todas las condiciones del código.`, checks, bits, power };
+    }
+
+    // Consecutive rejections share one visual event. Every mask is still tested,
+    // including repeated tests at different recursive branches, in source order.
+    function buildSearchTrace(warriors, weapons) {
+      const used = Array(weapons.length).fill(0), frames = [], events = [];
+      let tested = 0, backtracks = 0;
+      const emit = (kind, index, extra = {}) => events.push({ kind, index, used: [...used], frames: frames.map(f => ({ ...f })), tested, backtracks, mask: frames.at(-1)?.mask ?? 0, ...extra });
+      emit('ready', 0);
+      function encontrarArmasParaGuerrero(indice_guerrero) {
+        const frame = { index: indice_guerrero, mask: 0, status: 'probando' };
+        frames.push(frame);
+        if (indice_guerrero === warriors.length) {
+          frame.status = 'caso base';
+          emit('base', indice_guerrero);
+          frames.pop();
+          return true;
+        }
+        emit('enter', indice_guerrero);
+        let batch = null;
+        const flush = () => {
+          if (!batch) return;
+          emit('rejections', indice_guerrero, { mask: batch.end, batch: { ...batch, reasons: { ...batch.reasons } } });
+          batch = null;
+        };
+        const combinaciones = 2 ** weapons.length;
+        for (let i = 0; i < combinaciones; i++) {
+          frame.mask = i;
+          const validation = validateCandidate(i, used, warriors[indice_guerrero], weapons);
+          if (!validation.valid) {
+            tested++;
+            if (!batch) batch = { start: i, end: i, count: 0, reasons: {} };
+            batch.end = i; batch.count++;
+            batch.reasons[validation.reason] = (batch.reasons[validation.reason] ?? 0) + 1;
+            continue;
+          }
+          // The previous group is shown before this valid candidate is counted.
+          const nextMask = frame.mask;
+          if (batch) frame.mask = batch.end;
+          flush(); frame.mask = nextMask; tested++;
+          emit('candidate', indice_guerrero, { validation });
+          const cromosoma = validation.bits;
+          for (let j = 0; j < weapons.length; j++) if (cromosoma[j]) used[j] = indice_guerrero + 1;
+          frame.status = 'espera al siguiente';
+          emit('assign', indice_guerrero, { validation });
+          if (encontrarArmasParaGuerrero(indice_guerrero + 1)) {
+            frame.status = 'return true';
+            emit('return', indice_guerrero);
+            frames.pop();
+            return true;
+          }
+          for (let j = 0; j < weapons.length; j++) if (cromosoma[j]) used[j] = 0;
+          backtracks++;
+          frame.status = 'prueba otra mochila';
+          emit('undo', indice_guerrero);
+        }
+        flush();
+        frame.status = 'return false';
+        emit('failure', indice_guerrero);
+        frames.pop();
+        return false;
+      }
+      const success = encontrarArmasParaGuerrero(0);
+      emit('done', 0, { success, mask: 0 });
+      return events;
+    }
+
+    const ORIGINAL_BASE64 = 'I2luY2x1ZGUgPGlvc3RyZWFtPg0KI2luY2x1ZGUgPGZzdHJlYW0+DQojaW5jbHVkZSA8Y21hdGg+DQoNCnVzaW5nIG5hbWVzcGFjZSBzdGQ7DQoNCnN0cnVjdCBHdWVycmVybyB7DQoJaW50IHBvZGVyOw0KCWludCB0aXBvc19kZV9hcm1hc1s0XSA9IHswfTsNCn07DQoNCnN0cnVjdCBBcm1hIHsNCgljaGFyIGlkOw0KCWludCBwb2RlcjsNCglpbnQgdGlwbzsNCgljaGFyIGFybWFzX3ByZXJlcXVpc2l0b3NbNF0gPSB7MH07DQp9Ow0KDQppbnQgbGVlckRhdG9zKGludCAmY2FudGlkYWRfZ3VlcnJlcm9zLCBHdWVycmVybyogJmd1ZXJyZXJvcywgaW50ICZjYW50aWRhZF9hcm1hcywgQXJtYSogJmFybWFzKTsNCmJvb2wgZW5jb250cmFyQXJtYXNQYXJhR3VlcnJlcm8oaW50IGNhbnRpZGFkX2d1ZXJyZXJvcywgR3VlcnJlcm8qIGd1ZXJyZXJvcywgaW50IGNhbnRpZGFkX2FybWFzLCBBcm1hKiBhcm1hcywgaW50KiBhcm1hc191dGlsaXphZGFzLCBpbnQgaW5kaWNlX2d1ZXJyZXJvKTsNCnZvaWQgY2FyZ2FyQ3JvbW9zb21hKGludCogY3JvbW9zb21hLCBpbnQgdGFtYW5vX2Nyb21vc29tYSwgaW50IGkpOw0KYm9vbCBlc0Nyb21vc29tYVZhbGlkbyhpbnQqIGNyb21vc29tYSwgaW50IGNhbnRpZGFkX2FybWFzLCBBcm1hKiBhcm1hcywgR3VlcnJlcm8gZ3VlcnJlcm8sIGludCogYXJtYXNfdXRpbGl6YWRhcyk7DQp2b2lkIGltcHJpbWlyU29sdWNpb24oaW50IGNhbnRpZGFkX2d1ZXJyZXJvcywgR3VlcnJlcm8qIGd1ZXJyZXJvcywgaW50IGNhbnRpZGFkX2FybWFzLCBBcm1hKiBhcm1hcywgaW50KiBhcm1hc191dGlsaXphZGFzKTsNCg0KaW50IG1haW4oKSB7DQoJDQoJaW50IGNhbnRpZGFkX2d1ZXJyZXJvczsNCglHdWVycmVybyogZ3VlcnJlcm9zOw0KCQ0KCWludCBjYW50aWRhZF9hcm1hczsNCglBcm1hKiBhcm1hczsNCgkNCglpZiAobGVlckRhdG9zKGNhbnRpZGFkX2d1ZXJyZXJvcywgZ3VlcnJlcm9zLCBjYW50aWRhZF9hcm1hcywgYXJtYXMpID09IDEpDQoJCXJldHVybiAxOw0KCQ0KLy8JZm9yIChpbnQgaT0wOyBpPGNhbnRpZGFkX2d1ZXJyZXJvczsgaSsrKSB7DQovLwkJR3VlcnJlcm8gZ3VlcnJlcm8gPSBndWVycmVyb3NbaV07DQovLwkJY291dCA8PCBndWVycmVyby5wb2RlciA8PCBlbmRsOw0KLy8JCWZvciAoaW50IGo9MDsgZ3VlcnJlcm8udGlwb3NfZGVfYXJtYXNbal07IGorKykNCi8vCQkJY291dCA8PCBndWVycmVyby50aXBvc19kZV9hcm1hc1tqXSA8PCAiICI7DQovLwkJY291dCA8PCBlbmRsIDw8IGVuZGw7DQovLwl9DQovLwlmb3IgKGludCBpPTA7IGk8Y2FudGlkYWRfYXJtYXM7IGkrKykgew0KLy8JCUFybWEgYXJtYSA9IGFybWFzW2ldOw0KLy8JCWNvdXQgPDwgYXJtYS5pZCA8PCAiICIgPDwgYXJtYS5wb2RlciA8PCAiICIgPDwgYXJtYS50aXBvIDw8IGVuZGw7DQovLwkJZm9yIChpbnQgaj0wOyBhcm1hLmFybWFzX3ByZXJlcXVpc2l0b3Nbal07IGorKykNCi8vCQkJY291dCA8PCBhcm1hLmFybWFzX3ByZXJlcXVpc2l0b3Nbal0gPDwgIiAiOw0KLy8JCWNvdXQgPDwgZW5kbCA8PCBlbmRsOw0KLy8JfQ0KCQ0KCWludCBhcm1hc191dGlsaXphZGFzWzEyXSA9IHswfTsNCgkNCglpZiAoZW5jb250cmFyQXJtYXNQYXJhR3VlcnJlcm8oY2FudGlkYWRfZ3VlcnJlcm9zLCBndWVycmVyb3MsIGNhbnRpZGFkX2FybWFzLCBhcm1hcywgYXJtYXNfdXRpbGl6YWRhcywgMCkpIHsNCgkJaW1wcmltaXJTb2x1Y2lvbihjYW50aWRhZF9ndWVycmVyb3MsIGd1ZXJyZXJvcywgY2FudGlkYWRfYXJtYXMsIGFybWFzLCBhcm1hc191dGlsaXphZGFzKTsNCgl9DQoJZWxzZSB7DQoJCWNvdXQgPDwgIk5vIGV4aXN0ZSB1bmEgc29sdWNpb24gcGFyYSBlc3RlIGNhc28iIDw8IGVuZGw7DQoJfQ0KCQ0KCWRlbGV0ZVtdIGd1ZXJyZXJvczsNCglkZWxldGVbXSBhcm1hczsNCgkNCglyZXR1cm4gMDsNCn0NCg0KaW50IGxlZXJEYXRvcyhpbnQgJmNhbnRpZGFkX2d1ZXJyZXJvcywgR3VlcnJlcm8qICZndWVycmVyb3MsIGludCAmY2FudGlkYWRfYXJtYXMsIEFybWEqICZhcm1hcykgew0KCQ0KCWlmc3RyZWFtIGFyY2hpdm8oImRhdG9zMS50eHQiKTsNCgkNCglpZiAoIWFyY2hpdm8pIHsNCgkJY291dCA8PCAiTm8gc2UgcHVlZGUgYWJyaXIgZWwgYXJjaGl2byBkYXRvczEudHh0IiA8PCBlbmRsOw0KCQlyZXR1cm4gMTsNCgl9DQoJDQoJLy8gTGVjdHVyYSBkZSBndWVycmVyb3MNCglhcmNoaXZvID4+IGNhbnRpZGFkX2d1ZXJyZXJvczsNCglndWVycmVyb3MgPSBuZXcgR3VlcnJlcm9bY2FudGlkYWRfZ3VlcnJlcm9zXTsNCgkNCglmb3IgKGludCBpPTA7IGk8Y2FudGlkYWRfZ3VlcnJlcm9zOyBpKyspIHsNCgkNCgkJYXJjaGl2byA+PiBndWVycmVyb3NbaV0ucG9kZXI7DQoJDQoJCWludCBjYW50aWRhZF90aXBvc19kZV9hcm1hczsNCgkJYXJjaGl2byA+PiBjYW50aWRhZF90aXBvc19kZV9hcm1hczsNCgkNCgkJZm9yIChpbnQgaj0wOyBqPGNhbnRpZGFkX3RpcG9zX2RlX2FybWFzOyBqKyspDQoJCQlhcmNoaXZvID4+IGd1ZXJyZXJvc1tpXS50aXBvc19kZV9hcm1hc1tqXTsNCgl9DQoJDQoJLy8gTGVjdHVyYSBkZSBhcm1hcw0KCWFyY2hpdm8gPj4gY2FudGlkYWRfYXJtYXM7DQoJYXJtYXMgPSBuZXcgQXJtYVtjYW50aWRhZF9hcm1hc107DQoJDQoJZm9yIChpbnQgaT0wOyBpPGNhbnRpZGFkX2FybWFzOyBpKyspIHsNCgkJDQoJCWFyY2hpdm8gPj4gYXJtYXNbaV0uaWQ7DQoJCWFyY2hpdm8gPj4gYXJtYXNbaV0ucG9kZXI7DQoJCWFyY2hpdm8gPj4gYXJtYXNbaV0udGlwbzsNCgkJDQoJCWludCBjYW50aWRhZF9hcm1hc19wcmVyZXF1aXNpdG87DQoJCWFyY2hpdm8gPj4gY2FudGlkYWRfYXJtYXNfcHJlcmVxdWlzaXRvOw0KCQkNCgkJZm9yIChpbnQgaj0wOyBqPGNhbnRpZGFkX2FybWFzX3ByZXJlcXVpc2l0bzsgaisrKQ0KCQkJYXJjaGl2byA+PiBhcm1hc1tpXS5hcm1hc19wcmVyZXF1aXNpdG9zW2pdOw0KCX0NCgkNCgkNCglhcmNoaXZvLmNsb3NlKCk7DQoJDQoJcmV0dXJuIDA7DQp9DQoNCmJvb2wgZW5jb250cmFyQXJtYXNQYXJhR3VlcnJlcm8oaW50IGNhbnRpZGFkX2d1ZXJyZXJvcywgR3VlcnJlcm8qIGd1ZXJyZXJvcywgaW50IGNhbnRpZGFkX2FybWFzLCBBcm1hKiBhcm1hcywNCgkJCQkJCQkJaW50KiBhcm1hc191dGlsaXphZGFzLCBpbnQgaW5kaWNlX2d1ZXJyZXJvKSB7DQoJDQoJLy8gU2UgdmVyaWZpY2Egc2kgc2UgbGxlZ28gYWwgZmluYWwgZGVsIGFycmVnbG8gZGUgZ3VlcnJlcm9zDQoJaWYgKGluZGljZV9ndWVycmVybyA9PSBjYW50aWRhZF9ndWVycmVyb3MpDQoJCXJldHVybiB0cnVlOw0KCQ0KCS8vIFNlIHBydWViYW4gdG9kYXMgbGFzIGNvbWJpbmFjaW9uZXMgcG9zaWJsZXMNCglpbnQqIGNyb21vc29tYSA9IG5ldyBpbnRbY2FudGlkYWRfYXJtYXNdOw0KCWludCBjb21iaW5hY2lvbmVzID0gcG93KDIsIGNhbnRpZGFkX2FybWFzKTsgDQoJDQoJZm9yIChpbnQgaT0wOyBpPGNvbWJpbmFjaW9uZXM7IGkrKykgew0KCQkNCgkJY2FyZ2FyQ3JvbW9zb21hKGNyb21vc29tYSwgY2FudGlkYWRfYXJtYXMsIGkpOw0KCQkvLyBTZSB2ZXJpZmljYSBxdWUgZWwgY3JvbW9zb21hIHNlYSB2YWxpZG8NCgkJaWYgKGVzQ3JvbW9zb21hVmFsaWRvKGNyb21vc29tYSwgY2FudGlkYWRfYXJtYXMsIGFybWFzLCBndWVycmVyb3NbaW5kaWNlX2d1ZXJyZXJvXSwgYXJtYXNfdXRpbGl6YWRhcykpIHsNCgkJCS8vIFNlIGNhcmdhbiBsYXMgYXJtYXMgdXRpbGl6YWRhcyBwYXJhIGVsIGd1ZXJyZXJvDQoJCQlmb3IgKGludCBqPTA7IGo8Y2FudGlkYWRfYXJtYXM7IGorKykNCgkJCQlpZiAoY3JvbW9zb21hW2pdKQ0KCQkJCQlhcm1hc191dGlsaXphZGFzW2pdID0gaW5kaWNlX2d1ZXJyZXJvKzE7DQoJCQkvLyBTZSB2ZXJpZmljYSBxdWUgZWwgc2lndWllbnRlIGd1ZXJyZXJvIHRhbWJpZW4gc2UgcHVlZGEgY29tYmF0aXIgY29uIGxhcyBhcm1hcyByZXN0YW50ZXMNCgkJCWlmIChlbmNvbnRyYXJBcm1hc1BhcmFHdWVycmVybyhjYW50aWRhZF9ndWVycmVyb3MsIGd1ZXJyZXJvcywgY2FudGlkYWRfYXJtYXMsIGFybWFzLCBhcm1hc191dGlsaXphZGFzLCBpbmRpY2VfZ3VlcnJlcm8rMSkpIHsNCgkJCQlkZWxldGVbXSBjcm9tb3NvbWE7DQoJCQkJcmV0dXJuIHRydWU7DQoJCQl9DQoJCQkvLyBTaSBubyBzZSBwdWVkZSwgc2UgZGVzY2FyZ2FuIGxhcyBhcm1hcyB1dGlsaXphZGFzIHBhcmEgZWwgZ3VlcnJlcm8geSBzZSBwcnVlYmEgbGEgc2lndWllbnRlIGNvbWJpbmFjaW9uDQoJCQlmb3IgKGludCBqPTA7IGo8Y2FudGlkYWRfYXJtYXM7IGorKykNCgkJCQlpZiAoY3JvbW9zb21hW2pdKQ0KCQkJCQlhcm1hc191dGlsaXphZGFzW2pdID0gMDsNCgkJfQ0KCX0NCglkZWxldGVbXSBjcm9tb3NvbWE7DQoJcmV0dXJuIGZhbHNlOw0KfQ0KDQp2b2lkIGNhcmdhckNyb21vc29tYShpbnQqIGNyb21vc29tYSwgaW50IHRhbWFub19jcm9tb3NvbWEsIGludCBpKSB7DQoJDQoJZm9yIChpbnQgaiA9IDA7IGogPCB0YW1hbm9fY3JvbW9zb21hOyBqKyspDQoJCWNyb21vc29tYVtqXSA9IDA7DQoJDQoJZm9yIChpbnQgaiA9IHRhbWFub19jcm9tb3NvbWEgLSAxOyBpID4gMDsgai0tKSB7IA0KCQljcm9tb3NvbWFbal0gPSBpICUgMjsJCQkNCgkJaSAvPSAyOw0KCX0NCn0NCg0KYm9vbCBlc0Nyb21vc29tYVZhbGlkbyhpbnQqIGNyb21vc29tYSwgaW50IGNhbnRpZGFkX2FybWFzLCBBcm1hKiBhcm1hcywgR3VlcnJlcm8gZ3VlcnJlcm8sIGludCogYXJtYXNfdXRpbGl6YWRhcykgew0KCQ0KCS8vIDEuIFZlcmlmaWNhciBxdWUgbGFzIGFybWFzIG5vIGhhbiBzaWRvIHV0aWxpemFkYXMgdG9kYXbtYQ0KCWZvciAoaW50IGk9MDsgaTxjYW50aWRhZF9hcm1hczsgaSsrKQ0KCQlpZiAoY3JvbW9zb21hW2ldICYmIGFybWFzX3V0aWxpemFkYXNbaV0pDQoJCQlyZXR1cm4gZmFsc2U7DQoJDQoJLy8gMi4gVmVyaWZpY2FyIGxhcyBhcm1hcyBwcmVyZXF1aXNpdG9zDQoJZm9yIChpbnQgaT0wOyBpPGNhbnRpZGFkX2FybWFzOyBpKyspDQoJCWlmIChjcm9tb3NvbWFbaV0pIHsNCgkJCUFybWEgYXJtYSA9IGFybWFzW2ldOw0KCQkJZm9yIChpbnQgaj0wOyBhcm1hLmFybWFzX3ByZXJlcXVpc2l0b3Nbal07IGorKykgew0KCQkJCWZvciAoaW50IGs9MDsgazxjYW50aWRhZF9hcm1hczsgaysrKQ0KCQkJCQlpZiAoYXJtYXNba10uaWQgPT0gYXJtYS5hcm1hc19wcmVyZXF1aXNpdG9zW2pdKSB7DQoJCQkJCQlpZiAoY3JvbW9zb21hW2tdID09IDApDQoJCQkJCQkJcmV0dXJuIGZhbHNlOw0KCQkJCQkJYnJlYWs7DQoJCQkJCX0NCgkJCX0NCgkJfQ0KCQ0KCS8vIDMuIFZlcmlmaWNhciBxdWUgbGFzIGFybWFzIHNlbGVjY2lvbmFkYXMgcHVlZGVuIGRlcnJvdGFyIGFsIGd1ZXJyZXJvDQoJaW50IHN1bWFfcG9kZXIgPSAwOw0KCWZvciAoaW50IGk9MCwgajsgaTxjYW50aWRhZF9hcm1hczsgaSsrKQ0KCQlpZiAoY3JvbW9zb21hW2ldKSB7DQoJCQlBcm1hIGFybWEgPSBhcm1hc1tpXTsNCgkJCWZvciAoaj0wOyBndWVycmVyby50aXBvc19kZV9hcm1hc1tqXTsgaisrKSB7DQoJCQkJaWYgKGFybWEudGlwbyA9PSBndWVycmVyby50aXBvc19kZV9hcm1hc1tqXSkNCgkJCQkJYnJlYWs7DQoJCQl9DQoJCQlpZiAoZ3VlcnJlcm8udGlwb3NfZGVfYXJtYXNbal0gPT0gMCkNCgkJCQlyZXR1cm4gZmFsc2U7DQoJCQlzdW1hX3BvZGVyICs9IGFybWEucG9kZXI7DQoJCX0NCglpZiAoc3VtYV9wb2RlciA8IGd1ZXJyZXJvLnBvZGVyKQ0KCQlyZXR1cm4gZmFsc2U7DQoJDQoJcmV0dXJuIHRydWU7DQp9DQoNCnZvaWQgaW1wcmltaXJTb2x1Y2lvbihpbnQgY2FudGlkYWRfZ3VlcnJlcm9zLCBHdWVycmVybyogZ3VlcnJlcm9zLCBpbnQgY2FudGlkYWRfYXJtYXMsIEFybWEqIGFybWFzLCBpbnQqIGFybWFzX3V0aWxpemFkYXMpIHsNCglmb3IgKGludCBpPTA7IGk8Y2FudGlkYWRfZ3VlcnJlcm9zOyBpKyspIHsNCgkJR3VlcnJlcm8gZ3VlcnJlcm8gPSBndWVycmVyb3NbaV07DQoJCWNvdXQgPDwgIkd1ZXJyZXJvICIgPDwgaSsxIDw8IGVuZGw7DQoJCWNvdXQgPDwgIlBvZGVyOiAiIDw8IGd1ZXJyZXJvLnBvZGVyIDw8IGVuZGw7DQoJCWNvdXQgPDwgIkFybWFzIGVuIG1vY2hpbGEgcGFyYSB2ZW5jZXJsbzogIjsNCgkJZm9yIChpbnQgaj0wOyBqPGNhbnRpZGFkX2FybWFzOyBqKyspIHsNCgkJCWlmIChhcm1hc191dGlsaXphZGFzW2pdID09IGkrMSkgew0KCQkJCUFybWEgYXJtYSA9IGFybWFzW2pdOw0KCQkJCWNvdXQgPDwgYXJtYS5pZCA8PCAiICI7DQoJCQl9DQoJCX0NCgkJY291dCA8PCBlbmRsIDw8IGVuZGw7DQoJfQ0KfQ0KDQoNCg==';
+    const UPDATED_BASE64 = 'I2luY2x1ZGUgPGlvc3RyZWFtPgojaW5jbHVkZSA8ZnN0cmVhbT4KCnVzaW5nIG5hbWVzcGFjZSBzdGQ7CgpzdHJ1Y3QgR3VlcnJlcm8gewogICAgaW50IHBvZGVyID0gMDsKICAgIGludCB0aXBvc19kZV9hcm1hc1s0XSA9IHswfTsKfTsKCnN0cnVjdCBBcm1hIHsKICAgIGNoYXIgaWQgPSAnXDAnOwogICAgaW50IHBvZGVyID0gMDsKICAgIGludCB0aXBvID0gMDsKICAgIGNoYXIgYXJtYXNfcHJlcmVxdWlzaXRvc1s0XSA9IHswfTsKfTsKCmludCBsZWVyRGF0b3MoaW50ICZjYW50aWRhZF9ndWVycmVyb3MsIEd1ZXJyZXJvKiAmZ3VlcnJlcm9zLAogICAgICAgICAgICAgIGludCAmY2FudGlkYWRfYXJtYXMsIEFybWEqICZhcm1hcywgY29uc3QgY2hhciogbm9tYnJlX2FyY2hpdm8pOwppbnQgY29udGFyQXNpZ25hY2lvbmVzKGludCBjYW50aWRhZF9ndWVycmVyb3MsIGludCBjYW50aWRhZF9hcm1hcyk7CnZvaWQgY2FyZ2FyQ3JvbW9zb21hKGludCogY3JvbW9zb21hLCBpbnQgY2FudGlkYWRfYXJtYXMsIGludCBudW1lcm8sIGludCBiYXNlKTsKYm9vbCBlc0FzaWduYWNpb25WYWxpZGEoY29uc3QgaW50KiBjcm9tb3NvbWEsIGludCBjYW50aWRhZF9ndWVycmVyb3MsCiAgICAgICAgICAgICAgICAgICAgICAgY29uc3QgR3VlcnJlcm8qIGd1ZXJyZXJvcywgaW50IGNhbnRpZGFkX2FybWFzLAogICAgICAgICAgICAgICAgICAgICAgIGNvbnN0IEFybWEqIGFybWFzKTsKYm9vbCBlbmNvbnRyYXJTb2x1Y2lvbkZ1ZXJ6YUJydXRhKGludCBjYW50aWRhZF9ndWVycmVyb3MsIGNvbnN0IEd1ZXJyZXJvKiBndWVycmVyb3MsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGludCBjYW50aWRhZF9hcm1hcywgY29uc3QgQXJtYSogYXJtYXMsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGludCogYXJtYXNfdXRpbGl6YWRhcywgaW50ICZhc2lnbmFjaW9uZXNfcHJvYmFkYXMpOwp2b2lkIGltcHJpbWlyU29sdWNpb24oaW50IGNhbnRpZGFkX2d1ZXJyZXJvcywgY29uc3QgR3VlcnJlcm8qIGd1ZXJyZXJvcywKICAgICAgICAgICAgICAgICAgICAgIGludCBjYW50aWRhZF9hcm1hcywgY29uc3QgQXJtYSogYXJtYXMsCiAgICAgICAgICAgICAgICAgICAgICBjb25zdCBpbnQqIGFybWFzX3V0aWxpemFkYXMpOwoKLy8gQ2FyZ2EgbG9zIGRhdG9zLCBlbnVtZXJhIGFzaWduYWNpb25lcyBjb21wbGV0YXMgZSBpbXByaW1lIGxhIHByaW1lcmEgdmFsaWRhLgppbnQgbWFpbihpbnQgYXJnYywgY2hhciogYXJndltdKSB7CiAgICBpZiAoYXJnYyA+IDIpIHsKICAgICAgICBjb3V0IDw8ICJVc286ICIgPDwgYXJndlswXSA8PCAiIFthcmNoaXZvX2RlX2RhdG9zXVxuIjsKICAgICAgICByZXR1cm4gMTsKICAgIH0KCiAgICBpbnQgY2FudGlkYWRfZ3VlcnJlcm9zID0gMCwgY2FudGlkYWRfYXJtYXMgPSAwOwogICAgR3VlcnJlcm8qIGd1ZXJyZXJvcyA9IG51bGxwdHI7CiAgICBBcm1hKiBhcm1hcyA9IG51bGxwdHI7CiAgICBjb25zdCBjaGFyKiBub21icmVfYXJjaGl2byA9IGFyZ2MgPT0gMiA/IGFyZ3ZbMV0gOiBudWxscHRyOwogICAgaWYgKGxlZXJEYXRvcyhjYW50aWRhZF9ndWVycmVyb3MsIGd1ZXJyZXJvcywgY2FudGlkYWRfYXJtYXMsCiAgICAgICAgICAgICAgICAgIGFybWFzLCBub21icmVfYXJjaGl2bykgIT0gMCkgewogICAgICAgIGRlbGV0ZVtdIGd1ZXJyZXJvczsKICAgICAgICBkZWxldGVbXSBhcm1hczsKICAgICAgICByZXR1cm4gMTsKICAgIH0KCiAgICBpbnQgYXJtYXNfdXRpbGl6YWRhc1sxMl0gPSB7MH07CiAgICBpbnQgYXNpZ25hY2lvbmVzX3Byb2JhZGFzID0gMDsKICAgIGJvb2wgZW5jb250cmFkYSA9IGVuY29udHJhclNvbHVjaW9uRnVlcnphQnJ1dGEoCiAgICAgICAgY2FudGlkYWRfZ3VlcnJlcm9zLCBndWVycmVyb3MsIGNhbnRpZGFkX2FybWFzLCBhcm1hcywKICAgICAgICBhcm1hc191dGlsaXphZGFzLCBhc2lnbmFjaW9uZXNfcHJvYmFkYXMpOwoKICAgIGlmIChlbmNvbnRyYWRhKSB7CiAgICAgICAgaW1wcmltaXJTb2x1Y2lvbihjYW50aWRhZF9ndWVycmVyb3MsIGd1ZXJyZXJvcywKICAgICAgICAgICAgICAgICAgICAgICAgIGNhbnRpZGFkX2FybWFzLCBhcm1hcywgYXJtYXNfdXRpbGl6YWRhcyk7CiAgICB9IGVsc2UgewogICAgICAgIGNvdXQgPDwgIk5vIGV4aXN0ZSB1bmEgc29sdWNpb24gcGFyYSBlc3RlIGNhc28uXG4iOwogICAgfQogICAgY291dCA8PCAiQXNpZ25hY2lvbmVzIHByb2JhZGFzOiAiIDw8IGFzaWduYWNpb25lc19wcm9iYWRhcyA8PCAnXG4nOwogICAgY291dCA8PCAiQXNpZ25hY2lvbmVzIHBvc2libGVzOiAiCiAgICAgICAgIDw8IGNvbnRhckFzaWduYWNpb25lcyhjYW50aWRhZF9ndWVycmVyb3MsIGNhbnRpZGFkX2FybWFzKSA8PCAnXG4nOwoKICAgIGRlbGV0ZVtdIGd1ZXJyZXJvczsKICAgIGRlbGV0ZVtdIGFybWFzOwogICAgcmV0dXJuIDA7Cn0KCi8vIExlZSBlbCBmb3JtYXRvIGRlbCBsYWJvcmF0b3JpbyB5IGNvbXBydWViYSBzdXMgY2FudGlkYWRlcyBtYXhpbWFzIGFudGVzCi8vIGRlIGVzY3JpYmlyIGVuIGxvcyBhcnJlZ2xvcy4gQ29uc2VydmEgdW4gY2VybyBmaW5hbCBlbiB0aXBvcyB5IHJlcXVpc2l0b3MuCmludCBsZWVyRGF0b3MoaW50ICZjYW50aWRhZF9ndWVycmVyb3MsIEd1ZXJyZXJvKiAmZ3VlcnJlcm9zLAogICAgICAgICAgICAgIGludCAmY2FudGlkYWRfYXJtYXMsIEFybWEqICZhcm1hcywgY29uc3QgY2hhciogbm9tYnJlX2FyY2hpdm8pIHsKICAgIGlmc3RyZWFtIGFyY2hpdm8obm9tYnJlX2FyY2hpdm8gPyBub21icmVfYXJjaGl2byA6ICJkYXRvczEudHh0Iik7CiAgICBpZiAoIWFyY2hpdm8gJiYgIW5vbWJyZV9hcmNoaXZvKSB7CiAgICAgICAgYXJjaGl2by5jbGVhcigpOwogICAgICAgIGFyY2hpdm8ub3BlbigiQ29waWEgZGUgZGF0b3MxLnR4dCIpOwogICAgfQogICAgaWYgKCFhcmNoaXZvKSB7CiAgICAgICAgY291dCA8PCAiTm8gc2UgcHVlZGUgYWJyaXIgZWwgYXJjaGl2byBkZSBkYXRvcy5cbiI7CiAgICAgICAgcmV0dXJuIDE7CiAgICB9CiAgICBpZiAoIShhcmNoaXZvID4+IGNhbnRpZGFkX2d1ZXJyZXJvcykgfHwKICAgICAgICBjYW50aWRhZF9ndWVycmVyb3MgPCAxIHx8IGNhbnRpZGFkX2d1ZXJyZXJvcyA+IDMpIHsKICAgICAgICBjb3V0IDw8ICJMYSBjYW50aWRhZCBkZSBndWVycmVyb3MgZGViZSBlc3RhciBlbnRyZSAxIHkgMy5cbiI7CiAgICAgICAgcmV0dXJuIDE7CiAgICB9CiAgICBndWVycmVyb3MgPSBuZXcgR3VlcnJlcm9bY2FudGlkYWRfZ3VlcnJlcm9zXTsKICAgIGZvciAoaW50IGkgPSAwOyBpIDwgY2FudGlkYWRfZ3VlcnJlcm9zOyBpKyspIHsKICAgICAgICBpbnQgY2FudGlkYWRfdGlwb3MgPSAwOwogICAgICAgIGlmICghKGFyY2hpdm8gPj4gZ3VlcnJlcm9zW2ldLnBvZGVyID4+IGNhbnRpZGFkX3RpcG9zKSB8fAogICAgICAgICAgICBndWVycmVyb3NbaV0ucG9kZXIgPCAwIHx8IGNhbnRpZGFkX3RpcG9zIDwgMSB8fCBjYW50aWRhZF90aXBvcyA+IDMpIHsKICAgICAgICAgICAgY291dCA8PCAiRGF0b3MgZGUgZ3VlcnJlcm8gaW52YWxpZG9zLlxuIjsKICAgICAgICAgICAgcmV0dXJuIDE7CiAgICAgICAgfQogICAgICAgIGZvciAoaW50IGogPSAwOyBqIDwgY2FudGlkYWRfdGlwb3M7IGorKykgewogICAgICAgICAgICBpZiAoIShhcmNoaXZvID4+IGd1ZXJyZXJvc1tpXS50aXBvc19kZV9hcm1hc1tqXSkgfHwKICAgICAgICAgICAgICAgIGd1ZXJyZXJvc1tpXS50aXBvc19kZV9hcm1hc1tqXSA8IDEgfHwKICAgICAgICAgICAgICAgIGd1ZXJyZXJvc1tpXS50aXBvc19kZV9hcm1hc1tqXSA+IDMpIHsKICAgICAgICAgICAgICAgIGNvdXQgPDwgIkxvcyB0aXBvcyBkZSBhcm1hcyBkZWJlbiBlc3RhciBlbnRyZSAxIHkgMy5cbiI7CiAgICAgICAgICAgICAgICByZXR1cm4gMTsKICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KCiAgICBpZiAoIShhcmNoaXZvID4+IGNhbnRpZGFkX2FybWFzKSB8fCBjYW50aWRhZF9hcm1hcyA8IDAgfHwgY2FudGlkYWRfYXJtYXMgPiAxMikgewogICAgICAgIGNvdXQgPDwgIkxhIGNhbnRpZGFkIGRlIGFybWFzIGRlYmUgZXN0YXIgZW50cmUgMCB5IDEyLlxuIjsKICAgICAgICByZXR1cm4gMTsKICAgIH0KICAgIGFybWFzID0gbmV3IEFybWFbY2FudGlkYWRfYXJtYXNdOwogICAgZm9yIChpbnQgaSA9IDA7IGkgPCBjYW50aWRhZF9hcm1hczsgaSsrKSB7CiAgICAgICAgaW50IGNhbnRpZGFkX3JlcXVpc2l0b3MgPSAwOwogICAgICAgIGlmICghKGFyY2hpdm8gPj4gYXJtYXNbaV0uaWQgPj4gYXJtYXNbaV0ucG9kZXIgPj4gYXJtYXNbaV0udGlwbwogICAgICAgICAgICAgICAgICAgICAgPj4gY2FudGlkYWRfcmVxdWlzaXRvcykgfHwgYXJtYXNbaV0ucG9kZXIgPCAwIHx8CiAgICAgICAgICAgIGFybWFzW2ldLnRpcG8gPCAxIHx8IGFybWFzW2ldLnRpcG8gPiAzIHx8CiAgICAgICAgICAgIGNhbnRpZGFkX3JlcXVpc2l0b3MgPCAwIHx8IGNhbnRpZGFkX3JlcXVpc2l0b3MgPiAzKSB7CiAgICAgICAgICAgIGNvdXQgPDwgIkRhdG9zIGRlIGFybWEgaW52YWxpZG9zLlxuIjsKICAgICAgICAgICAgcmV0dXJuIDE7CiAgICAgICAgfQogICAgICAgIGZvciAoaW50IGogPSAwOyBqIDwgaTsgaisrKSB7CiAgICAgICAgICAgIGlmIChhcm1hc1tpXS5pZCA9PSBhcm1hc1tqXS5pZCkgewogICAgICAgICAgICAgICAgY291dCA8PCAiTG9zIGlkZW50aWZpY2Fkb3JlcyBkZSBsYXMgYXJtYXMgZGViZW4gc2VyIGRpc3RpbnRvcy5cbiI7CiAgICAgICAgICAgICAgICByZXR1cm4gMTsKICAgICAgICAgICAgfQogICAgICAgIH0KICAgICAgICBmb3IgKGludCBqID0gMDsgaiA8IGNhbnRpZGFkX3JlcXVpc2l0b3M7IGorKykgewogICAgICAgICAgICBpZiAoIShhcmNoaXZvID4+IGFybWFzW2ldLmFybWFzX3ByZXJlcXVpc2l0b3Nbal0pKSB7CiAgICAgICAgICAgICAgICBjb3V0IDw8ICJGYWx0YW4gbG9zIHByZXJyZXF1aXNpdG9zIGRlIHVuIGFybWEuXG4iOwogICAgICAgICAgICAgICAgcmV0dXJuIDE7CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9CiAgICBmb3IgKGludCBpID0gMDsgaSA8IGNhbnRpZGFkX2FybWFzOyBpKyspIHsKICAgICAgICBmb3IgKGludCBqID0gMDsgaiA8IDMgJiYgYXJtYXNbaV0uYXJtYXNfcHJlcmVxdWlzaXRvc1tqXTsgaisrKSB7CiAgICAgICAgICAgIGludCBrID0gMDsKICAgICAgICAgICAgd2hpbGUgKGsgPCBjYW50aWRhZF9hcm1hcyAmJgogICAgICAgICAgICAgICAgICAgYXJtYXNba10uaWQgIT0gYXJtYXNbaV0uYXJtYXNfcHJlcmVxdWlzaXRvc1tqXSkgaysrOwogICAgICAgICAgICBpZiAoayA9PSBjYW50aWRhZF9hcm1hcykgewogICAgICAgICAgICAgICAgY291dCA8PCAiVW4gcHJlcnJlcXVpc2l0byBtZW5jaW9uYSB1biBhcm1hIHF1ZSBubyBleGlzdGUuXG4iOwogICAgICAgICAgICAgICAgcmV0dXJuIDE7CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9CiAgICByZXR1cm4gMDsKfQoKLy8gQ2FkYSBhcm1hIHRpZW5lIEcrMSBkZXN0aW5vczogbm8gdXNhcmxhICgwKSBvIHVubyBkZSBsb3MgRyBndWVycmVyb3MuCi8vIE11bHRpcGxpY2FjaW9uIGVudGVyYTogY29tbyBtYXhpbW8gNF4xMiA9IDE2IDc3NyAyMTYgYXNpZ25hY2lvbmVzLgppbnQgY29udGFyQXNpZ25hY2lvbmVzKGludCBjYW50aWRhZF9ndWVycmVyb3MsIGludCBjYW50aWRhZF9hcm1hcykgewogICAgaW50IHRvdGFsID0gMTsKICAgIGZvciAoaW50IGkgPSAwOyBpIDwgY2FudGlkYWRfYXJtYXM7IGkrKykgdG90YWwgKj0gY2FudGlkYWRfZ3VlcnJlcm9zICsgMTsKICAgIHJldHVybiB0b3RhbDsKfQoKLy8gQ29udmllcnRlIHVuIG51bWVybyBhIGJhc2UgRysxLiBDYWRhIGRpZ2l0byBpbmRpY2EgZWwgZGVzdGlubyBkZSB1biBhcm1hLAovLyBlbiBlbCBvcmRlbiBkZSBsZWN0dXJhLiBQYXJhIHRyZXMgZ3VlcnJlcm9zOiAwPWxpYnJlLCAxPUcxLCAyPUcyLCAzPUczLgp2b2lkIGNhcmdhckNyb21vc29tYShpbnQqIGNyb21vc29tYSwgaW50IGNhbnRpZGFkX2FybWFzLCBpbnQgbnVtZXJvLCBpbnQgYmFzZSkgewogICAgZm9yIChpbnQgaiA9IGNhbnRpZGFkX2FybWFzIC0gMTsgaiA+PSAwOyBqLS0pIHsKICAgICAgICBjcm9tb3NvbWFbal0gPSBudW1lcm8gJSBiYXNlOwogICAgICAgIG51bWVybyAvPSBiYXNlOwogICAgfQp9CgovLyBWYWxpZGEgdW5hIGFzaWduYWNpb24gQ09NUExFVEEuIFVuIGRpZ2l0byBwb3IgYXJtYSBpbXBpZGUgcmV1dGlsaXphcmxhLgovLyBDb21wcnVlYmEgcmVxdWlzaXRvcyBlbiBsYSBtaXNtYSBtb2NoaWxhLCB0aXBvcyB5IHBvZGVyIGVzdHJpY3RhbWVudGUgbWF5b3IuCmJvb2wgZXNBc2lnbmFjaW9uVmFsaWRhKGNvbnN0IGludCogY3JvbW9zb21hLCBpbnQgY2FudGlkYWRfZ3VlcnJlcm9zLAogICAgICAgICAgICAgICAgICAgICAgIGNvbnN0IEd1ZXJyZXJvKiBndWVycmVyb3MsIGludCBjYW50aWRhZF9hcm1hcywKICAgICAgICAgICAgICAgICAgICAgICBjb25zdCBBcm1hKiBhcm1hcykgewogICAgbG9uZyBsb25nIHN1bWFfcG9kZXJbM10gPSB7MH07CiAgICBmb3IgKGludCBpID0gMDsgaSA8IGNhbnRpZGFkX2FybWFzOyBpKyspIHsKICAgICAgICBpbnQgZGVzdGlubyA9IGNyb21vc29tYVtpXTsKICAgICAgICBpZiAoZGVzdGlubyA9PSAwKSBjb250aW51ZTsKICAgICAgICBpZiAoZGVzdGlubyA8IDEgfHwgZGVzdGlubyA+IGNhbnRpZGFkX2d1ZXJyZXJvcykgcmV0dXJuIGZhbHNlOwoKICAgICAgICBmb3IgKGludCBqID0gMDsgaiA8IDMgJiYgYXJtYXNbaV0uYXJtYXNfcHJlcmVxdWlzaXRvc1tqXTsgaisrKSB7CiAgICAgICAgICAgIGludCBrID0gMDsKICAgICAgICAgICAgd2hpbGUgKGsgPCBjYW50aWRhZF9hcm1hcyAmJgogICAgICAgICAgICAgICAgICAgYXJtYXNba10uaWQgIT0gYXJtYXNbaV0uYXJtYXNfcHJlcmVxdWlzaXRvc1tqXSkgaysrOwogICAgICAgICAgICBpZiAoayA9PSBjYW50aWRhZF9hcm1hcyB8fCBjcm9tb3NvbWFba10gIT0gZGVzdGlubykgcmV0dXJuIGZhbHNlOwogICAgICAgIH0KCiAgICAgICAgY29uc3QgR3VlcnJlcm8gJmd1ZXJyZXJvID0gZ3VlcnJlcm9zW2Rlc3Rpbm8gLSAxXTsKICAgICAgICBib29sIHRpcG9fcGVybWl0aWRvID0gZmFsc2U7CiAgICAgICAgZm9yIChpbnQgaiA9IDA7IGogPCAzICYmIGd1ZXJyZXJvLnRpcG9zX2RlX2FybWFzW2pdOyBqKyspIHsKICAgICAgICAgICAgaWYgKGFybWFzW2ldLnRpcG8gPT0gZ3VlcnJlcm8udGlwb3NfZGVfYXJtYXNbal0pIHsKICAgICAgICAgICAgICAgIHRpcG9fcGVybWl0aWRvID0gdHJ1ZTsKICAgICAgICAgICAgICAgIGJyZWFrOwogICAgICAgICAgICB9CiAgICAgICAgfQogICAgICAgIGlmICghdGlwb19wZXJtaXRpZG8pIHJldHVybiBmYWxzZTsKICAgICAgICBzdW1hX3BvZGVyW2Rlc3Rpbm8gLSAxXSArPSBhcm1hc1tpXS5wb2RlcjsKICAgIH0KCiAgICBmb3IgKGludCBnID0gMDsgZyA8IGNhbnRpZGFkX2d1ZXJyZXJvczsgZysrKSB7CiAgICAgICAgaWYgKHN1bWFfcG9kZXJbZ10gPD0gZ3VlcnJlcm9zW2ddLnBvZGVyKSByZXR1cm4gZmFsc2U7CiAgICB9CiAgICByZXR1cm4gdHJ1ZTsKfQoKLy8gRlVFUlpBIEJSVVRBIElURVJBVElWQTogZW51bWVyYSBUT0RBUyBsYXMgYXNpZ25hY2lvbmVzIGNvbXBsZXRhcyBlbiBvcmRlbiwKLy8gZGVzZGUgMCBoYXN0YSAoRysxKV5BIC0gMSwgeSBzZSBkZXRpZW5lIGVuIGxhIHByaW1lcmEgcXVlIGN1bXBsZSBsYXMgcmVnbGFzLgovLyBObyB1dGlsaXphIGxsYW1hZGFzIHJlY3Vyc2l2YXMgbmkgcmVzZXJ2YXMgeSBsaWJlcmFjaW9uZXMgZGUgbW9jaGlsYXMuCmJvb2wgZW5jb250cmFyU29sdWNpb25GdWVyemFCcnV0YShpbnQgY2FudGlkYWRfZ3VlcnJlcm9zLCBjb25zdCBHdWVycmVybyogZ3VlcnJlcm9zLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBpbnQgY2FudGlkYWRfYXJtYXMsIGNvbnN0IEFybWEqIGFybWFzLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBpbnQqIGFybWFzX3V0aWxpemFkYXMsIGludCAmYXNpZ25hY2lvbmVzX3Byb2JhZGFzKSB7CiAgICBjb25zdCBpbnQgYmFzZSA9IGNhbnRpZGFkX2d1ZXJyZXJvcyArIDE7CiAgICBjb25zdCBpbnQgY29tYmluYWNpb25lcyA9IGNvbnRhckFzaWduYWNpb25lcyhjYW50aWRhZF9ndWVycmVyb3MsIGNhbnRpZGFkX2FybWFzKTsKICAgIGludCBjcm9tb3NvbWFbMTJdID0gezB9OwogICAgYXNpZ25hY2lvbmVzX3Byb2JhZGFzID0gMDsKICAgIGZvciAoaW50IGogPSAwOyBqIDwgY2FudGlkYWRfYXJtYXM7IGorKykgYXJtYXNfdXRpbGl6YWRhc1tqXSA9IDA7CgogICAgZm9yIChpbnQgaSA9IDA7IGkgPCBjb21iaW5hY2lvbmVzOyBpKyspIHsKICAgICAgICBjYXJnYXJDcm9tb3NvbWEoY3JvbW9zb21hLCBjYW50aWRhZF9hcm1hcywgaSwgYmFzZSk7CiAgICAgICAgYXNpZ25hY2lvbmVzX3Byb2JhZGFzKys7CiAgICAgICAgaWYgKGVzQXNpZ25hY2lvblZhbGlkYShjcm9tb3NvbWEsIGNhbnRpZGFkX2d1ZXJyZXJvcywgZ3VlcnJlcm9zLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FudGlkYWRfYXJtYXMsIGFybWFzKSkgewogICAgICAgICAgICBmb3IgKGludCBqID0gMDsgaiA8IGNhbnRpZGFkX2FybWFzOyBqKyspIHsKICAgICAgICAgICAgICAgIGFybWFzX3V0aWxpemFkYXNbal0gPSBjcm9tb3NvbWFbal07CiAgICAgICAgICAgIH0KICAgICAgICAgICAgcmV0dXJuIHRydWU7CiAgICAgICAgfQogICAgfQogICAgcmV0dXJuIGZhbHNlOwp9CgovLyBJbXByaW1lIGxhIG1vY2hpbGEgZGUgY2FkYSBndWVycmVybyB5IGVsIHBvZGVyIHF1ZSBzdXBlcmEgc3Ugb2JqZXRpdm8uCnZvaWQgaW1wcmltaXJTb2x1Y2lvbihpbnQgY2FudGlkYWRfZ3VlcnJlcm9zLCBjb25zdCBHdWVycmVybyogZ3VlcnJlcm9zLAogICAgICAgICAgICAgICAgICAgICAgaW50IGNhbnRpZGFkX2FybWFzLCBjb25zdCBBcm1hKiBhcm1hcywKICAgICAgICAgICAgICAgICAgICAgIGNvbnN0IGludCogYXJtYXNfdXRpbGl6YWRhcykgewogICAgZm9yIChpbnQgZyA9IDA7IGcgPCBjYW50aWRhZF9ndWVycmVyb3M7IGcrKykgewogICAgICAgIGxvbmcgbG9uZyBwb2Rlcl90b3RhbCA9IDA7CiAgICAgICAgY291dCA8PCAiR3VlcnJlcm8gIiA8PCBnICsgMSA8PCAnXG4nOwogICAgICAgIGNvdXQgPDwgIlBvZGVyOiAiIDw8IGd1ZXJyZXJvc1tnXS5wb2RlciA8PCAnXG4nOwogICAgICAgIGNvdXQgPDwgIkFybWFzIGVuIG1vY2hpbGEgcGFyYSB2ZW5jZXJsbzogIjsKICAgICAgICBmb3IgKGludCBqID0gMDsgaiA8IGNhbnRpZGFkX2FybWFzOyBqKyspIHsKICAgICAgICAgICAgaWYgKGFybWFzX3V0aWxpemFkYXNbal0gPT0gZyArIDEpIHsKICAgICAgICAgICAgICAgIGNvdXQgPDwgYXJtYXNbal0uaWQgPDwgJyAnOwogICAgICAgICAgICAgICAgcG9kZXJfdG90YWwgKz0gYXJtYXNbal0ucG9kZXI7CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICAgICAgY291dCA8PCAiXG5Qb2RlciBkZSBsYSBtb2NoaWxhOiAiIDw8IHBvZGVyX3RvdGFsIDw8ICJcblxuIjsKICAgIH0KfQo=';
+    const DATA_BASE64 = 'Mw0KMTIwDQoxDQoyDQoxNjANCjINCjEgMw0KODANCjENCjMNCjEyDQpaIDYwIDMNCjANClAgODAgMQ0KMQ0KWg0KUiAzOCAyDQowDQpEIDI1IDINCjENClINCkUgNDkgMg0KMA0KRiA1NyAxDQowDQpHIDY4IDMNCjANCkggMzUgMg0KMg0KWiBFDQpJIDYyIDINCjENClINCkogNDIgMg0KMA0KSyAzNiAxDQoxDQpaDQpMIDU0IDMNCjANCg0K';
+    const bytes = encoded => Uint8Array.from(atob(encoded), character => character.charCodeAt(0));
+    const originalSource = new TextDecoder('windows-1252').decode(bytes(ORIGINAL_BASE64));
+    const updatedSource = new TextDecoder().decode(bytes(UPDATED_BASE64));
+    const originalData = new TextDecoder().decode(bytes(DATA_BASE64));
+    const initial = parseData(originalData);
+    const weapons = initial.weapons;
+    let warriors = initial.warriors.map(w => ({ ...w, types: [...w.types] }));
+    const $ = id => document.getElementById(id);
+    let trace = [], step = 0, timer = null, playing = false, manualMask = null;
+    const maxMask = 2 ** weapons.length - 1;
+    const format = value => value.toLocaleString('es-PE');
+    const reasonNames = { used: 'armas ya usadas', prereq: 'prerrequisitos', type: 'tipo incompatible', power: 'poder insuficiente' };
+    const selectedNames = mask => weapons.filter((_, i) => cargarCromosoma(weapons.length, mask)[i]).map(w => w.id).join(', ') || 'ninguna';
+
+    function storyFor(event) {
+      const g = event.index + 1;
+      switch (event.kind) {
+        case 'ready': return ['Inicio', 'Po empieza con 12 armas.', 'armas_utilizadas contiene ceros. La primera llamada buscará una mochila para el guerrero 1.'];
+        case 'enter': return ['Nueva llamada', `Turno del guerrero ${g}.`, `indice_guerrero = ${event.index}. Se prueban ${format(maxMask + 1)} combinaciones, desde i = 0. Cada bit elige un arma.`];
+        case 'rejections': return ['Fuerza bruta', `${format(event.batch.count)} combinaciones descartadas.`, `Probó i = ${event.batch.start}…${event.batch.end}. Motivos: ${Object.entries(event.batch.reasons).map(([reason, count]) => `${format(count)} por ${reasonNames[reason]}`).join('; ')}. Abajo se evalúa la última.`];
+        case 'candidate': return ['Mochila válida', `${selectedNames(event.mask)} para el guerrero ${g}.`, `La combinación i = ${event.mask} pasa esCromosomaValido. Ahora puede reservar esas armas y probar con el siguiente guerrero.`];
+        case 'assign': return ['Llamada recursiva', `Reserva ${selectedNames(event.mask)}.`, `Escribe ${g} en armas_utilizadas para esas armas. Llama con indice_guerrero + 1 = ${event.index + 1}; esta llamada espera su respuesta.`];
+        case 'failure': return ['Sin salida', `El guerrero ${g} se queda sin mochila.`, `Se agotaron las ${format(maxMask + 1)} combinaciones. La función devuelve false; la llamada anterior deberá probar otra asignación.`];
+        case 'undo': return ['Backtracking', `Libera ${selectedNames(event.mask)} y vuelve a probar.`, `El siguiente guerrero devolvió false. Estas armas vuelven a 0 en armas_utilizadas; el ciclo del guerrero ${g} continuará con i = ${event.mask + 1}.`];
+        case 'base': return ['Caso base', '¡Todos los guerreros tienen mochila!', `indice_guerrero = ${event.index} es igual a cantidad_guerreros = ${warriors.length}. La función devuelve true y conserva las asignaciones.`];
+        case 'return': return ['Regreso', `El guerrero ${g} recibe true.`, 'La llamada siguiente encontró una solución. Se libera el arreglo cromosoma de esta llamada y se devuelve true, sin deshacer las armas reservadas.'];
+        case 'done': return event.success ? ['Solución encontrada', 'Po está listo para la batalla.', 'Cada rival tiene su mochila y ninguna arma se repite. Es la primera solución encontrada por Copia de P1.cpp, según su orden de combinaciones.'] : ['Búsqueda terminada', 'No existe una solución para este caso.', 'La función principal recibió false. En este escenario cambiamos el poder del guerrero 1 a 999; ninguna mochila válida alcanza ese poder.'];
+      }
+    }
+
+    function currentContext() {
+      const event = trace[step];
+      const index = Math.min(event.index, warriors.length - 1);
+      const mask = manualMask ?? event.mask;
+      // An assigned frame displays the candidate it just validated. Its own
+      // reservations are excluded when inspecting that same warrior's trial.
+      const available = event.used.map(owner => owner === index + 1 ? 0 : owner);
+      return { event, index, mask, bits: cargarCromosoma(weapons.length, mask), available };
+    }
+
+    function drawStatic() {
+      $('warriors').innerHTML = warriors.map((warrior, i) => `<article class="warrior" id="warrior-${i}"><div class="warrior-top"><h3>Guerrero ${i + 1}</h3><span class="number">0${i + 1}</span></div><div class="power">${warrior.power}</div><p class="types">Admite tipo ${warrior.types.join(' y ')}</p><div class="bag" id="bag-${i}"></div><div class="bag-power" id="bag-power-${i}">Poder asignado: 0</div><div class="progress"><i id="progress-${i}"></i></div></article>`).join('');
+      $('weapons').innerHTML = weapons.map((weapon, i) => `<button type="button" class="weapon" data-weapon="${i}" aria-pressed="false"><div class="weapon-head"><span class="weapon-letter">${weapon.id}</span><span class="type">T${weapon.type}</span></div><div class="weapon-power">${weapon.power} de poder</div><div class="weapon-deps">${weapon.deps.length ? `Necesita ${weapon.deps.join(' + ')}` : 'Sin requisitos'}</div><div class="ownership" id="owner-${i}">Libre</div></button>`).join('');
+      $('binary').innerHTML = weapons.map((weapon, i) => `<button class="bit" data-weapon="${i}" aria-pressed="false" aria-label="Incluir o quitar ${weapon.id}"><span>${weapon.id}</span><strong>0</strong></button>`).join('');
+    }
+
+    function render() {
+      const { event, index, mask, bits, available } = currentContext();
+      const validation = validateCandidate(mask, available, warriors[index], weapons);
+      for (let g = 0; g < warriors.length; g++) {
+        const assigned = weapons.filter((_, i) => event.used[i] === g + 1);
+        const power = assigned.reduce((sum, w) => sum + w.power, 0);
+        $(`warrior-${g}`).classList.toggle('active', event.kind !== 'done' && event.index === g);
+        $(`warrior-${g}`).classList.toggle('solved', assigned.length > 0);
+        $(`bag-${g}`).innerHTML = assigned.length ? assigned.map(w => `<span class="weapon-token">${w.id}</span>`).join('') : '<span class="empty">Mochila vacía</span>';
+        $(`bag-power-${g}`).textContent = `Poder asignado: ${power}`;
+        $(`progress-${g}`).style.width = `${Math.min(100, power / warriors[g].power * 100)}%`;
+      }
+      document.querySelectorAll('[data-weapon]').forEach(button => {
+        const i = Number(button.dataset.weapon);
+        button.setAttribute('aria-pressed', String(Boolean(bits[i])));
+        if (button.classList.contains('weapon')) {
+          button.classList.toggle('selected', Boolean(bits[i]));
+          button.classList.toggle('occupied', Boolean(event.used[i]));
+          button.classList.toggle('conflict', Boolean(bits[i] && available[i]));
+          button.setAttribute('aria-label', `Arma ${weapons[i].id}, poder ${weapons[i].power}, tipo ${weapons[i].type}. ${event.used[i] ? `Asignada al guerrero ${event.used[i]}` : 'Libre'}. ${bits[i] ? 'Incluida' : 'No incluida'} en la combinación.`);
+        } else button.querySelector('strong').textContent = bits[i];
+      });
+      weapons.forEach((_, i) => { $(`owner-${i}`).textContent = event.used[i] ? `Mochila G${event.used[i]}` : 'Libre'; });
+      $('available').textContent = `${event.used.filter(owner => !owner).length} de 12 armas libres`;
+      $('memory-values').innerHTML = event.used.map((owner, i) => `<span class="${owner ? 'taken' : ''}" title="${weapons[i].id}: ${owner ? `guerrero ${owner}` : 'libre'}">${owner}</span>`).join('');
+      $('mask').value = mask;
+      $('mask-prev').disabled = mask === 0;
+      $('mask-next').disabled = mask === maxMask;
+      $('manual-tag').hidden = manualMask === null;
+      $('tested').textContent = format(event.tested);
+      $('backtracks').textContent = event.backtracks;
+      const [phase, title, description] = manualMask === null ? storyFor(event) : ['Vista manual', `Prueba i = ${mask} para G${index + 1}.`, `${selectedNames(mask)}. Se usa la disponibilidad de este paso. Esta prueba no cambia las mochilas ni el contador del programa.`];
+      $('phase').textContent = phase;
+      $('story-title').textContent = title;
+      $('story-text').textContent = description;
+      $('story').classList.toggle('undo', manualMask === null && ['undo', 'failure'].includes(event.kind));
+      $('story').classList.toggle('success', manualMask === null && (event.kind === 'base' || event.kind === 'done' && event.success));
+      const showChecks = manualMask !== null || ['candidate', 'assign', 'rejections'].includes(event.kind);
+      const labels = ['Armas disponibles', 'Prerrequisitos en la misma mochila', `Tipos admitidos: ${warriors[index].types.join(' y ')}`, `Poder ≥ ${warriors[index].power} (regla del C++)`];
+      $('checks').innerHTML = labels.map((label, i) => {
+        const check = showChecks ? validation.checks[i] : null;
+        return `<div class="check ${check === true ? 'pass' : check === false ? 'fail' : ''}"><span class="check-icon">${check === true ? '✓' : check === false ? '×' : '·'}</span><span>${label}${check === null && showChecks ? ' · sin evaluar' : ''}</span></div>`;
+      }).join('');
+      $('check-detail').textContent = showChecks ? validation.message : 'El programa se detiene en la primera condición que falla. Las demás quedan sin evaluar.';
+      $('stack').innerHTML = event.frames.length ? event.frames.map((frame, i) => `<div class="frame ${i === event.frames.length - 1 ? 'active' : ''}" style="margin-left:${i * 7}px"><strong>indice_guerrero = ${frame.index}</strong><p>${frame.index < warriors.length ? `i = ${frame.mask} · ` : ''}${frame.status}</p></div>`).join('') : '<div class="empty-stack">Pila vacía</div>';
+      $('stack').scrollTop = $('stack').scrollHeight;
+      $('active-code').textContent = { ready: 'armas_utilizadas[12] = {0};', enter: 'for (int i=0; i<combinaciones; i++)', rejections: 'esCromosomaValido(...) → false', candidate: 'esCromosomaValido(...) → true', assign: 'armas_utilizadas[j] = indice_guerrero+1;\nencontrarArmasParaGuerrero(..., indice_guerrero+1)', undo: 'armas_utilizadas[j] = 0; // probar la siguiente', failure: 'delete[] cromosoma; return false;', base: 'if (indice_guerrero == cantidad_guerreros) return true;', return: 'delete[] cromosoma; return true;', done: event.success ? 'imprimirSolucion(..., armas_utilizadas);' : 'cout << "No existe una solucion para este caso";' }[event.kind];
+      $('timeline').value = step;
+      $('timeline').setAttribute('aria-valuetext', `Paso ${step} de ${trace.length - 1}. ${title}`);
+      $('step-counter').textContent = `Paso ${step} de ${trace.length - 1}`;
+      $('restart').disabled = step === 0 && manualMask === null;
+      $('back').disabled = step === 0;
+      $('next').disabled = step === trace.length - 1;
+      $('finish').disabled = step === trace.length - 1;
+      $('jump-backtrack').disabled = !trace.some(event => event.kind === 'undo');
+      updatePlayButton();
+    }
+
+    function updatePlayButton() {
+      $('play').textContent = playing ? 'Ⅱ Pausar' : step === trace.length - 1 ? '↺ Repetir' : step ? '▶ Continuar' : '▶ Reproducir';
+    }
+    function pause() { clearTimeout(timer); timer = null; playing = false; updatePlayButton(); }
+    function goTo(next) { pause(); manualMask = null; step = Math.max(0, Math.min(trace.length - 1, next)); render(); }
+    function schedule() {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        if (!playing) return;
+        step++;
+        if (step >= trace.length - 1) { step = trace.length - 1; pause(); }
+        render();
+        if (playing) schedule();
+      }, (trace[step].kind === 'undo' || trace[step].kind === 'rejections' ? 2200 : 1600) / Number($('speed').value));
+    }
+    function restartScenario(impossible) {
+      pause(); manualMask = null; step = 0;
+      warriors = initial.warriors.map(w => ({ ...w, types: [...w.types] }));
+      if (impossible) warriors[0].power = 999;
+      trace = buildSearchTrace(warriors, weapons);
+      $('timeline').max = trace.length - 1;
+      $('original-case').setAttribute('aria-pressed', String(!impossible));
+      $('impossible-case').setAttribute('aria-pressed', String(impossible));
+      $('scenario-note').textContent = impossible ? 'Ejemplo adicional: el poder del guerrero 1 pasa de 120 a 999.' : 'Mismos datos que Copia de datos1.txt.';
+      drawStatic(); render();
+    }
+    function inspectMask(mask) { pause(); manualMask = Math.max(0, Math.min(maxMask, mask)); render(); }
+    document.addEventListener('click', event => {
+      const weapon = event.target.closest('[data-weapon]');
+      if (!weapon) return;
+      const bit = weapons.length - 1 - Number(weapon.dataset.weapon);
+      inspectMask(currentContext().mask ^ (1 << bit));
+    });
+    $('mask').addEventListener('change', event => {
+      const value = Number(event.target.value);
+      if (event.target.value !== '' && Number.isInteger(value) && value >= 0 && value <= maxMask) inspectMask(value);
+      else { event.target.value = currentContext().mask; }
+    });
+    $('mask-prev').addEventListener('click', () => inspectMask(currentContext().mask - 1));
+    $('mask-next').addEventListener('click', () => inspectMask(currentContext().mask + 1));
+    $('return-to-trace').addEventListener('click', () => { manualMask = null; render(); });
+    $('original-case').addEventListener('click', () => restartScenario(false));
+    $('impossible-case').addEventListener('click', () => restartScenario(true));
+    $('restart').addEventListener('click', () => goTo(0));
+    $('back').addEventListener('click', () => goTo(step - 1));
+    $('next').addEventListener('click', () => goTo(step + 1));
+    $('finish').addEventListener('click', () => goTo(trace.length - 1));
+    $('timeline').addEventListener('input', event => goTo(Number(event.target.value)));
+    $('jump-backtrack').addEventListener('click', () => goTo(trace.findIndex(event => event.kind === 'undo')));
+    $('speed').addEventListener('change', () => { if (playing) schedule(); });
+    $('play').addEventListener('click', () => {
+      if (playing) { pause(); return; }
+      manualMask = null;
+      if (step === trace.length - 1) step = 0;
+      playing = true;
+      if (!step) step = 1;
+      render(); schedule();
+    });
+    document.addEventListener('visibilitychange', () => { if (document.hidden) pause(); });
+    function selectedSource() {
+      return $('source-version').value === 'updated' ? updatedSource : originalSource;
+    }
+    function showSource() {
+      const updated = $('source-version').value === 'updated';
+      $('source-code').textContent = selectedSource();
+      $('download-code').textContent = updated ? 'Descargar P1.cpp' : 'Descargar referencia';
+      $('source-description').textContent = updated
+        ? 'Un ciclo enumera las asignaciones en base G+1. Para tres guerreros y doce armas hay 4^12 posibilidades. Cada candidato asigna todas las armas y se comprueban los tipos, los requisitos en la misma mochila y poder estrictamente mayor.'
+        : 'Esta es la versión recursiva anterior que explica la animación. Reserva y libera armas mediante backtracking y acepta poder igual al del guerrero. El selector permite volver al C++ actualizado de fuerza bruta iterativa.';
+      $('copy-status').textContent = '';
+    }
+    $('source-version').addEventListener('change', showSource);
+    $('show-updated-code').addEventListener('click', () => {
+      $('code-details').open = true;
+      $('source-version').value = 'updated';
+      showSource();
+    });
+    showSource();
+    $('copy-code').addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText(selectedSource()); $('copy-status').textContent = 'Código seleccionado copiado.'; }
+      catch {
+        const range = document.createRange(); range.selectNodeContents($('source-code'));
+        const selection = window.getSelection(); selection.removeAllRanges(); selection.addRange(range);
+        $('copy-status').textContent = 'Código seleccionado. Copia con Ctrl+C o ⌘C.';
+      }
+    });
+    function download(encoded, name) {
+      const url = URL.createObjectURL(new Blob([bytes(encoded)], { type:'text/plain' }));
+      const link = document.createElement('a'); link.href = url; link.download = name;
+      document.body.append(link); link.click(); link.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    }
+    $('download-code').addEventListener('click', () => download($('source-version').value === 'updated' ? UPDATED_BASE64 : ORIGINAL_BASE64, $('source-version').value === 'updated' ? 'P1.cpp' : 'P1-recursivo-referencia.cpp'));
+    $('download-data').addEventListener('click', () => download(DATA_BASE64, 'datos1.txt'));
+    restartScenario(false);
+  </script>
+</body>
+</html>

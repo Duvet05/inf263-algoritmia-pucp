@@ -29,13 +29,13 @@ function check(values, expected) {
   assert.equal(elements.empty.hidden, count !== 0);
   assert.equal(elements.count.textContent, count + " de " + rows.length + " documentos");
 }
-check({}, 35);
+check({}, 40);
 check({search: "Nautilus"}, 1);
 check({search: "tortuninjas"}, 1);
 check({search: "barajado"}, 1);
 check({search: "sin-coincidencias-xyz"}, 0);
 check({kind: "Laboratorio"}, 19);
 check({kind: "Examen", term: "2024-1"}, 2);
-check({topic: "Backtracking"}, 3);
+check({topic: "Backtracking"}, 4);
 check({search: "recursion", kind: "Examen"}, 2);
 console.log("OK: filtros de busqueda, tema, tipo, ciclo y estado vacio");

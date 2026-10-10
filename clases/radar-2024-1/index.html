@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101e2a">
+  <title>Radar recursivo · Laboratorio 1, pregunta 2</title>
+  <style>
+    :root { color-scheme: light; --ink: #182b38; --muted: #65737e; --line: #dfe5e8; --paper: #f6f8f9; --accent: #286955; --mono: ui-monospace, SFMono-Regular, Consolas, monospace; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    button, input, select { font: inherit; }
+    button, select, summary { cursor: pointer; }
+    button { color: inherit; }
+    button:disabled { opacity: .38; cursor: default; }
+    a { color: var(--accent); text-underline-offset: 4px; }
+    button, a, input, select, summary { -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 3px solid #299c80; outline-offset: 4px; }
+    button { touch-action: manipulation; }
+    svg { display: block; }
+    h1, h2, h3, p { margin: 0; }
+    .icon { width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .wrap { max-width: 1480px; padding: 0 40px; margin: auto; }
+    .topbar { height: 78px; border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand, .toplinks, .row { display: flex; align-items: center; gap: 12px; }
+    .brand { font-weight: 750; letter-spacing: -.3px; font-size: 16px; }
+    .brand-mark { color: var(--accent); background: #e5eee9; padding: 9px; border-radius: 11px; }
+    .brand-mark .icon { width: 22px; height: 22px; }
+    .toplinks { color: var(--muted); font-size: 12px; gap: 24px; }
+    .toplinks a { color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: 6px; }
+    .toplinks a:hover { color: var(--accent); }
+    .intro { display: flex; justify-content: space-between; align-items: center; gap: 40px; padding: 37px 0 30px; }
+    .eyebrow, .section-label { font-size: 10px; text-transform: uppercase; letter-spacing: 1.7px; font-weight: 750; }
+    .eyebrow { color: var(--accent); margin-bottom: 10px; }
+    h1 { font-size: clamp(30px, 3.2vw, 44px); line-height: 1.1; letter-spacing: -1.8px; font-weight: 750; }
+    .intro p { color: var(--muted); max-width: 650px; margin-top: 13px; font-size: 14px; }
+    .rule { flex: 0 0 292px; border-left: 2px solid #b6d0c4; padding: 4px 0 4px 18px; }
+    .rule strong { font-size: 13px; display: block; }
+    .rule p { font-size: 12px; margin-top: 6px; line-height: 1.6; }
+    .workspace { display: grid; grid-template-columns: 218px minmax(0, 1fr) 320px; align-items: start; gap: 18px; }
+    .panel { background: white; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+    .config { padding: 20px 17px; }
+    .section-label { color: var(--muted); display: flex; align-items: center; gap: 8px; }
+    .section-label .index { color: #708879; font-family: var(--mono); letter-spacing: 0; }
+    .config h2, .stack-panel h2 { margin: 7px 0 17px; font-size: 19px; letter-spacing: -.6px; }
+    .cases { display: grid; gap: 8px; }
+    .case { display: block; text-align: left; width: 100%; padding: 11px 12px; border: 1px solid var(--line); border-radius: 9px; background: white; transition: border-color .15s, background .15s; }
+    .case:hover { border-color: #95b2a5; background: #f8faf8; }
+    .case[aria-pressed="true"] { border-color: var(--accent); background: #eef5f0; box-shadow: inset 3px 0 var(--accent); }
+    .case strong { display: flex; justify-content: space-between; font-size: 12px; }
+    .case strong span { font-family: var(--mono); font-weight: 500; color: var(--muted); }
+    .case small { display: block; font-size: 11px; color: var(--muted); margin-top: 4px; }
+    .case small b { color: var(--accent); font-weight: 600; }
+    .config hr { border: 0; border-top: 1px solid var(--line); margin: 20px 0; }
+    .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 10px; margin-top: 13px; }
+    .fields label { color: var(--muted); font-size: 11px; }
+    input[type="number"] { width: 100%; margin-top: 5px; padding: 7px 9px; border: 1px solid var(--line); border-radius: 7px; background: #fbfcfc; color: var(--ink); font-family: var(--mono); }
+    .secondary { border: 1px solid var(--line); background: white; border-radius: 8px; padding: 8px 12px; font-size: 12px; font-weight: 600; }
+    .secondary:hover:not(:disabled) { background: #edf3ef; border-color: #a9bfb4; }
+    .apply { width: 100%; margin-top: 13px; }
+    .hint { color: var(--muted); font-size: 11px; line-height: 1.6; }
+    .config .hint { margin-top: 10px; }
+    .config-note { background: #f4f7f5; border-radius: 8px; padding: 11px; margin-top: 20px; }
+    .config-note strong { font-size: 11px; display: block; margin-bottom: 4px; }
+    .simulator { min-width: 0; }
+    .radar { background: #101e2a; color: #d9e5ed; border-radius: 16px 16px 0 0; position: relative; overflow: hidden; }
+    .radar-top { padding: 19px 22px 0; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .radar-title { font-size: 10px; font-weight: 650; letter-spacing: 1.4px; display: flex; align-items: center; gap: 8px; }
+    .signal-dot { width: 6px; height: 6px; border-radius: 50%; background: #7dcdb0; box-shadow: 0 0 9px #7dcdb04d; }
+    .radar-meta { color: #95a9b8; font: 11px var(--mono); }
+    .map-shell { max-width: 440px; padding: 22px 30px 12px 14px; margin: 0 auto; }
+    .axis-title { text-align: center; color: #95a9b8; font: 10px var(--mono); margin-bottom: 11px; padding-left: 26px; }
+    .matrix-layout { display: grid; grid-template-columns: 22px minmax(0, 1fr); grid-template-rows: 21px auto; gap: 4px; margin: 0 auto; }
+    .axis-corner { font: 9px var(--mono); color: #7893a4; }
+    .axis-labels { display: grid; align-items: center; justify-items: center; color: #849aaa; font: 11px var(--mono); }
+    .col-labels { grid-template-columns: repeat(var(--columns), 1fr); }
+    .row-labels { grid-template-rows: repeat(var(--rows), 1fr); row-gap: 5px; }
+    .axis-labels .is-center { color: #f4cf76; font-weight: 800; }
+    .matrix-grid { display: grid; grid-template-columns: repeat(var(--columns), minmax(0, 1fr)); grid-template-rows: repeat(var(--rows), auto); position: relative; gap: 5px; isolation: isolate; }
+    .cell { aspect-ratio: 1; padding: 0; min-width: 0; position: relative; border: 1px solid #31414e; border-radius: 5px; background: #192a38; color: #7f95a6; font: 500 clamp(12px, 1.4vw, 19px) var(--mono); transition: background .2s, border-color .2s, color .2s; }
+    .cell:hover { background: #2c4252; border-color: #abc0ce; z-index: 3; }
+    .cell.has-unit { color: #ecf3f7; font-weight: 750; }
+    .cell.has-unit .value { border-bottom: 2px solid #7596a9; padding: 0 2px 2px; }
+    .cell.is-visited { background: color-mix(in srgb, var(--ring-color) 17%, #142331); border-color: color-mix(in srgb, var(--ring-color) 50%, #243744); color: color-mix(in srgb, var(--ring-color) 65%, white); }
+    .cell.is-visited.has-unit { background: color-mix(in srgb, var(--ring-color) 35%, #142331); color: #fff; }
+    .cell.is-visited.has-unit .value { border-color: var(--ring-color); }
+    .cell.is-robot { background: #4b4532; color: #ffdc85; border: 1px solid #e6bd60; }
+    .cell.is-robot::after { content: ''; width: 5px; height: 5px; position: absolute; right: 5px; top: 5px; background: #ffdc85; border-radius: 50%; box-shadow: 0 0 6px #e6bd6080; }
+    .cell.is-current { z-index: 2; border-color: white; box-shadow: 0 0 0 2px #e7f5ef, 0 0 20px #d9ede830; color: white; }
+    .cell.is-rejected { background: repeating-linear-gradient(135deg, #bd6d6930, #bd6d6930 3px, #bd6d690c 3px, #bd6d690c 8px); border: 1px dashed #bf7978; color: #dcaaa8; }
+    .cell.is-outside { opacity: .47; }
+    .ring-overlay { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; clip-path: inset(-12px); pointer-events: none; z-index: 4; }
+    .ring-overlay rect { vector-effect: non-scaling-stroke; fill: none; }
+    .board-caption { display: flex; justify-content: space-between; padding-left: 26px; font: 9px var(--mono); color: #90a5b4; margin-top: 14px; gap: 8px; }
+    .legend { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; padding: 12px 15px 17px; font-size: 10px; color: #aebfca; }
+    .legend span { display: flex; align-items: center; gap: 5px; }
+    .swatch { display: inline-block; width: 8px; height: 8px; border-radius: 2px; background: var(--swatch); }
+    .swatch.unit { background: transparent; border: 1px solid #c6dce8; }
+    .swatch.out { background: #526574; }
+    .radar-stats { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid #293b49; padding: 16px 12px; background: #142431; }
+    .stat { text-align: center; border-right: 1px solid #30414d; }
+    .stat:last-child { border: 0; }
+    .stat strong { display: block; color: #e7f0f5; font: 600 24px var(--mono); margin-bottom: 3px; }
+    .stat:first-child strong { color: #98dabd; }
+    .stat span { color: #99aebb; font-size: 10px; }
+    .playback { background: white; border: 1px solid var(--line); border-top: 0; border-radius: 0 0 16px 16px; padding: 18px; }
+    .transport { display: flex; align-items: center; gap: 7px; }
+    .transport button { height: 38px; display: flex; align-items: center; justify-content: center; gap: 7px; border: 1px solid var(--line); border-radius: 8px; background: white; font-size: 11px; font-weight: 650; }
+    .transport .icon-button { width: 35px; flex: none; }
+    .transport button:hover:not(:disabled) { background: #f0f5f1; }
+    .transport .primary { color: white; background: var(--accent); border-color: var(--accent); flex: 1; min-width: 100px; }
+    .transport .primary:hover { background: #1d5141; }
+    .transport .step-button { padding: 0 10px; }
+    .timeline { width: 100%; height: 5px; accent-color: var(--accent); display: block; margin: 20px 0 12px; cursor: pointer; }
+    .playback-settings { display: flex; justify-content: space-between; align-items: center; gap: 8px; color: var(--muted); font-size: 10px; }
+    .playback-settings select { max-width: 105px; background: #f6f8f7; color: var(--ink); padding: 4px 5px; border: 1px solid var(--line); border-radius: 5px; font-size: 10px; }
+    .settings-group { display: flex; align-items: center; gap: 7px; }
+    .editbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; margin-top: 13px; }
+    .segmented { display: inline-flex; padding: 3px; gap: 3px; border: 1px solid var(--line); border-radius: 8px; background: #eaf0ec; }
+    .segmented button { border: 0; border-radius: 5px; font-size: 10px; padding: 6px 9px; color: var(--muted); background: transparent; }
+    .segmented button[aria-pressed="true"] { background: white; color: var(--ink); box-shadow: 0 1px 3px #1c3d2110; }
+    .edit-hint { margin: 7px 0 0; font-size: 10px; color: var(--muted); }
+    .stack-panel { padding: 20px 18px; }
+    .stack-heading { display: flex; justify-content: space-between; align-items: center; }
+    .stack-heading h2 { margin-bottom: 11px; }
+    .depth { font: 11px var(--mono); padding: 2px 7px; border-radius: 5px; background: #eff3f5; color: var(--muted); }
+    .direction { display: flex; align-items: center; gap: 7px; font-size: 11px; color: var(--accent); font-weight: 650; min-height: 25px; }
+    .direction[data-state="base"] { color: #aa5645; }
+    .direction[data-state="return"] { color: #735aa0; }
+    .stack { display: flex; flex-direction: column; gap: 7px; max-height: 272px; min-height: 171px; overflow-y: auto; padding: 10px 2px; }
+    .stack-empty { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: var(--muted); padding: 18px 10px; border: 1px dashed #dbe4de; border-radius: 9px; background: #fafcfb; }
+    .stack-empty .empty-glyph { color: #acc4b7; font: 28px var(--mono); margin-bottom: 9px; }
+    .stack-empty strong { font-size: 12px; color: #53695d; font-weight: 600; }
+    .stack-empty span:last-child { font-size: 10px; max-width: 180px; margin-top: 5px; }
+    .frame { padding: 9px 10px; border: 1px solid #dfe5e8; border-left: 3px solid var(--frame-color); border-radius: 7px; background: #f9fbfa; flex: none; }
+    .frame.active { background: #eef5f0; box-shadow: 0 0 0 1px #bbcfc2; }
+    .frame.base { background: #fdf1ed; box-shadow: 0 0 0 1px #e4b9ac; }
+    .frame.returning { background: #f4effa; box-shadow: 0 0 0 1px #d6c6e8; }
+    .frame-title { display: flex; justify-content: space-between; align-items: center; gap: 5px; }
+    .frame-title code { font: 600 12px var(--mono); }
+    .frame-title small { color: var(--muted); font-size: 9px; }
+    .frame p { margin-top: 5px; color: #627368; font: 10px/1.5 var(--mono); }
+    .story { padding: 14px 0 15px; border-bottom: 1px solid var(--line); min-height: 115px; }
+    .story h3 { font-size: 14px; margin-bottom: 5px; letter-spacing: -.2px; }
+    .story p { font-size: 11px; line-height: 1.65; color: var(--muted); }
+    .mini-code { font: 10px/1.9 var(--mono); margin-top: 15px; counter-reset: line; }
+    .code-line { display: block; white-space: pre; margin: 0 -7px; padding: 1px 7px; border-radius: 4px; color: #617282; }
+    .code-line::before { counter-increment: line; content: counter(line); display: inline-block; width: 19px; color: #9daab3; }
+    .code-line.active { background: #e7f1eb; color: #205a46; font-weight: 700; }
+    .code-line.base-active { background: #fae8e3; color: #a9513f; }
+    .code-line.return-active { background: #f0e8fa; color: #70529a; }
+    .code-line .fn { color: #396a78; }
+    .return-note { font-size: 10px; color: var(--muted); margin-top: 12px; }
+    .equation { padding: 12px; margin-top: 12px; background: #f1f5f2; border-radius: 8px; font: 12px/1.5 var(--mono); color: #2a624a; overflow-wrap: anywhere; }
+    .learning { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin: 30px 0 26px; }
+    .lesson { display: flex; gap: 12px; }
+    .lesson-number { height: 27px; width: 27px; display: grid; place-items: center; flex: none; border: 1px solid #cfded5; border-radius: 50%; color: var(--accent); font: 11px var(--mono); }
+    .lesson h3 { font-size: 12px; margin: 3px 0 5px; }
+    .lesson p { color: var(--muted); font-size: 11px; line-height: 1.65; }
+    .lesson code { font-size: 10px; color: #426153; }
+    .code-details { background: white; border: 1px solid var(--line); border-radius: 12px; padding: 17px 20px; }
+    .code-details summary { font-size: 12px; font-weight: 650; }
+    .code-details summary span { color: var(--muted); font-size: 11px; font-weight: 400; margin-left: 8px; }
+    .code-details[open] summary { margin-bottom: 15px; }
+    .code-intro { display: flex; justify-content: space-between; align-items: center; gap: 18px; margin-bottom: 12px; }
+    .code-intro p { font-size: 12px; color: var(--muted); max-width: 740px; }
+    .code-actions { display: flex; flex-wrap: wrap; gap: 8px; flex: none; }
+    pre { padding: 22px; border-radius: 9px; background: #101e2a; color: #c7dddc; font: 12px/1.8 var(--mono); overflow: auto; margin: 0; }
+    footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 23px 0; color: var(--muted); font-size: 10px; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    noscript { display: block; background: #fff1df; padding: 20px; margin: 20px 0; }
+    @media (min-width: 1400px) { .workspace { grid-template-columns: 235px minmax(0, 1fr) 345px; gap: 22px; } .stack-panel, .config { padding: 23px; } .mini-code { font-size: 11px; } }
+    @media (max-width: 1180px) { .wrap { padding: 0 24px; } .workspace { grid-template-columns: 185px minmax(0, 1fr) 280px; gap: 12px; } .config, .stack-panel { padding: 16px 13px; } .rule { flex-basis: 248px; } .transport .step-button { padding: 0 7px; } .transport { gap: 5px; } .map-shell { padding-right: 25px; padding-left: 9px; } .mini-code { font-size: 9px; } .editbar { gap: 10px; } }
+    @media (max-width: 1020px) { .workspace { grid-template-columns: minmax(0, 1fr) 310px; gap: 18px; } .config { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; padding: 17px 20px; } .config h2 { font-size: 16px; margin: 4px 0 10px; } .cases { display: flex; } .case { padding: 9px; } .case strong { flex-direction: column; gap: 1px; } .config hr, .config-note { display: none; } .config form { grid-column: 2; grid-row: 1 / 4; align-self: center; } .config form .section-label { display: none; } .fields { grid-template-columns: repeat(4, 1fr); margin-top: 0; gap: 7px; } .config .apply { margin-top: 8px; } .config .hint { margin-top: 6px; font-size: 10px; } .intro { gap: 22px; } .rule { flex-basis: 225px; } .mini-code { font-size: 10px; } }
+    @media (max-width: 760px) { .wrap { padding: 0 18px; } .topbar { height: 64px; } .toplinks .term { display: none; } .brand { font-size: 14px; } .intro { padding: 27px 0 22px; display: block; } h1 { font-size: 34px; letter-spacing: -1.4px; } .intro p { font-size: 13px; } .rule { margin-top: 19px; padding-left: 12px; } .rule p { margin-top: 2px; font-size: 11px; } .workspace { display: flex; flex-direction: column; gap: 16px; } .workspace > * { width: 100%; } .config { display: block; padding: 16px; } .config h2 { margin-bottom: 10px; } .cases { gap: 6px; } .case { padding: 9px 8px; } .case strong { font-size: 11px; } .case small { font-size: 10px; } .config form { margin-top: 15px; } .config .apply { width: auto; margin-top: 11px; } .config .hint { display: inline; margin-left: 7px; } .map-shell { max-width: 460px; padding-top: 17px; } .cell { font-size: 18px; } .stack-panel { padding: 19px; } .stack { min-height: 135px; max-height: none; } .story { min-height: 0; } .mini-code { font-size: 12px; } .learning { grid-template-columns: 1fr; gap: 17px; margin: 23px 0; } .lesson p { max-width: none; } .code-details summary span { display: block; margin: 5px 0 0; } .code-intro { align-items: start; flex-direction: column; } footer { align-items: start; } .transport .step-button { padding: 0 12px; } }
+    @media (max-width: 400px) { .transport { gap: 4px; } .transport .icon-button { width: 28px; } .transport .primary { min-width: 85px; } .transport .step-button { padding: 0 6px; gap: 4px; } .transport .icon { width: 16px; } .radar-top { padding-left: 14px; padding-right: 14px; } .radar-title { font-size: 9px; letter-spacing: 1px; } .radar-meta { font-size: 9px; } .mini-code { font-size: 10px; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; } }
+    @media print { .config, .playback, .editbar, .edit-hint, .toplinks, .code-actions { display: none; } .wrap { padding: 0; } .workspace { display: grid; grid-template-columns: 1.4fr 1fr; } .radar, .panel { break-inside: avoid; } body { print-color-adjust: exact; -webkit-print-color-adjust: exact; } }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-radar" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/><path d="m12 12 7-7"/><path d="M12 1v2M1 12h2M12 21v2M21 12h2"/></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7Z"/></symbol>
+      <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+      <symbol id="i-step" viewBox="0 0 24 24"><path d="m6 5 10 7-10 7ZM19 5v14"/></symbol>
+      <symbol id="i-back" viewBox="0 0 24 24"><path d="m16 5-10 7 10 7ZM3 5v14"/></symbol>
+      <symbol id="i-reset" viewBox="0 0 24 24"><path d="M3 10a9 9 0 1 1 2 8M3 4v6h6"/></symbol>
+      <symbol id="i-end" viewBox="0 0 24 24"><path d="m3 6 7 6-7 6Zm8 0 7 6-7 6ZM21 6v12"/></symbol>
+      <symbol id="i-link" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+    </defs>
+  </svg>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark"><svg class="icon" aria-hidden="true"><use href="#i-radar"/></svg></span>Algoritmia visual</div>
+      <div class="toplinks"><span class="term">PUCP · 2024-1</span><a href="../../laboratorios/laboratorio-01/2024-1/enunciado.pdf#page=3" target="_blank" rel="noopener">Ver enunciado <svg class="icon" aria-hidden="true"><use href="#i-link"/></svg></a></div>
+    </header>
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div><div class="eyebrow">Laboratorio 01 / Pregunta 02 / Copia de P2.cpp</div><h1 id="page-title">Tu P2.cpp, anillo a anillo.</h1><p>Sigue hallarLimites y buscar: del borde exterior al centro, con los mismos límites y la misma suma por referencia que utiliza tu archivo.</p></div>
+        <aside class="rule"><strong>La suma se acumula al recorrer.</strong><p>buscar es void. Todas las llamadas comparten int &amp;suma; al regresar, su valor ya está calculado.</p></aside>
+      </section>
+      <noscript>Activa JavaScript para usar la simulación. En el ejemplo 1 se cuentan 0 + 2 + 3 = 5 unidades; en el ejemplo 2, 1 + 1 = 2.</noscript>
+      <div class="workspace">
+        <aside class="panel config" aria-labelledby="config-title">
+          <div class="section-label"><span class="index">01</span> El escenario</div>
+          <h2 id="config-title">Prepara la búsqueda</h2>
+          <div class="cases" aria-label="Ejemplos de búsqueda">
+            <button class="case" data-case="first" aria-pressed="true"><strong>Ejemplo 1 <span>(3, 2)</span></strong><small>Del enunciado · <b>5 unidades</b></small></button>
+            <button class="case" data-case="second" aria-pressed="false"><strong>Ejemplo 2 <span>(4, 4)</span></strong><small>Del enunciado · <b>2 unidades</b></small></button>
+            <button class="case" data-case="edge" aria-pressed="false"><strong>En el borde <span>(0, 3)</span></strong><small>Extra · <b>solo el centro</b></small></button>
+          </div>
+          <hr>
+          <form id="config-form">
+            <div class="section-label">Prueba tus propios datos</div>
+            <div class="fields">
+              <label for="rows">Filas · N<input id="rows" type="number" min="1" max="12" step="1" value="6" required></label>
+              <label for="cols">Columnas · M<input id="cols" type="number" min="1" max="12" step="1" value="6" required></label>
+              <label for="robot-x">Fila · X<input id="robot-x" type="number" min="0" max="5" step="1" value="3" required></label>
+              <label for="robot-y">Columna · Y<input id="robot-y" type="number" min="0" max="5" step="1" value="2" required></label>
+            </div>
+            <button class="secondary apply" type="submit">Actualizar mapa</button>
+            <p class="hint">Índices desde 0. Tamaño: de 1 a 12.</p>
+          </form>
+          <div class="config-note"><strong>Lee el mapa</strong><p class="hint">Un <b>1</b> es una unidad; un <b>0</b>, una celda vacía. El punto amarillo marca la posición del radar.</p></div>
+        </aside>
+
+        <section class="simulator" aria-label="Simulación del radar">
+          <div class="radar">
+            <div class="radar-top"><span class="radar-title"><span class="signal-dot"></span>MAPA DE BÚSQUEDA</span><span id="scenario-tag" class="radar-meta">EJEMPLO 1 · 6 × 6</span></div>
+            <div class="map-shell">
+              <div class="axis-title">Y → columna</div>
+              <div class="matrix-layout">
+                <div class="axis-corner">X ↓</div>
+                <div id="col-labels" class="axis-labels col-labels" aria-hidden="true"></div>
+                <div id="row-labels" class="axis-labels row-labels" aria-hidden="true"></div>
+                <div id="matrix" class="matrix-grid" role="group" aria-label="Matriz del radar. Usa las flechas para recorrer las celdas y Enter para editarlas."></div>
+              </div>
+              <div class="board-caption"><span id="position-caption">RADAR EN (3, 2)</span><span id="radius-caption">RADIO r = 0</span></div>
+            </div>
+            <div class="legend"><span><i class="swatch" style="--swatch:#efc868"></i>Radar</span><span><i class="swatch unit"></i>1 = unidad</span><span><i class="swatch" style="--swatch:#8ccdcf"></i>Anillo 1</span><span><i class="swatch" style="--swatch:#dda3b2"></i>Anillo 2</span><span><i class="swatch out"></i>Sin explorar</span></div>
+            <div class="radar-stats">
+              <div class="stat"><strong id="detected">0</strong><span>suma compartida</span></div>
+              <div class="stat"><strong id="explored">0</strong><span>celdas exploradas</span></div>
+              <div class="stat"><strong id="rings">0</strong><span>anillos completos*</span></div>
+            </div>
+          </div>
+          <div class="playback">
+            <div class="transport">
+              <button class="icon-button" id="restart" title="Reiniciar la animación" aria-label="Reiniciar la animación"><svg class="icon" aria-hidden="true"><use href="#i-reset"/></svg></button>
+              <button class="icon-button" id="back" title="Paso anterior" aria-label="Paso anterior"><svg class="icon" aria-hidden="true"><use href="#i-back"/></svg></button>
+              <button class="primary" id="play"><svg class="icon" aria-hidden="true"><use id="play-icon" href="#i-play"/></svg><span id="play-label">Reproducir</span></button>
+              <button class="step-button" id="next">Paso <svg class="icon" aria-hidden="true"><use href="#i-step"/></svg></button>
+              <button class="icon-button" id="finish" title="Ver resultado" aria-label="Ver resultado"><svg class="icon" aria-hidden="true"><use href="#i-end"/></svg></button>
+            </div>
+            <label class="sr-only" for="timeline">Avance de la recursión</label><input class="timeline" id="timeline" type="range" min="0" max="1" value="0" step="1">
+            <div class="playback-settings"><span id="step-counter">Paso 0 de 0</span><div class="settings-group"><label class="sr-only" for="detail">Detalle de la animación</label><select id="detail"><option value="rings">Por anillos</option><option value="cells">Por celdas</option></select><label class="sr-only" for="speed">Velocidad</label><select id="speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select></div></div>
+          </div>
+          <div class="editbar"><div class="segmented" aria-label="Herramienta para editar el mapa"><button id="move-tool" aria-pressed="true">Mover radar</button><button id="unit-tool" aria-pressed="false">Editar unidades</button></div><span class="hint">* El centro es el anillo 0.</span></div>
+          <p id="edit-hint" class="edit-hint">Haz clic en una celda para mover el radar. Cada cambio reinicia la búsqueda.</p>
+        </section>
+
+        <section class="panel stack-panel" aria-labelledby="stack-title">
+          <div class="section-label"><span class="index">02</span> Dentro de la recursión</div>
+          <div class="stack-heading"><h2 id="stack-title">Pila de llamadas</h2><span class="depth" id="depth">0 activas</span></div>
+          <div class="direction" id="direction">○ Lista para comenzar</div>
+          <div class="stack" id="stack" aria-label="Llamadas activas; la más reciente está abajo"></div>
+          <div class="story" role="status" aria-live="polite" aria-atomic="true"><h3 id="story-title">Primero, hallarLimites.</h3><p id="story-text">Después buscar recorre el borde y reduce sus cuatro límites.</p></div>
+          <div class="mini-code" aria-label="Resumen de las líneas de P2.cpp">
+            <span class="code-line" data-code="limits">hallarLimites(...);</span>
+            <span class="code-line" data-code="call">void buscar(..., int &amp;suma)</span>
+            <span class="code-line" data-code="check">if (filaInicio &gt; filaFin ||</span>
+            <span class="code-line" data-code="check">    colInicio &gt; colFin)</span>
+            <span class="code-line" data-code="base">    return;</span>
+            <span class="code-line" data-code="scan">suma += matriz[...][...];</span>
+            <span class="code-line" data-code="descend">buscar(..., FI+1, FF-1,</span>
+            <span class="code-line" data-code="descend">       CI+1, CF-1, suma);</span>
+          </div>
+          <p class="return-note">FI/FF = filaInicio/filaFin. CI/CF = colInicio/colFin. Las abreviaturas solo se usan en este resumen; abajo está el archivo completo.</p>
+          <div class="equation" id="equation">int &amp;suma → 0</div>
+        </section>
+      </div>
+
+      <section class="learning" aria-label="Las tres ideas de la recursión">
+        <article class="lesson"><span class="lesson-number">1</span><div><h3>hallarLimites prepara el cuadrado</h3><p>Calcula <code>menor</code> y fija filaInicio, filaFin, columnaInicio y columnaFin. buscar empieza por el borde exterior.</p></div></article>
+        <article class="lesson"><span class="lesson-number">2</span><div><h3>Los cuatro ciclos suman</h3><p>Arriba → derecha → abajo → izquierda. Cada celda modifica la misma variable <code>suma</code>. Después los límites se acercan al centro.</p></div></article>
+        <article class="lesson"><span class="lesson-number">3</span><div><h3>Los límites se cruzan</h3><p>Cuando inicio &gt; fin, ya no quedan celdas. Se ejecuta <code>return;</code>. Las llamadas terminan y main imprime la suma acumulada.</p></div></article>
+      </section>
+
+      <details class="code-details" id="cpp-details">
+        <summary>Copia de P2.cpp <span>El archivo original utilizado como referencia</span></summary>
+        <div class="code-intro"><p>La animación reproduce hallarLimites y buscar del <a href="../../laboratorios/laboratorio-01/2024-1/material_original/variantes/2025-0/Semana%202%20-%20Recursi%C3%B3n/SESI%C3%93N%202/Copia%20de%20P2.cpp">archivo original</a>. Su cálculo de menor usa solo alto y X. Si genera columnas fuera de la matriz, se señala aquí y se detiene la simulación antes de esas lecturas; no se cambia el algoritmo.</p><div class="code-actions"><button class="secondary" id="copy-code">Copiar archivo</button><button class="secondary" id="download-code">Descargar original</button></div></div>
+        <pre><code id="cpp-code"></code></pre>
+        <p class="hint" style="margin-top:12px">El programa original lee <a href="../../laboratorios/laboratorio-01/2024-1/material_original/variantes/2024-2/LAB1/Viernes%2013%EF%BC%8F09/Copia%20de%20datos2.txt" download="datos2.txt">datos2.txt</a> (ejemplo 2). Coloca ambos archivos en la misma carpeta al ejecutarlo.</p>
+        <p class="hint" id="copy-status" role="status"></p>
+      </details>
+    </main>
+    <footer><span>Laboratorio 1 · 2024-1 · Pregunta 2<br>Visualización didáctica · funciona sin conexión</span><a href="../../catalogo/index.html">Volver al catálogo de laboratorios ↗</a></footer>
+  </div>
+  <script>
+    'use strict';
+
+    const COLORS = ['#efc868', '#8ccdcf', '#dda3b2', '#b6a0e3', '#9fc5ef', '#c5d893', '#e5ab83'];
+    const FIRST_MATRIX = [
+      [0, 0, 0, 1, 0, 1],
+      [0, 0, 1, 0, 0, 0],
+      [0, 1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0],
+      [0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0]
+    ];
+    const $ = id => document.getElementById(id);
+    const color = r => COLORS[Math.max(0, r) % COLORS.length];
+    const unitText = n => `${n} ${n === 1 ? 'unidad' : 'unidades'}`;
+
+    // Mirrors hallarLimites and buscar in Copia de P2.cpp.
+    // Snapshot fields are visual annotations; buscar shares one sum and returns void.
+    function buildTrace(matrix, x, y) {
+      const alto = matrix.length, ancho = matrix[0].length;
+      const menor = alto - 1 - x < x ? alto - 1 - x : x;
+      const initial = { top: x - menor, bottom: x + menor, left: y - menor, right: y + menor };
+      const frames = [], visited = [], completed = [], ringCounts = [], events = [];
+      let suma = 0;
+      const emit = (kind, r, extra = {}) => events.push({
+        kind, r, bounds: { ...initial }, frames: frames.map(f => ({ ...f, bounds: { ...f.bounds } })),
+        visited: [...visited], completed: [...completed], ringCounts: [...ringCounts],
+        suma, detected: suma, ...extra
+      });
+      emit('ready', menor);
+      emit('limits', menor, { menor });
+      // This guard belongs to the visualizer, not to the original C++.
+      // Never invent a numerical result for its out-of-bounds accesses.
+      if (initial.left < 0 || initial.right >= ancho) {
+        emit('invalid', menor);
+        return events;
+      }
+      function buscar(filaInicio, filaFin, colInicio, colFin, depth) {
+        const r = menor - depth;
+        const bounds = { top: filaInicio, bottom: filaFin, left: colInicio, right: colFin };
+        const frame = { r, depth, bounds, status: 'checking' };
+        frames.push(frame);
+        emit('call', r, { bounds });
+        if (filaInicio > filaFin || colInicio > colFin) {
+          frame.status = 'base';
+          emit('base', r, { bounds });
+          frames.pop();
+          return;
+        }
+        frame.status = 'scanning';
+        const before = suma;
+        function visit(row, col, side) {
+          const previous = suma;
+          suma += matrix[row][col];
+          visited.push(row * ancho + col);
+          emit('scan', r, { bounds, current: [row, col], value: matrix[row][col], previous, side });
+        }
+        for (let j = colInicio; j <= colFin; j++) visit(filaInicio, j, 'arriba');
+        for (let i = filaInicio + 1; i <= filaFin; i++) visit(i, colFin, 'derecha');
+        if (filaInicio < filaFin)
+          for (let j = colFin - 1; j >= colInicio; j--) visit(filaFin, j, 'abajo');
+        if (colInicio < colFin)
+          for (let i = filaFin - 1; i > filaInicio; i--) visit(i, colInicio, 'izquierda');
+        completed.push(r);
+        ringCounts.push(suma - before);
+        emit('complete', r, { bounds, added: suma - before });
+        frame.status = 'waiting';
+        emit('descend', r, { bounds });
+        buscar(filaInicio + 1, filaFin - 1, colInicio + 1, colFin - 1, depth + 1);
+        frame.status = 'returning';
+        emit('return', r, { bounds });
+        frames.pop();
+      }
+      buscar(initial.top, initial.bottom, initial.left, initial.right, 0);
+      emit('done', menor, { result: suma });
+      return events;
+    }
+
+    let state = { matrix: FIRST_MATRIX.map(row => [...row]), x: 3, y: 2, preset: 'first' };
+    let trace = [], steps = [], step = 0, timer = null, playing = false, editTool = 'move';
+    let cellNodes = [], overlay;
+
+    function maximumRadius() {
+      return Math.min(state.x, state.y, state.matrix.length - 1 - state.x, state.matrix[0].length - 1 - state.y);
+    }
+
+    function syncInputs() {
+      $('rows').value = state.matrix.length;
+      $('cols').value = state.matrix[0].length;
+      $('robot-x').max = state.matrix.length - 1;
+      $('robot-y').max = state.matrix[0].length - 1;
+      $('robot-x').value = state.x;
+      $('robot-y').value = state.y;
+      document.querySelectorAll('[data-case]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.case === state.preset)));
+    }
+
+    function drawMatrix() {
+      const n = state.matrix.length, m = state.matrix[0].length;
+      const grid = $('matrix');
+      grid.replaceChildren();
+      grid.style.setProperty('--columns', m);
+      grid.style.setProperty('--rows', n);
+      // Fit tall matrices in 360 px; each cell retains its square shape.
+      const cellSize = Math.min(64, (360 - (n - 1) * 5) / n);
+      grid.parentElement.style.maxWidth = `${m * cellSize + (m - 1) * 5 + 26}px`;
+      $('col-labels').style.setProperty('--columns', m);
+      $('row-labels').style.setProperty('--rows', n);
+      for (const [id, length, center] of [['col-labels', m, state.y], ['row-labels', n, state.x]]) {
+        $(id).replaceChildren(...Array.from({ length }, (_, i) => {
+          const label = document.createElement('span');
+          label.textContent = i;
+          if (i === center) label.className = 'is-center';
+          return label;
+        }));
+      }
+      cellNodes = state.matrix.flatMap((row, x) => row.map((value, y) => {
+        const cell = document.createElement('button');
+        const robot = x === state.x && y === state.y;
+        cell.type = 'button';
+        cell.dataset.x = x;
+        cell.dataset.y = y;
+        cell.tabIndex = robot ? 0 : -1;
+        cell.innerHTML = `<span class="value">${value}</span>`;
+        cell.setAttribute('aria-label', `Fila ${x}, columna ${y}: ${value ? '1 unidad' : 'sin unidad'}${robot ? '. Radar' : ''}`);
+        cell.title = `(${x}, ${y}) · ${unitText(value)} · radio ${Math.max(Math.abs(x - state.x), Math.abs(y - state.y))}`;
+        if (m > 9) cell.style.fontSize = '12px';
+        return cell;
+      }));
+      grid.append(...cellNodes);
+      overlay = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      overlay.classList.add('ring-overlay');
+      overlay.setAttribute('viewBox', `0 0 ${m * 100} ${n * 100}`);
+      overlay.setAttribute('preserveAspectRatio', 'none');
+      overlay.setAttribute('aria-hidden', 'true');
+      grid.append(overlay);
+      const names = { first: 'EJEMPLO 1', second: 'EJEMPLO 2', edge: 'EN EL BORDE', custom: 'TU ESCENARIO' };
+      $('scenario-tag').textContent = `${names[state.preset]} · ${n} × ${m}`;
+      $('position-caption').textContent = `RADAR EN (${state.x}, ${state.y})`;
+    }
+
+    function setSteps() {
+      steps = trace.filter(event => $('detail').value === 'cells' || event.kind !== 'scan');
+      $('timeline').max = steps.length - 1;
+    }
+
+    function rebuild() {
+      pause();
+      syncInputs();
+      trace = buildTrace(state.matrix, state.x, state.y);
+      setSteps();
+      step = 0;
+      drawMatrix();
+      render();
+    }
+
+    function renderOverlay(event) {
+      if (event.r < 0) { overlay.innerHTML = ''; return; }
+      const max = maximumRadius();
+      const guideRadii = event.kind === 'ready' ? Array.from({ length: max + 1 }, (_, r) => r) : [];
+      const radii = guideRadii.length ? guideRadii : [event.kind === 'done' ? max : event.r];
+      overlay.innerHTML = radii.map(r => {
+        const invalid = r > max;
+        const inset = 3;
+        return `<rect x="${(state.y - r) * 100 + inset}" y="${(state.x - r) * 100 + inset}" width="${(2 * r + 1) * 100 - inset * 2}" height="${(2 * r + 1) * 100 - inset * 2}" rx="7" stroke="${invalid ? '#ed9d94' : color(r)}" stroke-width="${event.kind === 'ready' ? 1 : 2}" opacity="${event.kind === 'ready' && r > 0 ? .32 : .9}" ${invalid || event.kind === 'ready' ? 'stroke-dasharray="5 5"' : ''}/>`;
+      }).join('');
+    }
+
+    function renderStack(event) {
+      const container = $('stack');
+      if (!event.frames.length) {
+        container.innerHTML = event.kind === 'done'
+          ? `<div class="stack-empty"><span class="empty-glyph">↩</span><strong>buscar terminó.</strong><span>main imprime suma = ${event.suma}. Ninguna llamada devuelve un número.</span></div>`
+          : '<div class="stack-empty"><span class="empty-glyph">{ }</span><strong>Primero se calculan los límites.</strong><span>buscar añadirá una llamada por anillo, desde afuera hacia adentro.</span></div>';
+      } else {
+        container.innerHTML = event.frames.map((frame, index) => {
+          const active = index === event.frames.length - 1;
+          const status = { checking: 'verifica caso base', scanning: 'recorre el borde', waiting: 'en espera', base: 'return;', returning: 'termina, sin sumar' }[frame.status];
+          const b = frame.bounds;
+          return `<div class="frame ${active ? 'active' : ''} ${frame.status === 'base' ? 'base' : ''} ${frame.status === 'returning' ? 'returning' : ''}" style="--frame-color:${color(frame.r)};margin-left:${index * 5}px"><div class="frame-title"><code>buscar · #${frame.depth + 1}</code><small>${status}</small></div><p>filaInicio=${b.top} · filaFin=${b.bottom}<br>colInicio=${b.left} · colFin=${b.right}<br>&amp;suma → ${event.suma} (compartida)</p></div>`;
+        }).join('');
+        container.scrollTop = container.scrollHeight;
+      }
+      $('depth').textContent = `${event.frames.length} ${event.frames.length === 1 ? 'activa' : 'activas'}`;
+    }
+
+    function describe(event) {
+      const b = event.bounds;
+      switch (event.kind) {
+        case 'ready': return ['Primero, hallarLimites.', 'La animación sigue Copia de P2.cpp. Pulsa Paso para calcular los límites; buscar empezará por el anillo exterior.'];
+        case 'limits': return ['hallarLimites calcula el cuadrado.', `menor = min(${state.matrix.length - 1 - state.x}, ${state.x}) = ${event.menor}. Filas ${b.top}…${b.bottom}; columnas ${b.left}…${b.right}. En main, suma empieza en 0.`];
+        case 'call': return [`Entra buscar: filas ${b.top}…${b.bottom}.`, `Recibe columnas ${b.left}…${b.right} y la misma referencia a suma = ${event.suma}. Comprueba si filaInicio > filaFin o colInicio > colFin.`];
+        case 'scan': return [`Lado ${event.side}: celda (${event.current.join(', ')}).`, `suma += matriz[${event.current[0]}][${event.current[1]}]: ${event.previous} + ${event.value} = ${event.suma}. La suma compartida cambia durante el ciclo, antes de la siguiente llamada.`];
+        case 'complete': return [`Borde recorrido: +${unitText(event.added)}.`, event.r === 0 ? `La fila superior cuenta la única celda central. Los demás ciclos no visitan ninguna celda. suma = ${event.suma}.` : `Los cuatro ciclos recorrieron ${8 * event.r} celdas sin repetir esquinas. suma ya vale ${event.suma}.`];
+        case 'descend': return ['La siguiente llamada va hacia adentro.', `filaInicio: ${b.top} → ${b.top + 1}; filaFin: ${b.bottom} → ${b.bottom - 1}; colInicio: ${b.left} → ${b.left + 1}; colFin: ${b.right} → ${b.right - 1}. Se pasa la misma suma = ${event.suma}.`];
+        case 'base': return ['Caso base: los límites se cruzaron.', `filaInicio ${b.top} > filaFin ${b.bottom}; colInicio ${b.left} > colFin ${b.right}. No quedan celdas: return; termina la llamada. suma conserva ${event.suma}.`];
+        case 'return': return ['Termina esta llamada a buscar.', `La llamada interior ya terminó. Se llega al cierre de la función void: no hay otra suma ni un valor de retorno. suma permanece en ${event.suma}.`];
+        case 'invalid': return ['hallarLimites genera columnas inválidas.', `Obtiene ${b.left}…${b.right}, pero las columnas válidas son 0…${state.matrix[0].length - 1}. El original solo considera alto y X. La simulación se detiene antes de buscar; el C++ intentaría acceder fuera de la matriz.`];
+        case 'done': return [`main imprime: ${unitText(event.suma)}.`, `buscar terminó y la pila está vacía. Se visitaron ${event.visited.length} celdas, del anillo exterior al centro. El resultado se lee de suma, que se modificó por referencia.`];
+      }
+    }
+
+    function render() {
+      const event = steps[step];
+      const visited = new Set(event.visited), m = state.matrix[0].length, max = maximumRadius();
+      cellNodes.forEach((cell, index) => {
+        const row = Math.floor(index / m), col = index % m;
+        const r = Math.max(Math.abs(row - state.x), Math.abs(col - state.y));
+        const robot = row === state.x && col === state.y;
+        const rejected = event.kind === 'invalid' && r === event.r;
+        const current = event.current && row === event.current[0] && col === event.current[1];
+        cell.className = ['cell', state.matrix[row][col] ? 'has-unit' : '', visited.has(index) ? 'is-visited' : '', robot ? 'is-robot' : '', rejected ? 'is-rejected' : '', current ? 'is-current' : '', event.kind === 'done' && r > max ? 'is-outside' : ''].filter(Boolean).join(' ');
+        cell.style.setProperty('--ring-color', color(r));
+      });
+      renderOverlay(event);
+      renderStack(event);
+      $('detected').textContent = event.detected;
+      $('explored').textContent = event.visited.length;
+      $('rings').textContent = event.completed.length;
+      $('radius-caption').textContent = event.r < 0 ? 'SIN CELDAS: INICIO > FIN' : `ANILLO ${event.r} · ${event.kind === 'return' ? 'REGRESO' : 'HACIA ADENTRO'}`;
+      const returning = event.kind === 'return' || event.kind === 'done';
+      const direction = $('direction');
+      direction.dataset.state = ['base', 'invalid'].includes(event.kind) ? 'base' : returning ? 'return' : 'explore';
+      direction.textContent = event.kind === 'ready' ? '○ Lista para comenzar' : event.kind === 'invalid' ? '■ Límites inválidos del original' : event.kind === 'base' ? '■ No quedan celdas' : event.kind === 'done' ? '✓ main lee suma' : returning ? '↑ Regresando sin modificar suma' : '↓ Del exterior al centro';
+      const [title, description] = describe(event);
+      $('story-title').textContent = title;
+      $('story-text').textContent = description;
+      const activeCode = { ready: '', limits: 'limits', invalid: 'limits', call: 'check', scan: 'scan', complete: 'scan', descend: 'descend', base: 'base', return: '', done: '' }[event.kind];
+      document.querySelectorAll('[data-code]').forEach(line => {
+        const active = line.dataset.code === activeCode;
+        line.classList.toggle('active', active);
+        line.classList.toggle('base-active', active && event.kind === 'base');
+        line.classList.toggle('return-active', active && returning);
+      });
+      const frame = event.frames[event.frames.length - 1];
+      $('equation').textContent = event.kind === 'invalid' ? 'Sin resultado: lectura fuera de límites'
+        : event.kind === 'done' ? `suma = ${event.ringCounts.join(' + ')} = ${event.suma}`
+        : event.kind === 'scan' ? `suma: ${event.previous} + ${event.value} = ${event.suma}`
+        : `int &suma → ${event.suma}${returning || event.kind === 'base' ? ' · sin cambios' : ''}`;
+      $('timeline').value = step;
+      $('timeline').setAttribute('aria-valuetext', `Paso ${step} de ${steps.length - 1}. ${title}`);
+      $('step-counter').textContent = `Paso ${step} de ${steps.length - 1}`;
+      $('back').disabled = step === 0;
+      $('restart').disabled = step === 0 && !playing;
+      $('next').disabled = step === steps.length - 1;
+      $('finish').disabled = step === steps.length - 1;
+      updatePlayButton();
+    }
+
+    function updatePlayButton() {
+      $('play-label').textContent = playing ? 'Pausar' : step === steps.length - 1 ? 'Repetir' : step > 0 ? 'Continuar' : 'Reproducir';
+      $('play-icon').setAttribute('href', playing ? '#i-pause' : '#i-play');
+    }
+
+    function pause() {
+      clearTimeout(timer);
+      timer = null;
+      playing = false;
+      updatePlayButton();
+    }
+
+    function schedule() {
+      clearTimeout(timer);
+      const event = steps[step];
+      const delay = (event.kind === 'scan' ? 400 : event.kind === 'base' || event.kind === 'return' ? 1550 : 1150) / Number($('speed').value);
+      timer = setTimeout(() => {
+        if (!playing) return;
+        step++;
+        if (step >= steps.length - 1) { step = steps.length - 1; pause(); }
+        render();
+        if (playing) schedule();
+      }, delay);
+    }
+
+    function goTo(index) {
+      pause();
+      step = Math.max(0, Math.min(index, steps.length - 1));
+      render();
+    }
+
+    $('play').addEventListener('click', () => {
+      if (playing) { pause(); render(); return; }
+      if (step === steps.length - 1) step = 0;
+      playing = true;
+      if (step === 0) step = 1;
+      render();
+      schedule();
+    });
+    $('next').addEventListener('click', () => goTo(step + 1));
+    $('back').addEventListener('click', () => goTo(step - 1));
+    $('restart').addEventListener('click', () => goTo(0));
+    $('finish').addEventListener('click', () => goTo(steps.length - 1));
+    $('timeline').addEventListener('input', event => goTo(Number(event.target.value)));
+    $('speed').addEventListener('change', () => { if (playing) schedule(); });
+    $('detail').addEventListener('change', () => {
+      const current = steps[step];
+      pause();
+      setSteps();
+      step = steps.indexOf(current);
+      if (step < 0) {
+        const rawIndex = trace.indexOf(current);
+        step = steps.findIndex(event => trace.indexOf(event) > rawIndex);
+      }
+      render();
+    });
+    document.addEventListener('visibilitychange', () => { if (document.hidden) pause(); });
+
+    document.querySelectorAll('[data-case]').forEach(button => button.addEventListener('click', () => {
+      const preset = button.dataset.case;
+      const matrix = FIRST_MATRIX.map(row => [...row]);
+      if (preset === 'second') matrix[4][4] = 1;
+      const [x, y] = preset === 'first' ? [3, 2] : preset === 'second' ? [4, 4] : [0, 3];
+      state = { matrix, x, y, preset };
+      rebuild();
+    }));
+
+    for (const [dimension, coordinate] of [['rows', 'robot-x'], ['cols', 'robot-y']]) {
+      $(dimension).addEventListener('input', () => {
+        const value = Number($(dimension).value);
+        if (Number.isInteger(value) && value >= 1 && value <= 12) $(coordinate).max = value - 1;
+      });
+    }
+    $('config-form').addEventListener('submit', event => {
+      event.preventDefault();
+      const n = Number($('rows').value), m = Number($('cols').value);
+      const x = Number($('robot-x').value), y = Number($('robot-y').value);
+      if (![n, m, x, y].every(Number.isInteger) || n < 1 || n > 12 || m < 1 || m > 12 || x < 0 || x >= n || y < 0 || y >= m) return;
+      const matrix = Array.from({ length: n }, (_, row) => Array.from({ length: m }, (_, col) => state.matrix[row]?.[col] ?? 0));
+      state = { matrix, x, y, preset: 'custom' };
+      rebuild();
+    });
+
+    function chooseTool(tool) {
+      editTool = tool;
+      $('move-tool').setAttribute('aria-pressed', String(tool === 'move'));
+      $('unit-tool').setAttribute('aria-pressed', String(tool === 'unit'));
+      $('edit-hint').textContent = tool === 'move'
+        ? 'Haz clic en una celda para mover el radar. Cada cambio reinicia la búsqueda.'
+        : 'Haz clic para alternar 0 ↔ 1, incluso bajo el radar. Cada cambio reinicia la búsqueda.';
+    }
+    $('move-tool').addEventListener('click', () => chooseTool('move'));
+    $('unit-tool').addEventListener('click', () => chooseTool('unit'));
+    $('matrix').addEventListener('click', event => {
+      const cell = event.target.closest('button[data-x]');
+      if (!cell) return;
+      const x = Number(cell.dataset.x), y = Number(cell.dataset.y);
+      if (editTool === 'move') { state.x = x; state.y = y; }
+      else state.matrix[x][y] = 1 - state.matrix[x][y];
+      state.preset = 'custom';
+      rebuild();
+      cellNodes.forEach(node => { node.tabIndex = -1; });
+      const selected = cellNodes[x * state.matrix[0].length + y];
+      selected.tabIndex = 0;
+      selected.focus({ preventScroll: true });
+    });
+    $('matrix').addEventListener('keydown', event => {
+      const cell = event.target.closest('button[data-x]');
+      const directions = { ArrowUp: [-1, 0], ArrowDown: [1, 0], ArrowLeft: [0, -1], ArrowRight: [0, 1] };
+      if (!cell || !directions[event.key]) return;
+      event.preventDefault();
+      const [dx, dy] = directions[event.key];
+      const x = Number(cell.dataset.x) + dx, y = Number(cell.dataset.y) + dy;
+      if (x < 0 || x >= state.matrix.length || y < 0 || y >= state.matrix[0].length) return;
+      cell.tabIndex = -1;
+      const next = cellNodes[x * state.matrix[0].length + y];
+      next.tabIndex = 0;
+      next.focus({ preventScroll: true });
+    });
+
+    const ORIGINAL_BASE64 = 'I2luY2x1ZGUgPGlvc3RyZWFtPg0KI2luY2x1ZGUgPGZzdHJlYW0+DQojaW5jbHVkZSA8Y21hdGg+DQoNCnVzaW5nIG5hbWVzcGFjZSBzdGQ7DQoNCnN0cnVjdCBQb3NpY2lvbiB7DQoJaW50IHgsIHk7DQp9Ow0KDQppbnQgbGVlckRhdG9zKGludCAmYW5jaG8sIGludCAmYWx0bywgaW50KiogJm1hdHJpeiwgUG9zaWNpb24gJnBvcyk7DQp2b2lkIGhhbGxhckxpbWl0ZXMoaW50ICZmaWxhSW5pY2lvLCBpbnQgJmZpbGFGaW4sIGludCAmY29sdW1uYUluaWNpbywgaW50ICZjb2x1bW5hRmluLCBQb3NpY2lvbiBwb3MsIGludCBhbHRvKTsNCnZvaWQgYnVzY2FyKGludCBhbmNobywgaW50IGFsdG8sIGludCoqIG1hdHJpeiwgaW50IGZpbGFJbmljaW8sIGludCBmaWxhRmluLCBpbnQgY29sSW5pY2lvLCBpbnQgY29sRmluLCBpbnQgJnN1bWEpOw0Kdm9pZCBsaWJlcmFyTWVtb3JpYShpbnQgYWx0bywgaW50KiogbWF0cml6KTsNCg0KaW50IG1haW4oKSB7DQoJDQoJaW50IGFuY2hvLCBhbHRvOw0KCWludCoqIG1hdHJpejsNCglQb3NpY2lvbiBwb3M7DQoJDQoJaWYgKGxlZXJEYXRvcyhhbmNobywgYWx0bywgbWF0cml6LCBwb3MpID09IDEpDQoJCXJldHVybiAxOw0KCQ0KCWludCBmaWxhSW5pY2lvLCBmaWxhRmluLCBjb2x1bW5hSW5pY2lvLCBjb2x1bW5hRmluOw0KDQoJaGFsbGFyTGltaXRlcyhmaWxhSW5pY2lvLCBmaWxhRmluLCBjb2x1bW5hSW5pY2lvLCBjb2x1bW5hRmluLCBwb3MsIGFsdG8pOw0KCWludCBzdW1hID0gMDsNCglidXNjYXIoYW5jaG8sIGFsdG8sIG1hdHJpeiwgZmlsYUluaWNpbywgZmlsYUZpbiwgY29sdW1uYUluaWNpbywgY29sdW1uYUZpbiwgc3VtYSk7DQoJDQoJY291dCA8PCAiUmVzdWx0YWRvIGRlIGxhIGJ1c3F1ZWRhOiAiIDw8IHN1bWEgPDwgZW5kbDsNCgkNCglsaWJlcmFyTWVtb3JpYShhbHRvLCBtYXRyaXopOw0KCQ0KCXJldHVybiAwOw0KfQ0KDQppbnQgbGVlckRhdG9zKGludCAmYW5jaG8sIGludCAmYWx0bywgaW50KiogJm1hdHJpeiwgUG9zaWNpb24gJnBvcykgew0KCWlmc3RyZWFtIGFyY2hpdm8oImRhdG9zMi50eHQiKTsNCgkNCglpZiAoIWFyY2hpdm8pIHsNCgkJY291dCA8PCAiTm8gc2UgcHVlZGUgYWJyaXIgZWwgYXJjaGl2byBkYXRvczIudHh0IiA8PCBlbmRsOw0KCQlyZXR1cm4gMTsNCgl9DQoJDQoJYXJjaGl2byA+PiBhbmNobzsNCglhcmNoaXZvID4+IGFsdG87DQoJDQoJbWF0cml6ID0gbmV3IGludCpbYWx0b107DQoJDQoJZm9yIChpbnQgeD0wOyB4PGFsdG87IHgrKykgew0KCQltYXRyaXpbeF0gPSBuZXcgaW50W2FuY2hvXTsNCgkJZm9yIChpbnQgeT0wOyB5PGFuY2hvOyB5KyspDQoJCQlhcmNoaXZvID4+IG1hdHJpelt4XVt5XTsNCgl9DQoJYXJjaGl2byA+PiBwb3MueDsNCglhcmNoaXZvID4+IHBvcy55Ow0KCQ0KCWFyY2hpdm8uY2xvc2UoKTsNCglyZXR1cm4gMDsNCn0NCg0Kdm9pZCBoYWxsYXJMaW1pdGVzKGludCAmZmlsYUluaWNpbywgaW50ICZmaWxhRmluLCBpbnQgJmNvbHVtbmFJbmljaW8sIGludCAmY29sdW1uYUZpbiwgUG9zaWNpb24gcG9zLCBpbnQgYWx0bykgew0KCQ0KCWludCBtZW5vciA9IGFsdG8gLSAxIC0gcG9zLnggPCBwb3MueCA/IGFsdG8gLSAxIC0gcG9zLnggOiBwb3MueDsNCglmaWxhSW5pY2lvID0gcG9zLnggLSBtZW5vcjsNCgljb2x1bW5hSW5pY2lvID0gcG9zLnkgLSBtZW5vcjsNCglmaWxhRmluID0gZmlsYUluaWNpbyArIDIqbWVub3I7DQoJY29sdW1uYUZpbiA9IGNvbHVtbmFJbmljaW8gKyAyKm1lbm9yOw0KfQ0KDQp2b2lkIGJ1c2NhcihpbnQgYW5jaG8sIGludCBhbHRvLCBpbnQqKiBtYXRyaXosIGludCBmaWxhSW5pY2lvLCBpbnQgZmlsYUZpbiwgaW50IGNvbEluaWNpbywgaW50IGNvbEZpbiwgaW50ICZzdW1hKSB7DQoJCWNvdXQgPDwgIlxuTGxhbWFkYSByZWN1cnNpdmFcbiI7DQoJCWNvdXQgPDwgZmlsYUluaWNpbyA8PCBlbmRsOw0KCQljb3V0IDw8IGZpbGFGaW4gPDwgZW5kbDsNCgkJY291dCA8PCBjb2xJbmljaW8gPDwgZW5kbDsNCgkJY291dCA8PCBjb2xGaW4gPDwgZW5kbCA8PCBlbmRsOw0KIAkvLyBDYXNvIGJhc2U6IHNpIG5vIGhheSBt77+9cyBmaWxhcyBvIGNvbHVtbmFzIHF1ZSByZWNvcnJlcg0KICAgIGlmIChmaWxhSW5pY2lvID4gZmlsYUZpbiB8fCBjb2xJbmljaW8gPiBjb2xGaW4pIHsNCiAgICAgICAgcmV0dXJuOw0KICAgIH0NCg0KICAgIC8vIFJlY29ycmVyIGxhIGZpbGEgc3VwZXJpb3IgZGUgaXpxdWllcmRhIGEgZGVyZWNoYQ0KICAgIGZvciAoaW50IHkgPSBjb2xJbmljaW87IHkgPD0gY29sRmluOyB5KyspIHsNCiAgICAgICAgY291dCA8PCBtYXRyaXpbZmlsYUluaWNpb11beV0gPDwgZW5kbDsNCiAgICAJc3VtYSArPSBtYXRyaXpbZmlsYUluaWNpb11beV07DQoJfQ0KDQogICAgLy8gUmVjb3JyZXIgbGEgY29sdW1uYSBkZXJlY2hhIGRlIGFycmliYSBoYWNpYSBhYmFqbw0KICAgIGZvciAoaW50IHggPSBmaWxhSW5pY2lvICsgMTsgeCA8PSBmaWxhRmluOyB4KyspIHsNCiAgICAgICAgY291dCA8PCBtYXRyaXpbeF1bY29sRmluXSA8PCBlbmRsOw0KICAgIAlzdW1hICs9IG1hdHJpelt4XVtjb2xGaW5dOw0KCX0NCg0KICAgIC8vIFJlY29ycmVyIGxhIGZpbGEgaW5mZXJpb3IgZGUgZGVyZWNoYSBhIGl6cXVpZXJkYSwgc2kgYe+/vW4gaGF5IGZpbGFzIHBvciByZWNvcnJlcg0KICAgIGlmIChmaWxhSW5pY2lvIDwgZmlsYUZpbikgew0KICAgICAgICBmb3IgKGludCB5ID0gY29sRmluIC0gMTsgeSA+PSBjb2xJbmljaW87IHktLSkgew0KICAgICAgICAgICAgY291dCA8PCBtYXRyaXpbZmlsYUZpbl1beV0gPDwgZW5kbDsNCiAgICAgICAgICAgIHN1bWEgKz0gbWF0cml6W2ZpbGFGaW5dW3ldOw0KICAgICAgICB9DQogICAgfQ0KDQogICAgLy8gUmVjb3JyZXIgbGEgY29sdW1uYSBpenF1aWVyZGEgZGUgYWJham8gaGFjaWEgYXJyaWJhLCBzaSBh77+9biBoYXkgY29sdW1uYXMgcG9yIHJlY29ycmVyDQogICAgaWYgKGNvbEluaWNpbyA8IGNvbEZpbikgew0KICAgICAgICBmb3IgKGludCB4ID0gZmlsYUZpbiAtIDE7IHggPiBmaWxhSW5pY2lvOyB4LS0pIHsNCiAgICAgICAgICAgIGNvdXQgPDwgbWF0cml6W3hdW2NvbEluaWNpb10gPDwgZW5kbDsNCiAgICAgICAgICAgIHN1bWEgKz0gbWF0cml6W3hdW2NvbEluaWNpb107DQogICAgICAgIH0NCiAgICB9DQoNCiAgICAvLyBMbGFtYXIgcmVjdXJzaXZhbWVudGUgcGFyYSBsYSBzdWJtYXRyaXogaW50ZXJuYQ0KICAgIGJ1c2NhcihhbmNobywgYWx0bywgbWF0cml6LCBmaWxhSW5pY2lvICsgMSwgZmlsYUZpbiAtIDEsIGNvbEluaWNpbyArIDEsIGNvbEZpbiAtIDEsIHN1bWEpOw0KfQ0KDQp2b2lkIGxpYmVyYXJNZW1vcmlhKGludCBhbHRvLCBpbnQqKiBtYXRyaXopIHsNCglmb3IgKGludCB5PTA7IHk8YWx0bzsgeSsrKSB7DQoJCWRlbGV0ZVtdIG1hdHJpelt5XTsNCgl9DQoJZGVsZXRlW10gbWF0cml6Ow0KfQ0KDQoNCg0KDQoNCg0K';
+    const originalBytes = () => Uint8Array.from(atob(ORIGINAL_BASE64), char => char.charCodeAt(0));
+    const CPP_PROGRAM = new TextDecoder().decode(originalBytes());
+    $('cpp-code').textContent = CPP_PROGRAM;
+    $('copy-code').addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(CPP_PROGRAM);
+        $('copy-status').textContent = 'Archivo original copiado.';
+      } catch {
+        const selection = window.getSelection();
+        const range = document.createRange();
+        range.selectNodeContents($('cpp-code'));
+        selection.removeAllRanges();
+        selection.addRange(range);
+        $('copy-status').textContent = 'Código seleccionado. Usa Ctrl+C o ⌘C para copiarlo.';
+      }
+    });
+    $('download-code').addEventListener('click', () => {
+      const url = URL.createObjectURL(new Blob([originalBytes()], { type: 'text/plain;charset=utf-8' }));
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'Copia de P2.cpp';
+      document.body.append(link);
+      link.click();
+      link.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    });
+
+    rebuild();
+  </script>
+</body>
+</html>

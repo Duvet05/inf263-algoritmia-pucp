@@ -2,7 +2,7 @@
 
 [Catálogo con filtros](catalogo/index.html) · [Por temas](temas/README.md) · [Exámenes](examenes/README.md) · [Laboratorios](laboratorios/README.md) · [Clases y Excel](clases/README.md) · [Abrir en VS Code](algoritmia.code-workspace)
 
-El material del curso está organizado por evaluación y ciclo, con índices por tema y una sola copia de cada enunciado. Las soluciones actuales incluyen pruebas reproducibles; cada evaluación conserva también sus fuentes de origen. Para preparar la clase de hoy, empieza por [TortuNinjas](clases/tortuninjas/README.md), [Nautilus](soluciones-actuales/04_listas_pilas_colas/enunciados/nautilus.md) e [incidentes](soluciones-actuales/04_listas_pilas_colas/enunciados/incidentes.md).
+El material del curso está organizado por evaluación y ciclo, con índices por tema y una sola copia de cada enunciado. Las soluciones actuales incluyen pruebas reproducibles; cada evaluación conserva también sus fuentes de origen. Para preparar una clase, empieza por [mochilas](clases/mochilas/README.md), [Po](clases/po-2024-1/LEEME.md), [radar](clases/radar-2024-1/README.md), [TortuNinjas](clases/tortuninjas/README.md), [Nautilus](soluciones-actuales/04_listas_pilas_colas/enunciados/nautilus.md) e [incidentes](soluciones-actuales/04_listas_pilas_colas/enunciados/incidentes.md).
 
 [![Verificación de soluciones actuales](https://github.com/Duvet05/inf263-algoritmia-pucp/actions/workflows/verificar-actuales.yml/badge.svg)](https://github.com/Duvet05/inf263-algoritmia-pucp/actions/workflows/verificar-actuales.yml)
 
@@ -84,3 +84,5 @@ Abre `algoritmia.code-workspace` en VS Code. En **Terminal → Ejecutar tarea** 
 | [Introduction to Algorithms](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/index.htm) | Massachusetts Institute of Technology |
 | [Design and Analysis of Algorithms](http://web.stanford.edu/class/archive/cs/cs161/cs161.1168/) | Stanford University |
 | [Data Structures](https://sp21.datastructur.es/) | University of California, Berkeley |
+
+La copia de trabajo canónica es este repositorio. Los archivos recuperados y sus destinos se documentan en la [consolidación local](catalogo/consolidacion-2026-10-09.md).
